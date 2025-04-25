@@ -1,7 +1,7 @@
 <template>
   <div class="relative min-h-screen">
     <!-- Hero Section mit verbessertem Layout -->
-    <section class="relative py-5 md:py-20">
+    <section class="relative py-4 md:py-20">
       <div class="absolute inset-0 z-0 opacity-10">
         <div class="h-full w-full"></div>
       </div>
@@ -52,7 +52,7 @@
     </section>
 
     <!-- Über mich Section mit Card Design -->
-    <section class="py-10">
+    <section class="py-4">
       <div class="container mx-auto max-w-6xl px-5">
         <div class="mb-4 flex items-center">
           <UserIcon class="mr-3 size-7 text-blue-500" />
@@ -86,7 +86,7 @@
     </section>
 
     <!-- Skills Section -->
-    <section class="py-10">
+    <section class="py-4">
       <div class="container mx-auto max-w-6xl px-6">
         <div class="mb-4 flex items-center">
           <LightBulbIcon class="mr-3 size-7 text-blue-500" />
@@ -146,7 +146,7 @@
     </section>
 
     <!-- Projekte Section -->
-    <section class="px-3 py-10">
+    <section class="px-3 py-4">
       <div class="container mx-auto max-w-6xl">
         <div class="mb-4 flex items-center">
           <FolderIcon class="mr-3 size-7 text-blue-500" />
@@ -192,7 +192,7 @@
               </div>
               <a href="/editorfolio" target="_blank">
                 <button
-                  class="mt-6 flex w-full items-center justify-center rounded-lg bg-blue-600/80 py-2 text-sm font-medium text-white transition-colors hover:bg-blue-700"
+                  class="mt-6 flex w-full cursor-pointer items-center justify-center rounded-lg bg-blue-600/80 py-2 text-sm font-medium text-white transition-colors hover:bg-blue-700"
                 >
                   Projekt ansehen
                   <ArrowRightIcon class="ml-1 size-4" /></button
@@ -209,7 +209,7 @@
             ></div>
 
             <div class="relative p-6">
-              <h3 class="mb-4 text-center text-2xl font-semibold text-white">Onlineshop</h3>
+              <h3 class="mb-4 text-center text-2xl font-semibold text-white">Dinkelspelz24.de</h3>
 
               <div class="overflow-hidden rounded-lg border border-gray-700 shadow-lg">
                 <img
@@ -239,7 +239,58 @@
 
               <a href="https://dinkelspelz24.de/" target="_blank" rel="noopener noreferrer">
                 <button
-                  class="mt-6 flex w-full items-center justify-center rounded-lg bg-blue-600/80 py-2 text-sm font-medium text-white transition-colors hover:bg-blue-700"
+                  class="mt-6 flex w-full cursor-pointer items-center justify-center rounded-lg bg-blue-600/80 py-2 text-sm font-medium text-white transition-colors hover:bg-blue-700"
+                >
+                  Projekt ansehen
+                  <ArrowRightIcon class="ml-1 size-4" />
+                </button>
+              </a>
+            </div>
+          </div>
+
+          <!-- Projekt Card 3 -->
+          <div
+            class="group relative overflow-hidden rounded-xl bg-gray-800/40 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-900/20"
+          >
+            <div
+              class="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/20 opacity-0 transition-opacity group-hover:opacity-100"
+            ></div>
+
+            <div class="relative p-6">
+              <h3 class="mb-4 text-center text-2xl font-semibold text-white">Chronixly.com</h3>
+
+              <div class="overflow-hidden rounded-lg border border-gray-700 shadow-lg">
+                <img
+                  src="/src/assets/webp/chronixlyScreenshot.webp"
+                  alt="Projekt 2 Vorschau"
+                  class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+
+              <div class="mt-6">
+                <p class="mb-4 text-gray-300">
+                  Chronixly ist eine Web-App zur projektbasierten Zeiterfassung mit Fokus auf
+                  Benutzerfreundlichkeit, Übersichtlichkeit und smarter Teamverwaltung.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="rounded-full bg-blue-900/50 px-3 py-1 text-xs text-blue-300"
+                    >Vue 3</span
+                  >
+                  <span class="rounded-full bg-blue-900/50 px-3 py-1 text-xs text-blue-300"
+                    >Flask</span
+                  >
+                  <span class="rounded-full bg-blue-900/50 px-3 py-1 text-xs text-blue-300"
+                    >PostgreSQL</span
+                  >
+                  <span class="rounded-full bg-blue-900/50 px-3 py-1 text-xs text-blue-300"
+                    >Tailwind CSS</span
+                  >
+                </div>
+              </div>
+
+              <a href="https://chronixly.com/" target="_blank" rel="noopener noreferrer">
+                <button
+                  class="mt-6 flex w-full cursor-pointer items-center justify-center rounded-lg bg-blue-600/80 py-2 text-sm font-medium text-white transition-colors hover:bg-blue-700"
                 >
                   Projekt ansehen
                   <ArrowRightIcon class="ml-1 size-4" />
