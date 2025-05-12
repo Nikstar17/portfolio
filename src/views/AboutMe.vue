@@ -13,23 +13,25 @@
             <h1
               class="bg-gradient-to-r from-white to-blue-400 bg-clip-text text-3xl font-bold tracking-tight text-transparent md:text-5xl lg:text-6xl"
             >
-              Dominik Kasten
+              IT-Dienstleistungen Goslar
             </h1>
             <p class="mt-4 text-lg font-medium text-blue-400 md:text-xl">
-              Full-Stack Entwicklung | IT-Dienstleistungen
+              Webseite erstellen lassen | IT-Freelancer im Harz
             </p>
             <p class="mt-6 text-base leading-relaxed text-gray-300 md:text-lg">
-              Ich bin freiberuflicher Full-Stack Entwickler und begleite Unternehmen bei der
-              Umsetzung digitaler Lösungen – von performanten Webanwendungen bis hin zur
-              Automatisierung interner Prozesse.
+              Willkommen bei Dominik Kasten – Ihrem lokalen Ansprechpartner für Web & Technik in
+              Goslar und der Harzregion. Als freiberuflicher Full-Stack Entwickler unterstütze ich
+              kleine Unternehmen, Selbstständige und lokale Dienstleister ohne IT-Vorkenntnisse bei
+              der Digitalisierung ihrer Geschäftsprozesse – von modernen Webseiten bis hin zur
+              Automatisierung Ihrer täglichen Arbeitsabläufe.
             </p>
             <div class="mt-8 flex flex-wrap items-center justify-center gap-4 md:justify-start">
-              <a href="/kontakt"
+              <RouterLink to="/kontakt"
                 ><button
                   class="rounded-full bg-blue-600 px-6 py-2.5 text-sm font-medium text-white transition-all hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-600/20"
                 >
                   Kontakt aufnehmen
-                </button></a
+                </button></RouterLink
               >
             </div>
           </div>
@@ -42,7 +44,7 @@
             <div class="relative rounded-full border-2 border-blue-500/20 p-1 backdrop-blur-sm">
               <img
                 src="/src/assets/webp/me2.webp"
-                alt="Profile picture"
+                alt="IT-Freelancer Dominik Kasten aus Goslar im Harz - Ihr Experte für Webseiten und IT-Dienstleistungen"
                 class="size-48 rounded-full object-cover shadow-xl md:size-56 lg:size-64"
               />
             </div>
@@ -59,7 +61,7 @@
           <h2 class="text-3xl font-bold text-white md:text-4xl">Über mich</h2>
         </div>
 
-        <div class="grid gap-4 md:grid-cols-2">
+        <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           <div
             class="rounded-xl bg-gray-800/50 p-6 backdrop-blur-sm transition-transform hover:-translate-y-1"
           >
@@ -68,6 +70,18 @@
               Durch mein Informatikstudium im Fernstudium an der IU verbinde ich theoretisches
               Fachwissen mit praktischer Projekterfahrung. So kann ich technische Anforderungen
               nicht nur verstehen, sondern auch effizient und zielgerichtet umsetzen.
+            </p>
+          </div>
+
+          <div
+            class="rounded-xl bg-gray-800/50 p-6 backdrop-blur-sm transition-transform hover:-translate-y-1"
+          >
+            <h3 class="mb-2 text-xl font-semibold text-blue-400">Lokale IT-Hilfe im Harz</h3>
+            <p class="text-gray-300">
+              Als IT-Freelancer im Harz biete ich persönliche Betreuung für Unternehmen in Goslar
+              und Umgebung. Von der ersten Beratung bis zur fertigen Webseite – ich bin Ihr direkter
+              Ansprechpartner für alle Fragen rund um Web & Technik in Goslar. Nutzen Sie den
+              Vorteil kurzer Wege und lokaler Expertise.
             </p>
           </div>
 
@@ -154,52 +168,6 @@
         </div>
 
         <div class="grid gap-4 md:grid-cols-2">
-          <!-- Projekt Card 1 mit verbesserten Effekten -->
-          <div
-            class="group relative overflow-hidden rounded-xl bg-gray-800/40 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-900/20"
-          >
-            <div
-              class="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/20 opacity-0 transition-opacity group-hover:opacity-100"
-            ></div>
-
-            <div class="relative p-6">
-              <h3 class="mb-4 text-center text-2xl font-semibold text-white">Editorfolio</h3>
-
-              <div class="overflow-hidden rounded-lg border border-gray-700 shadow-lg">
-                <img
-                  src="/src/assets/webp/screenshot1.webp"
-                  alt="Projekt 1 Vorschau"
-                  class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-              </div>
-
-              <div class="mt-6">
-                <p class="mb-4 text-gray-300">
-                  Ein modernes Onepage-Portfolio für Cutter und Videocreator – ideal zur
-                  Präsentation von Projekten und Showreels.
-                </p>
-                <div class="flex flex-wrap gap-2">
-                  <span class="rounded-full bg-blue-900/50 px-3 py-1 text-xs text-blue-300"
-                    >Vue.js</span
-                  >
-                  <span class="rounded-full bg-blue-900/50 px-3 py-1 text-xs text-blue-300"
-                    >Tailwind</span
-                  >
-                  <span class="rounded-full bg-blue-900/50 px-3 py-1 text-xs text-blue-300"
-                    >Node.js</span
-                  >
-                </div>
-              </div>
-              <a href="/editorfolio" target="_blank">
-                <button
-                  class="mt-6 flex w-full cursor-pointer items-center justify-center rounded-lg bg-blue-600/80 py-2 text-sm font-medium text-white transition-colors hover:bg-blue-700"
-                >
-                  Projekt ansehen
-                  <ArrowRightIcon class="ml-1 size-4" /></button
-              ></a>
-            </div>
-          </div>
-
           <!-- Projekt Card 2 -->
           <div
             class="group relative overflow-hidden rounded-xl bg-gray-800/40 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-900/20"
@@ -213,7 +181,7 @@
 
               <div class="overflow-hidden rounded-lg border border-gray-700 shadow-lg">
                 <img
-                  src="/src/assets/webp/screenshot3.webp"
+                  src="/src/assets/webp/dinkelspelz24.webp"
                   alt="Projekt 2 Vorschau"
                   class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
@@ -261,7 +229,7 @@
 
               <div class="overflow-hidden rounded-lg border border-gray-700 shadow-lg">
                 <img
-                  src="/src/assets/webp/chronixlyScreenshot.webp"
+                  src="/src/assets/webp/chronixly.webp"
                   alt="Projekt 2 Vorschau"
                   class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
@@ -269,8 +237,8 @@
 
               <div class="mt-6">
                 <p class="mb-4 text-gray-300">
-                  Chronixly ist eine Web-App zur projektbasierten Zeiterfassung mit Fokus auf
-                  Benutzerfreundlichkeit, Übersichtlichkeit und smarter Teamverwaltung.
+                  Chronixly ist eine benutzerfreundliche Web-App zur projektbasierten Zeiterfassung
+                  mit smarter Teamverwaltung.
                 </p>
                 <div class="flex flex-wrap gap-2">
                   <span class="rounded-full bg-blue-900/50 px-3 py-1 text-xs text-blue-300"
@@ -298,6 +266,51 @@
               </a>
             </div>
           </div>
+          <!-- Projekt Card 1 mit verbesserten Effekten -->
+          <div
+            class="group relative overflow-hidden rounded-xl bg-gray-800/40 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-900/20"
+          >
+            <div
+              class="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/20 opacity-0 transition-opacity group-hover:opacity-100"
+            ></div>
+
+            <div class="relative p-6">
+              <h3 class="mb-4 text-center text-2xl font-semibold text-white">Editorfolio</h3>
+
+              <div class="overflow-hidden rounded-lg border border-gray-700 shadow-lg">
+                <img
+                  src="/src/assets/webp/editorfolio.webp"
+                  alt="Projekt 1 Vorschau"
+                  class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+
+              <div class="mt-6">
+                <p class="mb-4 text-gray-300">
+                  Ein modernes Onepage-Portfolio für Cutter und Videocreator – ideal zur
+                  Präsentation von Projekten und Showreels.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="rounded-full bg-blue-900/50 px-3 py-1 text-xs text-blue-300"
+                    >Vue.js</span
+                  >
+                  <span class="rounded-full bg-blue-900/50 px-3 py-1 text-xs text-blue-300"
+                    >Tailwind</span
+                  >
+                  <span class="rounded-full bg-blue-900/50 px-3 py-1 text-xs text-blue-300"
+                    >Node.js</span
+                  >
+                </div>
+              </div>
+              <RouterLink to="/editorfolio">
+                <button
+                  class="mt-6 flex w-full cursor-pointer items-center justify-center rounded-lg bg-blue-600/80 py-2 text-sm font-medium text-white transition-colors hover:bg-blue-700"
+                >
+                  Projekt ansehen
+                  <ArrowRightIcon class="ml-1 size-4" /></button
+              ></RouterLink>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -310,18 +323,19 @@
         >
           <div class="text-center">
             <h2 class="text-3xl font-bold text-white md:text-4xl">
-              Bereit für das nächste Projekt?
+              Webseite erstellen lassen in Goslar?
             </h2>
             <p class="mx-auto mt-4 max-w-2xl text-gray-300">
-              Lassen Sie uns gemeinsam an Ihren digitalen Herausforderungen arbeiten und innovative
-              Lösungen entwickeln.
+              Sie suchen Hilfe bei Web & Technik in Goslar und Umgebung? Lassen Sie uns gemeinsam an
+              Ihren digitalen Herausforderungen arbeiten. Als IT-Freelancer im Harz stehe ich Ihnen
+              bei allen technischen Fragen persönlich zur Seite.
             </p>
-            <a href="/kontakt">
+            <RouterLink to="/kontakt">
               <button
-                class="mt-8 rounded-lg bg-blue-600 px-8 py-3 text-base font-medium text-white shadow-lg shadow-blue-600/30 transition-all hover:bg-blue-700 hover:shadow-xl hover:shadow-blue-600/40"
+                class="mt-8 cursor-pointer rounded-lg bg-blue-600 px-8 py-3 text-base font-medium text-white shadow-lg shadow-blue-600/30 transition-all hover:bg-blue-700 hover:shadow-xl hover:shadow-blue-600/40"
               >
                 Kontakt aufnehmen
-              </button></a
+              </button></RouterLink
             >
           </div>
         </div>
@@ -335,4 +349,24 @@ import { UserIcon } from '@heroicons/vue/24/outline'
 import { LightBulbIcon } from '@heroicons/vue/24/outline'
 import { FolderIcon } from '@heroicons/vue/24/outline'
 import { ArrowRightIcon } from '@heroicons/vue/24/outline'
+import { onMounted } from 'vue'
+
+// SEO-Optimierung für lokale Suchbegriffe
+onMounted(() => {
+  document.title = 'IT-Dienstleistungen & Webseite erstellen lassen in Goslar | Dominik Kasten'
+
+  // Meta-Description anpassen
+  const metaDescription =
+    document.querySelector('meta[name="description"]') || document.createElement('meta')
+  metaDescription.setAttribute('name', 'description')
+  metaDescription.setAttribute(
+    'content',
+    'Professionelle IT-Dienstleistungen in Goslar und dem Harz. Webseite erstellen lassen von Ihrem lokalen IT-Freelancer. Hilfe bei Web & Technik für kleine Unternehmen und Selbstständige.',
+  )
+
+  // Falls noch nicht vorhanden, zum head hinzufügen
+  if (!document.querySelector('meta[name="description"]')) {
+    document.head.appendChild(metaDescription)
+  }
+})
 </script>

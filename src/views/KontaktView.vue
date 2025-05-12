@@ -263,18 +263,20 @@ const submitForm = async () => {
   isSubmitting.value = true
 
   try {
-    const response = await fetch('/api/contact', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
+    const response = await fetch(
+      `https://sr5x4a62cd.execute-api.eu-north-1.amazonaws.com/contact`,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        }),
       },
-      body: JSON.stringify({
-        name: formData.name,
-        email: formData.email,
-        subject: formData.subject,
-        message: formData.message,
-      }),
-    })
+    )
 
     if (!response.ok) {
       throw new Error('Fehler beim Senden des Formulars.')
@@ -285,7 +287,6 @@ const submitForm = async () => {
     // Formular zurücksetzen
     formData.name = ''
     formData.email = ''
-    formData.subject = ''
     formData.message = ''
     formData.privacy = false
   } catch (error) {
