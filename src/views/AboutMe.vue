@@ -43,7 +43,7 @@
             ></div>
             <div class="relative rounded-full border-2 border-blue-500/20 p-1 backdrop-blur-sm">
               <img
-                src="/src/assets/webp/me2.webp"
+                src="@/assets/webp/me2.webp"
                 alt="IT-Freelancer Dominik Kasten aus Goslar im Harz - Ihr Experte für Webseiten und IT-Dienstleistungen"
                 class="size-48 rounded-full object-cover shadow-xl md:size-56 lg:size-64"
               />

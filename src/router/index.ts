@@ -38,6 +38,10 @@ const router = createRouter({
       component: Kontakt,
       meta: { transition: 'fade' },
     },
+    {
+      path: '/:pathMatch(.*)*',
+      redirect: '/',
+    },
   ],
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
