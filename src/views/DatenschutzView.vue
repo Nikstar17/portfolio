@@ -73,17 +73,19 @@
 
         <div class="space-y-6 text-gray-300">
           <div>
-            <h3 class="mt-4 mb-2 text-lg font-medium text-white">Externes Hosting durch Hetzner</h3>
+            <h3 class="mt-4 mb-2 text-lg font-medium text-white">
+              Externes Hosting durch Amazon Web Services (AWS)
+            </h3>
             <p>
               Diese Website wird extern gehostet. Der Anbieter ist:
               <br />
               <strong
-                >Hetzner Online GmbH, Industriestraße 25, 91710 Gunzenhausen, Deutschland</strong
+                >Amazon Web Services EMEA SARL, 38 Avenue John F. Kennedy, L-1855 Luxemburg</strong
               >.
             </p>
             <p class="mt-2">
               Die personenbezogenen Daten, die auf dieser Website erfasst werden, werden auf den
-              Servern von Hetzner gespeichert. Hierbei kann es sich insbesondere um IP-Adressen,
+              Servern von AWS gespeichert. Hierbei kann es sich insbesondere um IP-Adressen,
               Kontaktanfragen, Meta- und Kommunikationsdaten, Vertragsdaten, Kontaktdaten, Namen,
               Websitezugriffe sowie sonstige über eine Website generierte Daten handeln.
             </p>

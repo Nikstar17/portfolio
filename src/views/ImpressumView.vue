@@ -28,7 +28,7 @@
           <div>
             <h3 class="mb-2 text-lg font-medium text-white">Umsatzsteuer-ID</h3>
             <p>Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:</p>
-            <p>(folgt)</p>
+            <p>DE323104082</p>
           </div>
 
           <div>
