@@ -1,5 +1,19 @@
 <template>
   <div class="relative min-h-screen">
+    <!-- Meta-Tags Component -->
+    <MetaTags
+      :meta="{
+        title: 'Über mich – Dominik Kasten | IT-Service & Weblösungen in Goslar',
+        description:
+          'Ich bin Dominik Kasten, freiberuflicher IT-Dienstleister in Goslar. Persönlich, zuverlässig und verständlich – für IT-Service, Webseiten & Technik-Hilfe in der Region.',
+        keywords:
+          'dominik kasten, it-dienstleister goslar, it-service harz, webseiten goslar, it-freelancer, it-hilfe, technik-support',
+        ogTitle: 'Über mich – Dominik Kasten | IT-Service & Weblösungen in Goslar',
+        ogDescription:
+          'Persönlicher IT-Service aus Goslar: Technik verständlich gemacht – für Privatkunden und Unternehmen in der Region Harz.',
+      }"
+    />
+
     <!-- Hero Section mit verbessertem Layout -->
     <section class="relative py-4 md:py-20">
       <div class="absolute inset-0 z-0 opacity-10">
@@ -13,26 +27,39 @@
             <h1
               class="bg-gradient-to-r from-white to-blue-400 bg-clip-text text-3xl font-bold tracking-tight text-transparent md:text-5xl lg:text-6xl"
             >
-              IT-Dienstleistungen Goslar
+              Dominik Kasten – Ihr persönlicher IT-Dienstleister aus Goslar
             </h1>
             <p class="mt-4 text-lg font-medium text-blue-400 md:text-xl">
-              Webseite erstellen lassen | IT-Freelancer im Harz
+              Technik verständlich gemacht – persönlich & direkt aus der Region
             </p>
             <p class="mt-6 text-base leading-relaxed text-gray-300 md:text-lg">
-              Willkommen bei Dominik Kasten – Ihrem lokalen Ansprechpartner für Web & Technik in
-              Goslar und der Harzregion. Als freiberuflicher Full-Stack Entwickler unterstütze ich
-              kleine Unternehmen, Selbstständige und lokale Dienstleister ohne IT-Vorkenntnisse bei
-              der Digitalisierung ihrer Geschäftsprozesse – von modernen Webseiten bis hin zur
-              Automatisierung Ihrer täglichen Arbeitsabläufe.
+              Ich bin Dominik Kasten, freiberuflicher Informatiker aus Goslar. Schon seit vielen
+              Jahren beschäftige ich mich leidenschaftlich mit Computern, Netzwerken und allem, was
+              dazugehört. Mein Ziel: Technik einfach machen – für Menschen, die keine Lust auf
+              komplizierte Fachsprache und unübersichtliche Technik haben.
             </p>
             <div class="mt-8 flex flex-wrap items-center justify-center gap-4 md:justify-start">
-              <RouterLink to="/kontakt"
-                ><button
+              <RouterLink to="/kontakt">
+                <button
                   class="rounded-full bg-blue-600 px-6 py-2.5 text-sm font-medium text-white transition-all hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-600/20"
                 >
                   Kontakt aufnehmen
-                </button></RouterLink
-              >
+                </button>
+              </RouterLink>
+              <RouterLink to="/webseiten-erstellung">
+                <button
+                  class="rounded-full border border-blue-500 px-6 py-2.5 text-sm font-medium text-white transition-all hover:bg-blue-500 hover:shadow-lg hover:shadow-blue-500/20"
+                >
+                  Webseiten-Erstellung
+                </button>
+              </RouterLink>
+              <RouterLink to="/preise">
+                <button
+                  class="rounded-full border border-blue-500 px-6 py-2.5 text-sm font-medium text-white transition-all hover:bg-blue-500 hover:shadow-lg hover:shadow-blue-500/20"
+                >
+                  Preise ansehen
+                </button>
+              </RouterLink>
             </div>
           </div>
 
@@ -58,48 +85,115 @@
       <div class="container mx-auto max-w-6xl px-5">
         <div class="mb-4 flex items-center">
           <UserIcon class="mr-3 size-7 text-blue-500" />
-          <h2 class="text-3xl font-bold text-white md:text-4xl">Über mich</h2>
+          <h2 class="text-3xl font-bold text-white md:text-4xl">Was mich auszeichnet</h2>
         </div>
 
-        <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
           <div
             class="rounded-xl bg-gray-800/50 p-6 backdrop-blur-sm transition-transform hover:-translate-y-1"
           >
-            <h3 class="mb-2 text-xl font-semibold text-blue-400">Expertise & Erfahrung</h3>
+            <h3 class="mb-2 text-xl font-semibold text-blue-400">Persönliche Betreuung</h3>
             <p class="text-gray-300">
-              Durch mein Informatikstudium im Fernstudium an der IU verbinde ich theoretisches
-              Fachwissen mit praktischer Projekterfahrung. So kann ich technische Anforderungen
-              nicht nur verstehen, sondern auch effizient und zielgerichtet umsetzen.
+              Keine anonyme Hotline, sondern direkte Ansprechbarkeit und individuelle Betreuung für
+              Ihre IT-Anliegen.
             </p>
           </div>
 
           <div
             class="rounded-xl bg-gray-800/50 p-6 backdrop-blur-sm transition-transform hover:-translate-y-1"
           >
-            <h3 class="mb-2 text-xl font-semibold text-blue-400">Lokale IT-Hilfe im Harz</h3>
+            <h3 class="mb-2 text-xl font-semibold text-blue-400">Verständliche Beratung</h3>
             <p class="text-gray-300">
-              Als IT-Freelancer im Harz biete ich persönliche Betreuung für Unternehmen in Goslar
-              und Umgebung. Von der ersten Beratung bis zur fertigen Webseite – ich bin Ihr direkter
-              Ansprechpartner für alle Fragen rund um Web & Technik in Goslar. Nutzen Sie den
-              Vorteil kurzer Wege und lokaler Expertise.
+              Komplexe Technik einfach erklärt – ohne Fachchinesisch und technische Hürden. Sie
+              verstehen, was ich tue und warum.
             </p>
           </div>
 
           <div
             class="rounded-xl bg-gray-800/50 p-6 backdrop-blur-sm transition-transform hover:-translate-y-1"
           >
-            <h3 class="mb-2 text-xl font-semibold text-blue-400">Vision & Ziele</h3>
+            <h3 class="mb-2 text-xl font-semibold text-blue-400">Langjährige Erfahrung</h3>
             <p class="text-gray-300">
-              Ich möchte digitale Lösungen entwickeln, die echten Mehrwert schaffen – effizient,
-              nachhaltig und individuell. Mein Ziel ist es, Unternehmen bei der Digitalisierung
-              aktiv zu begleiten und moderne Technologien gezielt einzusetzen.
+              Fundiertes Wissen im Umgang mit Technik & Webprojekten. Ich verbinde theoretisches
+              Fachwissen mit praktischer Projekterfahrung.
+            </p>
+          </div>
+
+          <div
+            class="rounded-xl bg-gray-800/50 p-6 backdrop-blur-sm transition-transform hover:-translate-y-1"
+          >
+            <h3 class="mb-2 text-xl font-semibold text-blue-400">Schnelle Hilfe</h3>
+            <p class="text-gray-300">
+              Support vor Ort oder per Fernwartung – je nach Bedarf. Flexibel, effizient und
+              lösungsorientiert für Ihre Anforderungen.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- Mein Einsatzgebiet Section -->
+    <section class="py-4">
+      <div class="container mx-auto max-w-6xl px-6">
+        <div class="mb-4 flex items-center">
+          <LightBulbIcon class="mr-3 size-7 text-blue-500" />
+          <h2 class="text-3xl font-bold text-white md:text-4xl">Mein Einsatzgebiet</h2>
+        </div>
+
+        <div class="mb-6">
+          <p class="mb-4 text-gray-300">
+            Ich bin in Goslar zuhause und betreue Kundinnen und Kunden in der gesamten Region –
+            darunter:
+          </p>
+
+          <div class="mt-6 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-6">
+            <div
+              class="rounded-lg bg-gray-800/40 p-4 text-center transition-all hover:bg-gray-800/60"
+            >
+              <p class="font-medium text-blue-400">Goslar</p>
+            </div>
+            <div
+              class="rounded-lg bg-gray-800/40 p-4 text-center transition-all hover:bg-gray-800/60"
+            >
+              <p class="font-medium text-blue-400">Bad Harzburg</p>
+            </div>
+            <div
+              class="rounded-lg bg-gray-800/40 p-4 text-center transition-all hover:bg-gray-800/60"
+            >
+              <p class="font-medium text-blue-400">Vienenburg</p>
+            </div>
+            <div
+              class="rounded-lg bg-gray-800/40 p-4 text-center transition-all hover:bg-gray-800/60"
+            >
+              <p class="font-medium text-blue-400">Langelsheim</p>
+            </div>
+            <div
+              class="rounded-lg bg-gray-800/40 p-4 text-center transition-all hover:bg-gray-800/60"
+            >
+              <p class="font-medium text-blue-400">Seesen</p>
+            </div>
+            <div
+              class="rounded-lg bg-gray-800/40 p-4 text-center transition-all hover:bg-gray-800/60"
+            >
+              <p class="font-medium text-blue-400">Clausthal-Zellerfeld</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 rounded-xl border border-gray-700 bg-gray-800/30 p-6">
+          <h3 class="mb-3 text-xl font-semibold text-white">
+            Ein Ansprechpartner für alles Digitale
+          </h3>
+          <p class="text-gray-300">
+            Neben klassischem IT-Service biete ich auch die Erstellung von Webseiten, Hilfe bei
+            Domains, E-Mail-Einrichtung und allgemeinen digitalen Fragen an – immer verständlich,
+            ehrlich und transparent.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fähigkeiten Section -->
     <section class="py-4">
       <div class="container mx-auto max-w-6xl px-6">
         <div class="mb-4 flex items-center">
@@ -167,31 +261,31 @@
           <h2 class="text-3xl font-bold text-white md:text-4xl">Meine Projekte</h2>
         </div>
 
-        <div class="grid gap-4 md:grid-cols-2">
-          <!-- Projekt Card 2 -->
-          <div
-            class="group relative overflow-hidden rounded-xl bg-gray-800/40 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-900/20"
+        <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <!-- Dinkelspelz24 Projekt -->
+          <a
+            href="https://dinkelspelz24.de/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group flex flex-col overflow-hidden rounded-xl bg-slate-800/70 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-blue-600/20"
           >
-            <div
-              class="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/20 opacity-0 transition-opacity group-hover:opacity-100"
-            ></div>
-
-            <div class="relative p-6">
-              <h3 class="mb-4 text-center text-2xl font-semibold text-white">Dinkelspelz24.de</h3>
-
-              <div class="overflow-hidden rounded-lg border border-gray-700 shadow-lg">
-                <img
-                  src="/src/assets/webp/dinkelspelz24.webp"
-                  alt="Projekt 2 Vorschau"
-                  class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-              </div>
-
-              <div class="mt-6">
-                <p class="mb-4 text-gray-300">
-                  Ein moderner Onlineshop mit WordPress und WooCommerce – benutzerfreundlich und
-                  leicht erweiterbar.
-                </p>
+            <div class="relative overflow-hidden">
+              <img
+                src="@/assets/webp/dinkelspelz24.webp"
+                alt="Dinkelspelz24 - Regionale Bio-Produkte"
+                class="h-48 w-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-60"
+              ></div>
+            </div>
+            <div class="flex flex-1 flex-col p-6">
+              <h3 class="mb-3 text-xl font-semibold text-white">Dinkelspelz24</h3>
+              <p class="mb-4 flex-1 text-gray-300">
+                Ein moderner Onlineshop mit WordPress und WooCommerce – benutzerfreundlich und
+                leicht erweiterbar.
+              </p>
+              <div class="mt-auto flex flex-wrap items-center justify-between">
                 <div class="flex flex-wrap gap-2">
                   <span class="rounded-full bg-blue-900/50 px-3 py-1 text-xs text-blue-300"
                     >WordPress</span
@@ -204,42 +298,33 @@
                   >
                 </div>
               </div>
-
-              <a href="https://dinkelspelz24.de/" target="_blank" rel="noopener noreferrer">
-                <button
-                  class="mt-6 flex w-full cursor-pointer items-center justify-center rounded-lg bg-blue-600/80 py-2 text-sm font-medium text-white transition-colors hover:bg-blue-700"
-                >
-                  Projekt ansehen
-                  <ArrowRightIcon class="ml-1 size-4" />
-                </button>
-              </a>
             </div>
-          </div>
+          </a>
 
-          <!-- Projekt Card 3 -->
-          <div
-            class="group relative overflow-hidden rounded-xl bg-gray-800/40 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-900/20"
+          <!-- Chronixly Projekt -->
+          <a
+            href="https://chronixly.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group flex flex-col overflow-hidden rounded-xl bg-slate-800/70 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-blue-600/20"
           >
-            <div
-              class="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/20 opacity-0 transition-opacity group-hover:opacity-100"
-            ></div>
-
-            <div class="relative p-6">
-              <h3 class="mb-4 text-center text-2xl font-semibold text-white">Chronixly.com</h3>
-
-              <div class="overflow-hidden rounded-lg border border-gray-700 shadow-lg">
-                <img
-                  src="/src/assets/webp/chronixly.webp"
-                  alt="Projekt 2 Vorschau"
-                  class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-              </div>
-
-              <div class="mt-6">
-                <p class="mb-4 text-gray-300">
-                  Chronixly ist eine benutzerfreundliche Web-App zur projektbasierten Zeiterfassung
-                  mit smarter Teamverwaltung.
-                </p>
+            <div class="relative overflow-hidden">
+              <img
+                src="@/assets/webp/chronixly.webp"
+                alt="Chronixly - Zeiterfassungssoftware"
+                class="h-48 w-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-60"
+              ></div>
+            </div>
+            <div class="flex flex-1 flex-col p-6">
+              <h3 class="mb-3 text-xl font-semibold text-white">Chronixly</h3>
+              <p class="mb-4 flex-1 text-gray-300">
+                Eine moderne Web-App zur Zeiterfassung mit intuitiver Benutzeroberfläche,
+                responsivem Design und umfangreichen Analyse-Funktionen.
+              </p>
+              <div class="mt-auto flex flex-wrap items-center justify-between">
                 <div class="flex flex-wrap gap-2">
                   <span class="rounded-full bg-blue-900/50 px-3 py-1 text-xs text-blue-300"
                     >Vue 3</span
@@ -255,41 +340,31 @@
                   >
                 </div>
               </div>
-
-              <a href="https://chronixly.com/" target="_blank" rel="noopener noreferrer">
-                <button
-                  class="mt-6 flex w-full cursor-pointer items-center justify-center rounded-lg bg-blue-600/80 py-2 text-sm font-medium text-white transition-colors hover:bg-blue-700"
-                >
-                  Projekt ansehen
-                  <ArrowRightIcon class="ml-1 size-4" />
-                </button>
-              </a>
             </div>
-          </div>
-          <!-- Projekt Card 1 mit verbesserten Effekten -->
-          <div
-            class="group relative overflow-hidden rounded-xl bg-gray-800/40 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-900/20"
+          </a>
+
+          <!-- Editorfolio Projekt -->
+          <RouterLink
+            to="/editorfolio"
+            class="group flex flex-col overflow-hidden rounded-xl bg-slate-800/70 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-blue-600/20"
           >
-            <div
-              class="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/20 opacity-0 transition-opacity group-hover:opacity-100"
-            ></div>
-
-            <div class="relative p-6">
-              <h3 class="mb-4 text-center text-2xl font-semibold text-white">Editorfolio</h3>
-
-              <div class="overflow-hidden rounded-lg border border-gray-700 shadow-lg">
-                <img
-                  src="/src/assets/webp/editorfolio.webp"
-                  alt="Projekt 1 Vorschau"
-                  class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-              </div>
-
-              <div class="mt-6">
-                <p class="mb-4 text-gray-300">
-                  Ein modernes Onepage-Portfolio für Cutter und Videocreator – ideal zur
-                  Präsentation von Projekten und Showreels.
-                </p>
+            <div class="relative overflow-hidden">
+              <img
+                src="@/assets/webp/editorfolio.webp"
+                alt="Editorfolio - Portfolio für Videocreator"
+                class="h-48 w-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-60"
+              ></div>
+            </div>
+            <div class="flex flex-1 flex-col p-6">
+              <h3 class="mb-3 text-xl font-semibold text-white">Editorfolio</h3>
+              <p class="mb-4 flex-1 text-gray-300">
+                Ein modernes Onepage-Portfolio für Cutter und Videocreator – ideal zur Präsentation
+                von Projekten und Showreels.
+              </p>
+              <div class="mt-auto flex flex-wrap items-center justify-between">
                 <div class="flex flex-wrap gap-2">
                   <span class="rounded-full bg-blue-900/50 px-3 py-1 text-xs text-blue-300"
                     >Vue.js</span
@@ -302,15 +377,8 @@
                   >
                 </div>
               </div>
-              <RouterLink to="/editorfolio">
-                <button
-                  class="mt-6 flex w-full cursor-pointer items-center justify-center rounded-lg bg-blue-600/80 py-2 text-sm font-medium text-white transition-colors hover:bg-blue-700"
-                >
-                  Projekt ansehen
-                  <ArrowRightIcon class="ml-1 size-4" /></button
-              ></RouterLink>
             </div>
-          </div>
+          </RouterLink>
         </div>
       </div>
     </section>
@@ -323,12 +391,12 @@
         >
           <div class="text-center">
             <h2 class="text-3xl font-bold text-white md:text-4xl">
-              Webseite erstellen lassen in Goslar?
+              Lernen Sie mich persönlich kennen
             </h2>
             <p class="mx-auto mt-4 max-w-2xl text-gray-300">
-              Sie suchen Hilfe bei Web & Technik in Goslar und Umgebung? Lassen Sie uns gemeinsam an
-              Ihren digitalen Herausforderungen arbeiten. Als IT-Freelancer im Harz stehe ich Ihnen
-              bei allen technischen Fragen persönlich zur Seite.
+              Ich arbeite lösungsorientiert, effizient und mit Blick auf das Wesentliche. Ob
+              Privatkunde, Selbstständiger oder Betrieb – Sie erhalten bei mir maßgeschneiderte
+              Unterstützung ohne unnötigen Ballast. Ich freue mich auf Ihre Anfrage!
             </p>
             <RouterLink to="/kontakt">
               <button
@@ -348,25 +416,10 @@
 import { UserIcon } from '@heroicons/vue/24/outline'
 import { LightBulbIcon } from '@heroicons/vue/24/outline'
 import { FolderIcon } from '@heroicons/vue/24/outline'
-import { ArrowRightIcon } from '@heroicons/vue/24/outline'
 import { onMounted } from 'vue'
+import MetaTags from '@/components/MetaTags.vue'
 
-// SEO-Optimierung für lokale Suchbegriffe
 onMounted(() => {
-  document.title = 'IT-Dienstleistungen & Webseite erstellen lassen in Goslar | Dominik Kasten'
-
-  // Meta-Description anpassen
-  const metaDescription =
-    document.querySelector('meta[name="description"]') || document.createElement('meta')
-  metaDescription.setAttribute('name', 'description')
-  metaDescription.setAttribute(
-    'content',
-    'Professionelle IT-Dienstleistungen in Goslar und dem Harz. Webseite erstellen lassen von Ihrem lokalen IT-Freelancer. Hilfe bei Web & Technik für kleine Unternehmen und Selbstständige.',
-  )
-
-  // Falls noch nicht vorhanden, zum head hinzufügen
-  if (!document.querySelector('meta[name="description"]')) {
-    document.head.appendChild(metaDescription)
-  }
+  window.scrollTo(0, 0)
 })
 </script>

@@ -1,3 +1,8 @@
+<script setup lang="ts">
+import CookieSettings from '../components/CookieSettings.vue'
+import { RouterLink } from 'vue-router'
+</script>
+
 <template>
   <div class="py-12">
     <div class="container mx-auto max-w-4xl px-6">
@@ -99,6 +104,54 @@
         </div>
       </div>
 
+      <div
+        class="mt-8 rounded-xl border border-gray-800/50 bg-gray-800/30 p-6 shadow-lg backdrop-blur-sm"
+      >
+        <h2 class="mb-4 text-xl font-semibold text-blue-400">3. Analyse-Tools und Werbung</h2>
+
+        <div class="space-y-6 text-gray-300">
+          <div>
+            <h3 class="mb-2 text-lg font-medium text-white">Google Analytics</h3>
+            <p>
+              Diese Website nutzt Funktionen des Webanalysedienstes Google Analytics. Anbieter ist
+              die Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland.
+            </p>
+            <p class="mt-2">
+              Google Analytics verwendet sog. „Cookies". Das sind Textdateien, die auf Ihrem
+              Computer gespeichert werden und die eine Analyse der Benutzung der Website durch Sie
+              ermöglichen. Die durch den Cookie erzeugten Informationen über Ihre Benutzung dieser
+              Website werden in der Regel an einen Server von Google in den USA übertragen und dort
+              gespeichert.
+            </p>
+            <p class="mt-2">
+              Die Nutzung von Google Analytics erfolgt nur mit Ihrer Einwilligung gemäß Art. 6 Abs.
+              1 lit. a DSGVO. Diese Einwilligung können Sie jederzeit widerrufen. Die
+              Datenverarbeitung erfolgt dabei auf Grundlage Ihrer Einwilligung nach Art. 6 Abs. 1
+              lit. a DSGVO. Sie können Ihre Einwilligung jederzeit widerrufen, indem Sie die
+              Cookie-Einstellungen anpassen.
+            </p>
+            <p class="mt-2">
+              <strong>IP-Anonymisierung</strong>
+            </p>
+            <p class="mt-1">
+              Wir haben auf dieser Website die Funktion IP-Anonymisierung aktiviert. Dadurch wird
+              Ihre IP-Adresse von Google innerhalb von Mitgliedstaaten der Europäischen Union oder
+              in anderen Vertragsstaaten des Abkommens über den Europäischen Wirtschaftsraum vor der
+              Übermittlung in die USA gekürzt. Nur in Ausnahmefällen wird die volle IP-Adresse an
+              einen Server von Google in den USA übertragen und dort gekürzt.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="mt-8 rounded-xl border border-gray-800/50 bg-gray-800/30 p-6 shadow-lg backdrop-blur-sm"
+      >
+        <h2 class="mb-4 text-xl font-semibold text-blue-400">4. Cookie-Einstellungen</h2>
+
+        <CookieSettings />
+      </div>
+
       <div class="mt-6 text-center">
         <RouterLink
           to="/"
@@ -124,7 +177,3 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import { RouterLink } from 'vue-router'
-</script>

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Google Analytics 4 with Consent Mode v2 Example</title>
+
+    <!-- Google Analytics 4 with Consent Mode v2 - Complete Implementation -->
+    <!-- Step 1: Load gtag.js and initialize GA4 with default consent set to denied -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y2MBSY2W6B"></script>
+    <script>
+      // Initialize dataLayer for gtag commands
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+
+      // Step 2: Set default consent to denied for all purposes
+      // This ensures GDPR compliance - no cookies are set until explicit consent
+      gtag('consent', 'default', {
+        ad_storage: 'denied',
+        analytics_storage: 'denied',
+        functionality_storage: 'denied',
+        personalization_storage: 'denied',
+        security_storage: 'granted', // Security cookies are always needed
+        wait_for_update: 500, // Wait for consent update before initializing
+      })
+
+      // Initialize GA4 with additional configuration
+      gtag('js', new Date())
+      gtag('config', 'G-Y2MBSY2W6B', {
+        anonymize_ip: true, // IP anonymization for GDPR compliance
+        cookie_flags: 'SameSite=None;Secure', // Secure cookies
+        send_page_view: false, // Don't send page view until consent is granted
+      })
+
+      // Check existing consent from cookie
+      function getCookie(name) {
+        const nameEQ = name + '='
+        const ca = document.cookie.split(';')
+        for (let i = 0; i < ca.length; i++) {
+          let c = ca[i]
+          while (c.charAt(0) === ' ') c = c.substring(1, c.length)
+          if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length)
+        }
+        return null
+      }
+
+      // Apply stored consent if available
+      const consent = getCookie('cookie-consent')
+      if (consent === 'ga-consent-granted') {
+        // Step 3: When user has previously accepted, update consent to granted
+        gtag('consent', 'update', {
+          ad_storage: 'granted',
+          analytics_storage: 'granted',
+          functionality_storage: 'granted',
+          personalization_storage: 'granted',
+        })
+
+        // Send initial page view when consent is granted
+        gtag('event', 'page_view')
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Vue app will be mounted here -->
+    <div id="app"></div>
+
+    <!-- JavaScript Implementation for Vue Cookie Banner interaction -->
+    <script>
+      // When user clicks "Accept" in cookie banner
+      function acceptCookies() {
+        // Set cookie to remember consent
+        setCookie('cookie-consent', 'ga-consent-granted', 365)
+
+        // Step 3: Update consent state to granted using Consent Mode v2
+        gtag('consent', 'update', {
+          ad_storage: 'granted',
+          analytics_storage: 'granted',
+          functionality_storage: 'granted',
+          personalization_storage: 'granted',
+        })
+
+        // Send page view after consent is granted
+        gtag('event', 'page_view')
+      }
+
+      // When user clicks "Decline" in cookie banner
+      function declineCookies() {
+        // Set cookie to remember denial
+        setCookie('cookie-consent', 'ga-consent-denied', 365)
+
+        // Step 4: Update consent state to denied using Consent Mode v2
+        gtag('consent', 'update', {
+          ad_storage: 'denied',
+          analytics_storage: 'denied',
+          functionality_storage: 'denied',
+          personalization_storage: 'denied',
+        })
+
+        // Step 5: Ensure GA cookies are removed
+        document.cookie =
+          '_ga=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT; SameSite=Lax; Secure'
+        document.cookie =
+          '_ga_Y2MBSY2W6B=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT; SameSite=Lax; Secure'
+      }
+
+      // Cookie helper functions
+      function setCookie(name, value, days) {
+        const date = new Date()
+        date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000)
+        const expires = '; expires=' + date.toUTCString()
+        document.cookie = name + '=' + value + expires + '; path=/; SameSite=Lax; Secure'
+      }
+    </script>
+  </body>
+</html>

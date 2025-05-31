@@ -2,10 +2,7 @@
 <html lang="de" class="dark bg-slate-950">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dominik Kasten – Full-Stack Webentwickler aus Goslar | IT-Dienstleistungen</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -52,16 +49,58 @@
         "telephone": "+49-176-56723879"
       }
     </script>
-    <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) with Consent Mode v2 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y2MBSY2W6B"></script>
     <script>
+      // Initialize dataLayer and gtag function
       window.dataLayer = window.dataLayer || []
       function gtag() {
         dataLayer.push(arguments)
       }
-      gtag('js', new Date())
 
-      gtag('config', 'G-Y2MBSY2W6B')
+      // Set default consent to denied for GDPR compliance
+      // This ensures no cookies are set before user gives consent
+      gtag('consent', 'default', {
+        ad_storage: 'denied',
+        analytics_storage: 'denied',
+        functionality_storage: 'denied',
+        personalization_storage: 'denied',
+        security_storage: 'granted', // Security cookies are always needed
+        wait_for_update: 500, // Wait 500ms for consent update before initialization
+      })
+
+      // Initialize GA4 with additional configuration
+      gtag('js', new Date())
+      gtag('config', 'G-Y2MBSY2W6B', {
+        anonymize_ip: true, // IP anonymization for GDPR compliance
+        cookie_flags: 'SameSite=None;Secure', // Secure cookies
+        send_page_view: false, // Don't send page view until consent is granted
+      })
+
+      // Check for existing consent cookie
+      function getCookie(name) {
+        const nameEQ = name + '='
+        const ca = document.cookie.split(';')
+        for (let i = 0; i < ca.length; i++) {
+          let c = ca[i]
+          while (c.charAt(0) === ' ') c = c.substring(1, c.length)
+          if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length)
+        }
+        return null
+      }
+
+      // Apply stored consent if available
+      const consent = getCookie('cookie-consent')
+      if (consent === 'ga-consent-granted') {
+        gtag('consent', 'update', {
+          ad_storage: 'granted',
+          analytics_storage: 'granted',
+          functionality_storage: 'granted',
+          personalization_storage: 'granted',
+        })
+        // Send initial page view when consent is granted
+        gtag('event', 'page_view')
+      }
     </script>
   </head>
   <body class="min-h-screen bg-gradient-to-b from-[#1a1c26] to-[#13141f]">

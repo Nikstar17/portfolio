@@ -1,5 +1,18 @@
 <template>
   <div class="py-12">
+    <!-- Meta-Tags Component -->
+    <MetaTags
+      :meta="{
+        title: 'Kontakt | IT-Dienstleistungen & Webentwicklung in Goslar',
+        description:
+          'Nehmen Sie Kontakt mit Dominik Kasten auf für professionelle IT-Dienstleistungen und Webentwicklung in Goslar und dem Harz. Schnelle und persönliche Beratung für Ihr Projekt.',
+        keywords: 'kontakt, anfrage, beratung, webentwicklung goslar, it-support harz',
+        ogTitle: 'Kontakt für IT-Dienstleistungen im Harz',
+        ogDescription:
+          'Schnelle und unkomplizierte Hilfe bei allen Fragen rund um Webentwicklung, IT-Support und digitale Lösungen für Ihr Unternehmen.',
+      }"
+    />
+
     <div class="container mx-auto max-w-4xl px-6">
       <div class="mb-8 text-center">
         <h1 class="text-3xl font-bold text-white md:text-4xl">Kontakt</h1>
@@ -10,9 +23,16 @@
         class="rounded-xl border border-gray-800/50 bg-gray-800/30 p-6 shadow-lg backdrop-blur-sm"
       >
         <h2 class="mb-4 text-xl font-semibold text-blue-400">Nehmen Sie Kontakt auf</h2>
-        <p class="mb-6 text-gray-300">
+        <p class="mb-4 text-gray-300">
           Sie haben Fragen zu meinen Dienstleistungen oder möchten ein Projekt besprechen? Füllen
           Sie das Formular aus und ich melde mich schnellstmöglich bei Ihnen.
+        </p>
+        <p class="mb-6 text-gray-300">
+          Sie möchten vorab meine Preise sehen?
+          <RouterLink to="/preise" class="text-blue-400 hover:underline"
+            >Hier finden Sie meine transparente Preisübersicht</RouterLink
+          >
+          für IT-Service und Webseiten-Erstellung.
         </p>
 
         <form @submit.prevent="submitForm" class="space-y-6">
@@ -116,24 +136,6 @@
           </div>
         </form>
 
-        <div v-if="formSubmitted" class="mt-6 rounded-lg bg-green-900/30 p-4 text-green-300">
-          <p class="flex items-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="mr-2 h-5 w-5"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                clip-rule="evenodd"
-              />
-            </svg>
-            Ihre Nachricht wurde erfolgreich gesendet! Ich werde mich zeitnah bei Ihnen melden.
-          </p>
-        </div>
-
         <div v-if="formError" class="mt-6 rounded-lg bg-red-900/30 p-4 text-red-300">
           <p class="flex items-center">
             <svg
@@ -176,8 +178,8 @@
             </svg>
             <div>
               <h3 class="text-lg font-medium text-white">E-Mail</h3>
-              <a href="mailto:dominik.k276@gmail.com" class="hover:text-blue-400">
-                dominik.k276@gmail.com
+              <a href="mailto:info@dominik-kasten.de" class="hover:text-blue-400">
+                info@dominik-kasten.de
               </a>
             </div>
           </div>
@@ -233,7 +235,7 @@
 
 <script setup lang="ts">
 import { ref, reactive } from 'vue'
-import { RouterLink } from 'vue-router'
+import { RouterLink, useRouter } from 'vue-router'
 
 // Formular-Daten
 const formData = reactive({
@@ -244,15 +246,16 @@ const formData = reactive({
   privacy: false,
 })
 
+// Router für die Navigation
+const router = useRouter()
+
 // Status-Variablen
 const isSubmitting = ref(false)
-const formSubmitted = ref(false)
 const formError = ref('')
 
 // Funktion zum Absenden des Formulars
 const submitForm = async () => {
   formError.value = ''
-  formSubmitted.value = false
 
   // Prüfe ob Datenschutz akzeptiert wurde
   if (!formData.privacy) {
@@ -273,6 +276,7 @@ const submitForm = async () => {
         body: JSON.stringify({
           name: formData.name,
           email: formData.email,
+          subject: formData.subject,
           message: formData.message,
         }),
       },
@@ -282,13 +286,15 @@ const submitForm = async () => {
       throw new Error('Fehler beim Senden des Formulars.')
     }
 
-    formSubmitted.value = true
-
     // Formular zurücksetzen
     formData.name = ''
     formData.email = ''
+    formData.subject = ''
     formData.message = ''
     formData.privacy = false
+
+    // Zur Danke-Seite navigieren
+    router.push('/danke')
   } catch (error) {
     formError.value = 'Es ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut.'
     console.error('Form submission error:', error)
@@ -296,4 +302,7 @@ const submitForm = async () => {
     isSubmitting.value = false
   }
 }
+
+// Importiere MetaTags-Komponente
+import MetaTags from '@/components/MetaTags.vue'
 </script>

@@ -1,7 +1,7 @@
 <template>
-  <footer class="border-t border-gray-800 py-8">
-    <div class="container mx-auto max-w-6xl px-6">
-      <div class="flex flex-col items-center justify-between gap-6 md:flex-row">
+  <footer class="border-t border-gray-800 py-8 md:py-10">
+    <div class="container mx-auto max-w-6xl px-4 md:px-6">
+      <div class="flex flex-col items-center justify-between gap-8 md:flex-row md:gap-6">
         <!-- Logo/Branding Side -->
         <div class="flex flex-col items-center md:items-start">
           <h2 class="text-xl font-bold text-white">Dominik Kasten</h2>
@@ -9,9 +9,9 @@
         </div>
 
         <!-- Links Side -->
-        <div class="flex flex-col items-center gap-4 md:flex-row md:items-center">
+        <div class="flex flex-col items-center gap-6 md:flex-row md:items-center md:gap-4">
           <!-- Social Media Links -->
-          <div class="flex items-center gap-4">
+          <div class="flex items-center gap-6 md:gap-4">
             <a
               href="https://github.com/Nikstar17"
               target="_blank"
@@ -49,7 +49,31 @@
           </div>
 
           <!-- Legal Links -->
-          <div class="flex items-center gap-4">
+          <div class="flex flex-wrap justify-center gap-3 md:gap-4">
+            <RouterLink
+              to="/kontakt"
+              class="text-sm font-medium text-gray-400 transition-all duration-200 hover:text-blue-500"
+            >
+              Kontakt
+            </RouterLink>
+            <RouterLink
+              to="/webseiten-erstellung"
+              class="text-sm font-medium text-gray-400 transition-all duration-200 hover:text-blue-500"
+            >
+              Webseiten
+            </RouterLink>
+            <RouterLink
+              to="/preise"
+              class="text-sm font-medium text-gray-400 transition-all duration-200 hover:text-blue-500"
+            >
+              Preise
+            </RouterLink>
+            <RouterLink
+              to="/ueber-mich"
+              class="text-sm font-medium text-gray-400 transition-all duration-200 hover:text-blue-500"
+            >
+              Über mich
+            </RouterLink>
             <RouterLink
               to="/impressum"
               class="text-sm font-medium text-gray-400 transition-all duration-200 hover:text-blue-500"
@@ -61,12 +85,6 @@
               class="text-sm font-medium text-gray-400 transition-all duration-200 hover:text-blue-500"
             >
               Datenschutz
-            </RouterLink>
-            <RouterLink
-              to="/kontakt"
-              class="text-sm font-medium text-gray-400 transition-all duration-200 hover:text-blue-500"
-            >
-              Kontakt
             </RouterLink>
           </div>
         </div>
@@ -92,6 +110,13 @@ import { RouterLink } from 'vue-router'
   .container {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+}
+
+/* Improve link spacing on very small screens */
+@media (max-width: 360px) {
+  .flex-wrap a {
+    margin-bottom: 0.5rem;
   }
 }
 </style>

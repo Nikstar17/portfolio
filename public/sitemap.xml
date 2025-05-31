@@ -2,31 +2,48 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://dominik-kasten.de/</loc>
-        <lastmod>2025-05-12</lastmod>
+        <lastmod>2025-05-31</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>https://dominik-kasten.de/webseiten-erstellung</loc>
+        <lastmod>2025-05-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
         <loc>https://dominik-kasten.de/editorfolio</loc>
-        <lastmod>2025-05-12</lastmod>
+        <lastmod>2025-05-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>    <url>
+        <loc>https://dominik-kasten.de/ueber-mich</loc>
+        <lastmod>2025-05-31</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://dominik-kasten.de/preise</loc>
+        <lastmod>2025-05-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
         <loc>https://dominik-kasten.de/kontakt</loc>
-        <lastmod>2025-05-12</lastmod>
+        <lastmod>2025-05-31</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://dominik-kasten.de/impressum</loc>
-        <lastmod>2025-05-12</lastmod>
+        <lastmod>2025-05-31</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
     </url>
     <url>
         <loc>https://dominik-kasten.de/datenschutz</loc>
-        <lastmod>2025-05-12</lastmod>
+        <lastmod>2025-05-31</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
     </url>

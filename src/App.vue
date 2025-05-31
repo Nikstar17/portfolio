@@ -1,11 +1,20 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
 import FooterView from './views/FooterView.vue'
+import HeaderNav from './components/HeaderNav.vue'
+import CookieBanner from './components/CookieBanner.vue'
+import { useMeta } from '@/utils/metaService'
+
+// Meta-Tags initialisieren
+useMeta()
 </script>
 
 <template>
   <!-- Add noise texture overlay -->
   <div class="noise-overlay"></div>
+
+  <!-- Header Navigation -->
+  <HeaderNav />
 
   <!-- Main content -->
   <main>
@@ -19,6 +28,7 @@ import FooterView from './views/FooterView.vue'
     </RouterView>
   </main>
   <FooterView />
+  <CookieBanner />
 </template>
 
 <style>
