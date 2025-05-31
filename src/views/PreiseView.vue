@@ -127,7 +127,7 @@
         </div>
 
         <p class="mb-6 text-gray-300">
-          Ich erstelle moderne, funktionale Webseiten für Selbstständige, kleine Unternehmen und
+          Ich erstelle moderne, funktionale Webseiten für Selbstständige, Unternehmen und
           Privatkunden – individuell auf Ihre Anforderungen abgestimmt.
         </p>
 
