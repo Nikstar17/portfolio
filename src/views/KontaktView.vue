@@ -1,5 +1,5 @@
 <template>
-  <div class="py-12">
+  <div class="py-8 sm:py-12">
     <!-- Meta-Tags Component -->
     <MetaTags
       :meta="{
@@ -13,7 +13,7 @@
       }"
     />
 
-    <div class="container mx-auto max-w-4xl px-6">
+    <div class="container mx-auto w-full max-w-2xl px-4 sm:px-6">
       <div class="mb-8 text-center">
         <h1 class="text-3xl font-bold text-white md:text-4xl">Kontakt</h1>
         <div class="mx-auto mt-2 h-1 w-20 bg-gradient-to-r from-blue-500 to-blue-400"></div>
@@ -29,14 +29,14 @@
         </p>
         <p class="mb-6 text-gray-300">
           Sie möchten vorab meine Preise sehen?
-          <RouterLink to="/preise" class="text-blue-400 hover:underline"
-            >Hier finden Sie meine transparente Preisübersicht</RouterLink
-          >
+          <RouterLink to="/preise" class="text-blue-400 hover:underline">
+            Hier finden Sie meine transparente Preisübersicht
+          </RouterLink>
           für IT-Service und Webseiten-Erstellung.
         </p>
 
         <form @submit.prevent="submitForm" class="space-y-6">
-          <div class="grid gap-6 md:grid-cols-2">
+          <div class="grid gap-6 gap-y-4 md:grid-cols-2">
             <div>
               <label for="name" class="mb-2 block text-sm font-medium text-white">Name</label>
               <input
@@ -85,12 +85,12 @@
             ></textarea>
           </div>
 
-          <div class="flex items-center">
+          <div class="flex items-start">
             <input
               id="privacy"
               type="checkbox"
               v-model="formData.privacy"
-              class="h-4 w-4 rounded border-gray-600 bg-gray-700 text-blue-600 focus:ring-2 focus:ring-blue-500"
+              class="mt-1 h-4 w-4 rounded border-gray-600 bg-gray-700 text-blue-600 focus:ring-2 focus:ring-blue-500"
               required
             />
             <label for="privacy" class="ml-2 text-sm text-gray-300">
@@ -105,7 +105,7 @@
           <div>
             <button
               type="submit"
-              class="group w-full rounded-lg bg-gradient-to-r from-blue-600 to-blue-500 px-5 py-3 text-center font-medium text-white transition-all duration-300 hover:from-blue-700 hover:to-blue-600 hover:shadow-lg hover:shadow-blue-600/20"
+              class="group w-full rounded-lg bg-gradient-to-r from-blue-600 to-blue-500 px-5 py-3 text-center text-sm font-medium text-white transition-all duration-300 hover:from-blue-700 hover:to-blue-600 hover:shadow-lg hover:shadow-blue-600/20 sm:text-base"
               :disabled="isSubmitting"
             >
               <span v-if="isSubmitting" class="flex items-center justify-center">
@@ -122,7 +122,7 @@
                     r="10"
                     stroke="currentColor"
                     stroke-width="4"
-                  ></circle>
+                  />
                   <path
                     class="opacity-75"
                     fill="currentColor"
@@ -155,15 +155,15 @@
         </div>
       </div>
 
+      <!-- Kontaktdaten -->
       <div
         class="mt-8 rounded-xl border border-gray-800/50 bg-gray-800/30 p-6 shadow-lg backdrop-blur-sm"
       >
         <h2 class="mb-4 text-xl font-semibold text-blue-400">Kontaktdaten</h2>
 
         <div class="space-y-4 text-gray-300">
-          <div class="flex items-start">
+          <div class="flex items-center">
             <svg
-              xmlns="http://www.w3.org/2000/svg"
               class="mr-3 h-6 w-6 text-blue-400"
               fill="none"
               viewBox="0 0 24 24"
@@ -184,9 +184,8 @@
             </div>
           </div>
 
-          <div class="flex items-start">
+          <div class="flex items-center">
             <svg
-              xmlns="http://www.w3.org/2000/svg"
               class="mr-3 h-6 w-6 text-blue-400"
               fill="none"
               viewBox="0 0 24 24"
@@ -201,13 +200,13 @@
             </svg>
             <div>
               <h3 class="text-lg font-medium text-white">Telefon</h3>
-              <a href="tel:+4917656723879" class="hover:text-blue-400">+49 176 56723879</a>
+              <a href="tel:+4917656723879" class="hover:text-blue-400"> +49 176 56723879 </a>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="mt-6 text-center">
+      <div class="mt-6 text-center sm:mt-8">
         <RouterLink
           to="/"
           class="group inline-flex items-center rounded-lg bg-gradient-to-r from-blue-600 to-blue-500 px-5 py-2 text-sm font-medium text-white transition-all duration-300 hover:from-blue-700 hover:to-blue-600 hover:shadow-lg hover:shadow-blue-600/20"

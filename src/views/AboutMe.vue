@@ -14,48 +14,50 @@
       }"
     />
 
-    <!-- Hero Section mit verbessertem Layout -->
-    <section class="relative py-4 md:py-20">
+    <!-- Hero Section -->
+    <section class="relative py-6 sm:py-10 md:py-20">
       <div class="absolute inset-0 z-0 opacity-10">
         <div class="h-full w-full"></div>
       </div>
 
-      <div class="relative z-10 container mx-auto max-w-6xl px-6">
+      <div class="relative z-10 container mx-auto max-w-6xl px-4 sm:px-6">
         <div class="flex flex-col-reverse items-center gap-10 md:flex-row md:justify-around">
           <!-- Text Content -->
           <div class="w-full text-center md:max-w-xl md:text-left">
             <h1
-              class="bg-gradient-to-r from-white to-blue-400 bg-clip-text text-3xl font-bold tracking-tight text-transparent md:text-5xl lg:text-6xl"
+              class="bg-gradient-to-r from-white to-blue-400 bg-clip-text text-2xl font-bold tracking-tight text-transparent sm:text-3xl md:text-5xl lg:text-6xl"
             >
               Dominik Kasten – Ihr persönlicher IT-Dienstleister aus Goslar
             </h1>
-            <p class="mt-4 text-lg font-medium text-blue-400 md:text-xl">
+            <p class="mt-4 text-base font-medium text-blue-400 sm:text-lg md:text-xl">
               Technik verständlich gemacht – persönlich & direkt aus der Region
             </p>
-            <p class="mt-6 text-base leading-relaxed text-gray-300 md:text-lg">
+            <p class="mt-5 text-sm leading-relaxed text-gray-300 sm:mt-6 sm:text-base md:text-lg">
               Ich bin Dominik Kasten, freiberuflicher Informatiker aus Goslar. Schon seit vielen
               Jahren beschäftige ich mich leidenschaftlich mit Computern, Netzwerken und allem, was
               dazugehört. Mein Ziel: Technik einfach machen – für Menschen, die keine Lust auf
               komplizierte Fachsprache und unübersichtliche Technik haben.
             </p>
-            <div class="mt-8 flex flex-wrap items-center justify-center gap-4 md:justify-start">
-              <RouterLink to="/kontakt">
+            <div
+              class="mt-6 flex flex-col flex-wrap items-center justify-center gap-4 sm:mt-8 sm:flex-row md:justify-start"
+            >
+              <RouterLink to="/kontakt" class="w-full sm:w-auto">
                 <button
-                  class="rounded-full bg-blue-600 px-6 py-2.5 text-sm font-medium text-white transition-all hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-600/20"
+                  class="w-full rounded-full bg-blue-600 px-6 py-2.5 text-sm font-medium text-white transition-all hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-600/20 sm:w-[220px]"
                 >
                   Kontakt aufnehmen
                 </button>
               </RouterLink>
-              <RouterLink to="/webseiten-erstellung">
+              <RouterLink to="/webseiten-erstellung" class="w-full sm:w-auto">
                 <button
-                  class="rounded-full border border-blue-500 px-6 py-2.5 text-sm font-medium text-white transition-all hover:bg-blue-500 hover:shadow-lg hover:shadow-blue-500/20"
+                  class="w-full rounded-full border border-blue-500 px-6 py-2.5 text-sm font-medium text-white transition-all hover:bg-blue-500 hover:shadow-lg hover:shadow-blue-500/20 sm:w-[220px]"
                 >
                   Webseiten-Erstellung
                 </button>
               </RouterLink>
-              <RouterLink to="/preise">
+              <RouterLink to="/preise" class="w-full sm:w-auto">
                 <button
-                  class="rounded-full border border-blue-500 px-6 py-2.5 text-sm font-medium text-white transition-all hover:bg-blue-500 hover:shadow-lg hover:shadow-blue-500/20"
+                  class="w-full rounded-full border border-blue-500 px-6 py-2.5 text-sm font-medium text-white transition-all hover:bg-blue-500 hover:shadow-lg hover:shadow-blue-500/20 sm:w-[220px]"
                 >
                   Preise ansehen
                 </button>
@@ -64,15 +66,15 @@
           </div>
 
           <!-- Profile Image mit Overlay-Effekt -->
-          <div class="relative">
+          <div class="relative w-40 sm:w-48 md:w-56 lg:w-64">
             <div
-              class="absolute -inset-0.5 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 opacity-75 blur-sm"
+              class="absolute inset-0 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 opacity-75 blur-sm"
             ></div>
             <div class="relative rounded-full border-2 border-blue-500/20 p-1 backdrop-blur-sm">
               <img
                 src="@/assets/webp/me2.webp"
                 alt="IT-Freelancer Dominik Kasten aus Goslar im Harz - Ihr Experte für Webseiten und IT-Dienstleistungen"
-                class="size-48 rounded-full object-cover shadow-xl md:size-56 lg:size-64"
+                class="h-auto w-full rounded-full object-cover shadow-xl"
               />
             </div>
           </div>

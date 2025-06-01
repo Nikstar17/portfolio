@@ -1,3 +1,8 @@
+<template>
+  <!-- This component doesn't render anything visible, it only manages meta tags -->
+  <div class="hidden"></div>
+</template>
+
 <script setup lang="ts">
 import { watch, onMounted } from 'vue'
 import { useRoute } from 'vue-router'

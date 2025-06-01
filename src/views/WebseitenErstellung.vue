@@ -17,26 +17,26 @@
     />
 
     <!-- Hero Section -->
-    <section class="relative py-4 md:py-16 lg:py-20">
+    <section class="relative py-6 sm:py-10 md:py-16 lg:py-20">
       <div class="absolute inset-0 z-0 opacity-10">
         <div class="h-full w-full"></div>
       </div>
 
-      <div class="relative z-10 container mx-auto max-w-6xl px-6">
+      <div class="relative z-10 container mx-auto max-w-6xl px-4 sm:px-6">
         <div
-          class="flex flex-col-reverse items-center gap-4 md:flex-row md:justify-around md:gap-10"
+          class="flex flex-col-reverse items-center gap-6 md:flex-row md:justify-around md:gap-10"
         >
           <!-- Text Content -->
           <div class="w-full text-center md:max-w-xl md:text-left">
             <h1
-              class="bg-gradient-to-r from-white to-blue-400 bg-clip-text text-3xl font-bold tracking-tight text-transparent md:text-5xl lg:text-6xl"
+              class="bg-gradient-to-r from-white to-blue-400 bg-clip-text text-2xl font-bold tracking-tight text-transparent sm:text-3xl md:text-5xl lg:text-6xl"
             >
               Professionelle Webseiten für Ihr Business
             </h1>
-            <p class="mt-4 text-lg font-medium text-blue-400 md:text-xl">
+            <p class="mt-4 text-base font-medium text-blue-400 sm:text-lg md:text-xl">
               Maßgeschneiderte Webseiten für Unternehmen im Harz und deutschlandweit
             </p>
-            <p class="mt-6 text-base leading-relaxed text-gray-300 md:text-lg">
+            <p class="mt-5 text-sm leading-relaxed text-gray-300 sm:mt-6 sm:text-base md:text-lg">
               Ich gestalte und entwickle moderne, responsive Webseiten, die perfekt auf Ihr
               Unternehmen abgestimmt sind. Mit meiner Erfahrung als Full-Stack Entwickler in Goslar
               und dem Harz sorge ich dafür, dass Ihre Online-Präsenz nicht nur optisch überzeugt,
@@ -44,25 +44,28 @@
               Harz, Salzgitter und Bad Harzburg profitieren von meiner lokalen Expertise und
               persönlichen Betreuung vor Ort.
             </p>
-            <div class="mt-8 flex flex-wrap items-center justify-center gap-4 md:justify-start">
-              <RouterLink to="/kontakt">
+            <div
+              class="mt-6 flex flex-col flex-wrap items-center justify-center gap-4 sm:mt-8 sm:flex-row md:justify-start"
+            >
+              <RouterLink to="/kontakt" class="w-full sm:w-auto">
                 <button
-                  class="rounded-full bg-blue-600 px-6 py-2.5 text-sm font-medium text-white transition-all hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-600/20"
+                  class="w-full min-w-[220px] rounded-full bg-blue-600 px-6 py-2.5 text-sm font-medium text-white transition-all hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-600/20"
                 >
                   Kostenfreies Beratungsgespräch
                 </button>
               </RouterLink>
-              <a
-                href="#leistungen"
-                class="rounded-full border border-gray-600 px-6 py-2.5 text-sm font-medium text-white transition-all hover:border-blue-400 hover:text-blue-400"
-              >
-                Leistungen entdecken
+              <a href="#leistungen" class="w-full sm:w-auto">
+                <button
+                  class="w-full min-w-[220px] rounded-full border border-gray-600 px-6 py-2.5 text-sm font-medium text-white transition-all hover:border-blue-400 hover:text-blue-400"
+                >
+                  Leistungen entdecken
+                </button>
               </a>
             </div>
           </div>
 
           <!-- Image -->
-          <div class="w-full max-w-[180px] sm:max-w-[220px] md:max-w-md">
+          <div class="w-full max-w-[160px] sm:max-w-[200px] md:max-w-md">
             <img
               src="/dominik-kasten-transparent.png"
               alt="Dominik Kasten Webentwickler"
@@ -331,26 +334,26 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="bg-gradient-to-b from-slate-900/50 to-blue-900/20 py-16">
-      <div class="container mx-auto max-w-4xl px-6 text-center">
-        <h2 class="mb-4 text-3xl font-bold text-white">
+    <section class="bg-gradient-to-b from-slate-900/50 to-blue-900/20 py-12 sm:py-16">
+      <div class="container mx-auto max-w-4xl px-4 text-center sm:px-6">
+        <h2 class="mb-4 text-2xl font-bold text-white sm:text-3xl">
           Bereit für Ihren professionellen Webauftritt?
         </h2>
-        <p class="mb-8 text-xl text-gray-300">
+        <p class="mb-6 text-base text-gray-300 sm:mb-8 sm:text-xl">
           Lassen Sie uns gemeinsam Ihre digitale Präsenz auf das nächste Level heben. Kontaktieren
           Sie mich für ein unverbindliches Beratungsgespräch.
         </p>
-        <div class="flex flex-wrap items-center justify-center gap-4">
-          <RouterLink to="/kontakt">
+        <div class="flex flex-col flex-wrap items-center justify-center gap-4 sm:flex-row">
+          <RouterLink to="/kontakt" class="w-full sm:w-auto">
             <button
-              class="rounded-full bg-blue-600 px-8 py-3 text-lg font-medium text-white transition-all hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-600/20"
+              class="w-full rounded-full bg-blue-600 px-6 py-3 text-base font-medium text-white transition-all hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-600/20 sm:w-[240px] sm:text-lg"
             >
               Jetzt Kontakt aufnehmen
             </button>
           </RouterLink>
-          <RouterLink to="/preise">
+          <RouterLink to="/preise" class="w-full sm:w-auto">
             <button
-              class="rounded-full border border-blue-500 px-8 py-3 text-lg font-medium text-white transition-all hover:bg-blue-500 hover:shadow-lg hover:shadow-blue-600/20"
+              class="w-full rounded-full border border-blue-500 px-6 py-3 text-base font-medium text-white transition-all hover:bg-blue-500 hover:shadow-lg hover:shadow-blue-600/20 sm:w-[240px] sm:text-lg"
             >
               Preise ansehen
             </button>

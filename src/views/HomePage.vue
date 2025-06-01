@@ -18,7 +18,7 @@
           description: 'IT-Service und Webseiten aus Goslar – Persönlich. Verständlich. Vor Ort.',
           url: 'https://dominik-kasten.de/',
           telephone: '+4917621173947',
-          email: 'hello@dominik-kasten.de',
+          email: 'info@dominik-kasten.de',
           address: {
             '@type': 'PostalAddress',
             streetAddress: 'Grauhöfer Str. 9',
@@ -53,41 +53,42 @@
     />
 
     <!-- Hero Section -->
-    <section class="relative py-8 md:py-16">
+    <section class="relative py-8 sm:py-12 md:py-16">
       <div class="absolute inset-0 z-0 opacity-10">
         <div class="h-full w-full"></div>
       </div>
 
-      <div class="relative z-10 container mx-auto max-w-6xl px-6">
-        <!-- Center profile image on small screens, move to right side on medium and up -->
+      <div class="relative z-10 container mx-auto max-w-6xl px-4 sm:px-6">
         <div class="grid grid-cols-1 gap-8 md:grid-cols-5 md:items-center">
-          <!-- Text Content - takes 3/5 of space on md screens -->
+          <!-- Text Content -->
           <div class="order-2 text-center md:order-1 md:col-span-3 md:text-left">
             <h1
-              class="bg-gradient-to-r from-white to-blue-400 bg-clip-text text-3xl font-bold tracking-tight text-transparent md:text-4xl lg:text-5xl"
+              class="bg-gradient-to-r from-white to-blue-400 bg-clip-text text-2xl font-bold tracking-tight text-transparent sm:text-3xl md:text-4xl lg:text-5xl"
             >
               IT-Service & Webseiten aus Goslar
             </h1>
-            <h2 class="mt-2 text-2xl font-semibold text-white md:text-3xl">
+            <h2 class="mt-2 text-xl font-semibold text-white sm:text-2xl md:text-3xl">
               Persönlich. Verständlich. Vor Ort.
             </h2>
-            <p class="mt-4 text-lg font-medium text-blue-400">
+            <p class="mt-4 text-base font-medium text-blue-400 sm:text-lg">
               Ihr IT-Dienstleister für Goslar & Umgebung
             </p>
-            <p class="mt-4 text-base leading-relaxed text-gray-300 md:text-lg">
+            <p class="mt-4 text-sm leading-relaxed text-gray-300 sm:text-base md:text-lg">
               Technik einfach machen – schnell, persönlich und unkompliziert.
             </p>
-            <div class="mt-6 flex flex-wrap items-center justify-center gap-4 md:justify-start">
+            <div
+              class="mt-6 flex flex-col flex-wrap items-center justify-center gap-4 sm:flex-row md:justify-start"
+            >
               <RouterLink to="/kontakt">
                 <button
-                  class="rounded-full bg-blue-600 px-6 py-2.5 text-sm font-medium text-white transition-all hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-600/20"
+                  class="w-full rounded-full bg-blue-600 px-6 py-2.5 text-sm font-medium text-white transition-all hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-600/20 sm:w-auto"
                 >
                   Kontakt aufnehmen
                 </button>
               </RouterLink>
               <RouterLink to="/webseiten-erstellung">
                 <button
-                  class="rounded-full border border-blue-500 px-6 py-2.5 text-sm font-medium text-white transition-all hover:bg-blue-500 hover:shadow-lg hover:shadow-blue-500/20"
+                  class="w-full rounded-full border border-blue-500 px-6 py-2.5 text-sm font-medium text-white transition-all hover:bg-blue-500 hover:shadow-lg hover:shadow-blue-500/20 sm:w-auto"
                 >
                   Webseiten-Erstellung
                 </button>
@@ -95,7 +96,7 @@
             </div>
           </div>
 
-          <!-- Profile Image - takes 2/5 of space on md screens -->
+          <!-- Profile Image -->
           <div class="order-1 mx-auto md:order-2 md:col-span-2">
             <div class="relative">
               <div
@@ -105,7 +106,7 @@
                 <img
                   src="@/assets/webp/me2.webp"
                   alt="Dominik Kasten - IT-Dienstleister aus Goslar und IT-Freelancer im Harz"
-                  class="size-48 rounded-full object-cover shadow-xl md:size-56 lg:size-64"
+                  class="h-40 w-40 rounded-full object-cover shadow-xl sm:h-48 sm:w-48 md:h-56 md:w-56 lg:h-64 lg:w-64"
                 />
               </div>
             </div>
@@ -115,36 +116,40 @@
     </section>
 
     <!-- Zielgruppen Section -->
-    <section class="py-4">
-      <div class="container mx-auto max-w-6xl px-5">
-        <p class="mb-8 text-center text-xl text-gray-300">Meine Leistungen richten sich an:</p>
-        <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+    <section class="py-6 sm:py-10">
+      <div class="container mx-auto max-w-6xl px-4 sm:px-6">
+        <p class="mb-6 text-center text-lg text-gray-300 sm:text-xl">
+          Meine Leistungen richten sich an:
+        </p>
+        <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
           <div
-            class="transform rounded-xl bg-gray-800/40 p-6 text-center transition-all hover:-translate-y-1 hover:bg-gray-800/60"
+            class="transform rounded-xl bg-gray-800/40 p-5 text-center transition-all hover:-translate-y-1 hover:bg-gray-800/60 sm:p-6"
           >
-            <div class="mb-4 flex justify-center">
-              <UserIcon class="size-12 text-blue-400" />
+            <div class="mb-3 flex justify-center">
+              <UserIcon class="h-10 w-10 text-blue-400 sm:h-12 sm:w-12" />
             </div>
-            <h3 class="text-xl font-semibold text-white">Privatpersonen</h3>
+            <h3 class="text-lg font-semibold text-white sm:text-xl">Privatpersonen</h3>
           </div>
           <div
-            class="transform rounded-xl bg-gray-800/40 p-6 text-center transition-all hover:-translate-y-1 hover:bg-gray-800/60"
+            class="transform rounded-xl bg-gray-800/40 p-5 text-center transition-all hover:-translate-y-1 hover:bg-gray-800/60 sm:p-6"
           >
-            <div class="mb-4 flex justify-center">
-              <UserGroupIcon class="size-12 text-blue-400" />
+            <div class="mb-3 flex justify-center">
+              <UserGroupIcon class="h-10 w-10 text-blue-400 sm:h-12 sm:w-12" />
             </div>
-            <h3 class="text-xl font-semibold text-white">Selbstständige & Freiberufler</h3>
+            <h3 class="text-lg font-semibold text-white sm:text-xl">
+              Selbstständige & Freiberufler
+            </h3>
           </div>
           <div
-            class="transform rounded-xl bg-gray-800/40 p-6 text-center transition-all hover:-translate-y-1 hover:bg-gray-800/60"
+            class="transform rounded-xl bg-gray-800/40 p-5 text-center transition-all hover:-translate-y-1 hover:bg-gray-800/60 sm:p-6"
           >
-            <div class="mb-4 flex justify-center">
-              <BuildingOfficeIcon class="size-12 text-blue-400" />
+            <div class="mb-3 flex justify-center">
+              <BuildingOfficeIcon class="h-10 w-10 text-blue-400 sm:h-12 sm:w-12" />
             </div>
-            <h3 class="text-xl font-semibold text-white">Unternehmen</h3>
+            <h3 class="text-lg font-semibold text-white sm:text-xl">Unternehmen</h3>
           </div>
         </div>
-        <p class="mt-8 text-center text-lg text-gray-300">
+        <p class="mt-6 text-center text-base text-gray-300 sm:mt-8 sm:text-lg">
           Dabei stehe ich für Verständlichkeit, Zuverlässigkeit und faire Preise.
         </p>
       </div>
