@@ -352,7 +352,7 @@
           >
             <div class="relative overflow-hidden">
               <img
-                src="@/assets/webp/editorfolio.webp"
+                src="@/assets/webp/Editorfolio.webp"
                 alt="Editorfolio - Portfolio für Videocreator"
                 class="h-48 w-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
               />
