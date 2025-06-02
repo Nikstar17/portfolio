@@ -56,7 +56,7 @@
       function gtag() {
         dataLayer.push(arguments)
       }
-      
+
       // Check for existing consent cookie
       function getCookie(name) {
         const nameEQ = name + '='
@@ -75,20 +75,20 @@
         options: {
           anonymize_ip: true,
           cookie_flags: 'SameSite=None;Secure',
-          send_page_view: false
-        }
+          send_page_view: false,
+        },
       }
-      
+
       // Load GA only if consent is already granted
       const consent = getCookie('cookie-consent')
       if (consent === 'ga-consent-granted') {
         loadGA()
       }
-      
+
       // Function to load GA script
       function loadGA() {
         if (document.getElementById('ga-script')) return
-        
+
         // Set default consent configuration
         gtag('consent', 'default', {
           ad_storage: 'denied',
@@ -96,19 +96,19 @@
           functionality_storage: 'denied',
           personalization_storage: 'denied',
           security_storage: 'granted',
-          wait_for_update: 500
+          wait_for_update: 500,
         })
-        
+
         // Create and append GA script
         const script = document.createElement('script')
         script.id = 'ga-script'
         script.async = true
         script.src = 'https://www.googletagmanager.com/gtag/js?id=' + window.GA_CONFIG.id
-        
-        script.onload = function() {
+
+        script.onload = function () {
           gtag('js', new Date())
           gtag('config', window.GA_CONFIG.id, window.GA_CONFIG.options)
-          
+
           // If consent is already granted, update consent status
           if (consent === 'ga-consent-granted') {
             gtag('consent', 'update', {
@@ -120,10 +120,10 @@
             gtag('event', 'page_view')
           }
         }
-        
+
         document.head.appendChild(script)
       }
-      
+
       // Expose loadGA to window for use in our consent script
       window.loadGA = loadGA
     </script>

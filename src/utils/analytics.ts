@@ -59,7 +59,7 @@ export function updateGAConsent(status: typeof CONSENT_GRANTED | typeof CONSENT_
     if (window.loadGA && typeof window.loadGA === 'function') {
       window.loadGA()
     }
-    
+
     // If gtag is available, update consent
     if (window.gtag) {
       // Update consent state using Consent Mode v2
@@ -70,7 +70,7 @@ export function updateGAConsent(status: typeof CONSENT_GRANTED | typeof CONSENT_
         personalization_storage: status,
         // security_storage always remains granted for essential functionality
       })
-      
+
       // Enable GA and send the initial page view
       window['ga-disable-' + GA4_ID] = false
       window.gtag('event', 'page_view', {
@@ -88,10 +88,10 @@ export function updateGAConsent(status: typeof CONSENT_GRANTED | typeof CONSENT_
         functionality_storage: status,
         personalization_storage: status,
       })
-      
+
       window['ga-disable-' + GA4_ID] = true
     }
-    
+
     removeCookie('_ga')
     removeCookie('_ga_' + GA4_ID.replace('G-', ''))
   }
