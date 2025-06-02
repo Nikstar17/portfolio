@@ -52,28 +52,46 @@ export function initializeGA() {
  * @param status - 'granted' or 'denied'
  */
 export function updateGAConsent(status: typeof CONSENT_GRANTED | typeof CONSENT_DENIED) {
-  if (typeof window === 'undefined' || !window.gtag) return
-
-  // Update consent state using Consent Mode v2
-  window.gtag('consent', 'update', {
-    ad_storage: status,
-    analytics_storage: status,
-    functionality_storage: status,
-    personalization_storage: status,
-    // security_storage always remains granted for essential functionality
-  })
+  if (typeof window === 'undefined') return
 
   if (status === CONSENT_GRANTED) {
-    // When consent is granted, enable GA and send the initial page view
-    window['ga-disable-' + GA4_ID] = false
-    window.gtag('event', 'page_view', {
-      page_title: document.title,
-      page_location: window.location.href,
-      page_path: window.location.pathname,
-    })
+    // When consent is granted, load GA if not already loaded
+    if (window.loadGA && typeof window.loadGA === 'function') {
+      window.loadGA()
+    }
+    
+    // If gtag is available, update consent
+    if (window.gtag) {
+      // Update consent state using Consent Mode v2
+      window.gtag('consent', 'update', {
+        ad_storage: status,
+        analytics_storage: status,
+        functionality_storage: status,
+        personalization_storage: status,
+        // security_storage always remains granted for essential functionality
+      })
+      
+      // Enable GA and send the initial page view
+      window['ga-disable-' + GA4_ID] = false
+      window.gtag('event', 'page_view', {
+        page_title: document.title,
+        page_location: window.location.href,
+        page_path: window.location.pathname,
+      })
+    }
   } else {
-    // When consent is denied, disable GA and remove cookies
-    window['ga-disable-' + GA4_ID] = true
+    // When consent is denied, disable GA if loaded and remove cookies
+    if (window.gtag) {
+      window.gtag('consent', 'update', {
+        ad_storage: status,
+        analytics_storage: status,
+        functionality_storage: status,
+        personalization_storage: status,
+      })
+      
+      window['ga-disable-' + GA4_ID] = true
+    }
+    
     removeCookie('_ga')
     removeCookie('_ga_' + GA4_ID.replace('G-', ''))
   }
