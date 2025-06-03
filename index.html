@@ -89,15 +89,21 @@
       function loadGA() {
         if (document.getElementById('ga-script')) return
 
-        // Set default consent configuration
+        // Set default consent configuration (Consent Mode v2)
         gtag('consent', 'default', {
           ad_storage: 'denied',
           analytics_storage: 'denied',
           functionality_storage: 'denied',
           personalization_storage: 'denied',
           security_storage: 'granted',
+          ad_user_data: 'denied', // Consent Mode v2
+          ad_personalization: 'denied', // Consent Mode v2
           wait_for_update: 500,
         })
+
+        // Set recommended Consent Mode v2 settings
+        gtag('set', 'url_passthrough', true)
+        gtag('set', 'ads_data_redaction', true)
 
         // Create and append GA script
         const script = document.createElement('script')
@@ -116,6 +122,8 @@
               analytics_storage: 'granted',
               functionality_storage: 'granted',
               personalization_storage: 'granted',
+              ad_user_data: 'granted', // Consent Mode v2
+              ad_personalization: 'granted', // Consent Mode v2
             })
             gtag('event', 'page_view')
           }

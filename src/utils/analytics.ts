@@ -68,6 +68,8 @@ export function updateGAConsent(status: typeof CONSENT_GRANTED | typeof CONSENT_
         analytics_storage: status,
         functionality_storage: status,
         personalization_storage: status,
+        ad_user_data: status, // Consent Mode v2
+        ad_personalization: status, // Consent Mode v2
         // security_storage always remains granted for essential functionality
       })
 
@@ -87,6 +89,8 @@ export function updateGAConsent(status: typeof CONSENT_GRANTED | typeof CONSENT_
         analytics_storage: status,
         functionality_storage: status,
         personalization_storage: status,
+        ad_user_data: status, // Consent Mode v2
+        ad_personalization: status, // Consent Mode v2
       })
 
       window['ga-disable-' + GA4_ID] = true
