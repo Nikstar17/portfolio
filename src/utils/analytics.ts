@@ -99,14 +99,14 @@ export function updateGAConsent(status: typeof CONSENT_GRANTED | typeof CONSENT_
 
 /**
  * Send GA4 page view event
- * Only sends if analytics consent is granted
+ * Only sends if analytics consent is granted and gtag is loaded
  */
 export function sendPageView() {
-  if (!window.gtag) return
+  // Do nothing if gtag isn't available or consent hasn't been granted
+  if (!window.gtag || getCookie('cookie-consent') !== 'ga-consent-granted') return
 
+  // Only send the minimum required data
   window.gtag('event', 'page_view', {
-    page_title: document.title,
-    page_location: window.location.href,
     page_path: window.location.pathname,
   })
 }

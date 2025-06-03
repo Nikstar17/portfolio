@@ -1,14 +1,15 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import AboutMe from '@/views/AboutMe.vue'
-import EditorFolio from '@/views/EditorFolio.vue'
-import Impressum from '@/views/ImpressumView.vue'
-import Datenschutz from '@/views/DatenschutzView.vue'
-import Kontakt from '@/views/KontaktView.vue'
-import Danke from '@/views/DankeView.vue'
-import HomePage from '@/views/HomePage.vue'
-import WebseitenErstellung from '@/views/WebseitenErstellung.vue'
-import PreiseView from '@/views/PreiseView.vue'
 import { sendPageView } from '@/utils/analytics'
+// Use dynamic imports for code-splitting
+const HomePage = () => import('@/views/HomePage.vue')
+const AboutMe = () => import('@/views/AboutMe.vue')
+const EditorFolio = () => import('@/views/EditorFolio.vue')
+const Impressum = () => import('@/views/ImpressumView.vue')
+const Datenschutz = () => import('@/views/DatenschutzView.vue')
+const Kontakt = () => import('@/views/KontaktView.vue')
+const Danke = () => import('@/views/DankeView.vue')
+const WebseitenErstellung = () => import('@/views/WebseitenErstellung.vue')
+const PreiseView = () => import('@/views/PreiseView.vue')
 import type { MetaInfo } from '@/utils/metaService'
 
 const router = createRouter({

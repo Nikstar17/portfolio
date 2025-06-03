@@ -343,17 +343,17 @@
           Lassen Sie uns gemeinsam Ihre digitale Präsenz auf das nächste Level heben. Kontaktieren
           Sie mich für ein unverbindliches Beratungsgespräch.
         </p>
-        <div class="flex flex-col flex-wrap items-center justify-center gap-4 sm:flex-row">
-          <RouterLink to="/kontakt" class="w-full sm:w-auto">
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <RouterLink to="/kontakt">
             <button
-              class="w-full rounded-full bg-blue-600 px-6 py-3 text-base font-medium text-white transition-all hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-600/20 sm:w-[240px] sm:text-lg"
+              class="text-md rounded-full bg-blue-600 px-5 py-2 font-medium text-white transition-all hover:scale-105 hover:bg-blue-700 hover:shadow-md hover:shadow-blue-600/20"
             >
               Jetzt Kontakt aufnehmen
             </button>
           </RouterLink>
-          <RouterLink to="/preise" class="w-full sm:w-auto">
+          <RouterLink to="/preise">
             <button
-              class="w-full rounded-full border border-blue-500 px-6 py-3 text-base font-medium text-white transition-all hover:bg-blue-500 hover:shadow-lg hover:shadow-blue-600/20 sm:w-[240px] sm:text-lg"
+              class="text-md rounded-full border border-blue-500 px-5 py-2 font-medium text-white transition-all hover:scale-105 hover:bg-blue-500/20 hover:shadow-md hover:shadow-blue-600/20"
             >
               Preise ansehen
             </button>
