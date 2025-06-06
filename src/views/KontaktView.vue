@@ -265,21 +265,18 @@ const submitForm = async () => {
   isSubmitting.value = true
 
   try {
-    const response = await fetch(
-      `https://sr5x4a62cd.execute-api.eu-north-1.amazonaws.com/contact`,
-      {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          subject: formData.subject,
-          message: formData.message,
-        }),
+    const response = await fetch('/api/submitContactForm', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
       },
-    )
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+      }),
+    })
 
     if (!response.ok) {
       throw new Error('Fehler beim Senden des Formulars.')
