@@ -672,50 +672,7 @@
           wurde individuell auf die Bedürfnisse des Kunden zugeschnitten.
         </p>
 
-        <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
-          <!-- EditorFolio Projekt -->
-          <div
-            class="group overflow-hidden rounded-xl bg-slate-800/70 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-blue-600/20"
-          >
-            <div class="relative overflow-hidden">
-              <img
-                src="@/assets/webp/Editorfolio.webp"
-                alt="EditorFolio - Portfolio für Video-Editoren"
-                class="h-48 w-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
-              />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-60"
-              ></div>
-            </div>
-            <div class="p-6">
-              <h3 class="mb-3 text-xl font-semibold text-white">EditorFolio</h3>
-              <p class="mb-4 text-gray-300">
-                Ein modernes Portfolio-Template für Video-Editoren und Content-Creator mit
-                interaktiven Elementen und optimaler Darstellung von Showreels.
-              </p>
-              <RouterLink
-                to="/editorfolio"
-                class="inline-flex items-center text-blue-400 transition-colors hover:text-blue-300"
-              >
-                Projekt ansehen
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="ml-2 h-4 w-4"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M14 5l7 7m0 0l-7 7m7-7H3"
-                  />
-                </svg>
-              </RouterLink>
-            </div>
-          </div>
-
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
           <!-- Dinkelspelz24 Projekt -->
           <div
             class="group overflow-hidden rounded-xl bg-slate-800/70 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-blue-600/20"
@@ -724,7 +681,7 @@
               <img
                 src="@/assets/webp/dinkelspelz24.webp"
                 alt="Dinkelspelz24 - Regionale Bio-Produkte"
-                class="h-48 w-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
+                class="h-64 w-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
               />
               <div
                 class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-60"
@@ -733,11 +690,11 @@
             <div class="p-6">
               <h3 class="mb-3 text-xl font-semibold text-white">Dinkelspelz24</h3>
               <p class="mb-4 text-gray-300">
-                Eine responsive E-Commerce-Website für regionale Bio-Produkte mit integriertem
+                Eine responsive E-Commerce-Website für regionale Produkte mit integriertem
                 Shop-System und benutzerfreundlicher Navigation.
               </p>
               <a
-                href="https://www.dinkelspelz24.de"
+                href="https://dinkelspelz24.de"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="inline-flex items-center text-blue-400 transition-colors hover:text-blue-300"
@@ -769,7 +726,7 @@
               <img
                 src="@/assets/webp/chronixly.webp"
                 alt="Chronixly - Zeiterfassungssoftware"
-                class="h-48 w-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
+                class="h-64 w-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
               />
               <div
                 class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-60"
@@ -803,6 +760,93 @@
                   />
                 </svg>
               </a>
+            </div>
+          </div>
+
+          <!-- KatrinCompanera Projekt -->
+          <div
+            class="group overflow-hidden rounded-xl bg-slate-800/70 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-blue-600/20"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="@/assets/webp/katrincompanera.webp"
+                alt="KatrinCompanera - Gesellschaftsleisterin in Wolfsburg"
+                class="h-64 w-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-60"
+              ></div>
+            </div>
+            <div class="p-6">
+              <h3 class="mb-3 text-xl font-semibold text-white">KatrinCompanera</h3>
+              <p class="mb-4 text-gray-300">
+                Eine Website für eine Gesellschaftsleisterin mit Kontaktformular und responsivem
+                Design.
+              </p>
+              <a
+                href="https://www.katrincompanera.de/"
+                target="_blank"
+                class="inline-flex items-center text-blue-400 transition-colors hover:text-blue-300"
+              >
+                Webseite besuchen
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="ml-2 h-4 w-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- EditorFolio Projekt -->
+          <div
+            class="group overflow-hidden rounded-xl bg-slate-800/70 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-blue-600/20"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="@/assets/webp/Editorfolio.webp"
+                alt="EditorFolio - Portfolio für Video-Editoren"
+                class="h-64 w-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-60"
+              ></div>
+            </div>
+            <div class="p-6">
+              <h3 class="mb-3 text-xl font-semibold text-white">EditorFolio</h3>
+              <p class="mb-4 text-gray-300">
+                Ein modernes Portfolio-Template für Video-Editoren und Content-Creator mit
+                interaktiven Elementen und optimaler Darstellung von Showreels.
+              </p>
+              <RouterLink
+                to="/editorfolio"
+                class="inline-flex items-center text-blue-400 transition-colors hover:text-blue-300"
+              >
+                Projekt ansehen
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="ml-2 h-4 w-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                  />
+                </svg>
+              </RouterLink>
             </div>
           </div>
         </div>
