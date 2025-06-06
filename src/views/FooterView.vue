@@ -1,5 +1,5 @@
 <template>
-  <footer class="h-[280px] border-t border-gray-800 py-8 sm:h-[200px] md:py-10">
+  <footer class="border-t border-gray-800 py-8 md:py-10">
     <div class="container mx-auto max-w-6xl px-4 md:px-6">
       <div class="flex flex-col items-center justify-between gap-8 md:flex-row md:gap-6">
         <!-- Logo/Branding Side -->
@@ -92,7 +92,9 @@
 
       <!-- Copyright -->
       <div class="mt-8 text-center">
-        <p class="text-sm text-gray-500">&copy; 2025 Dominik Kasten. Alle Rechte vorbehalten.</p>
+        <p class="text-sm text-gray-500">
+          &copy; {{ new Date().getFullYear() }} Dominik Kasten. Alle Rechte vorbehalten.
+        </p>
       </div>
     </div>
   </footer>
