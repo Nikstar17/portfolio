@@ -92,9 +92,7 @@
 
       <!-- Copyright -->
       <div class="mt-8 text-center">
-        <p class="text-sm text-gray-500">
-          &copy; {{ new Date().getFullYear() }} Dominik Kasten. Alle Rechte vorbehalten.
-        </p>
+        <p class="text-sm text-gray-500">&copy; 2025 Dominik Kasten. Alle Rechte vorbehalten.</p>
       </div>
     </div>
   </footer>
