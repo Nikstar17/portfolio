@@ -19,7 +19,7 @@ useMeta()
   <!-- Flexible content container with min-height to prevent layout shift -->
   <div class="flex min-h-screen flex-col">
     <!-- Main content with flex-grow to push footer down and min-height to reserve space -->
-    <main class="flex-grow" style="min-height: calc(100vh - 60px);">
+    <main class="flex-grow" style="min-height: calc(100vh - 60px)">
       <RouterView v-slot="{ Component, route }">
         <transition
           :name="typeof route.meta.transition === 'string' ? route.meta.transition : 'fade'"
@@ -83,7 +83,8 @@ button {
 }
 
 /* Layout stabilization */
-html, body {
+html,
+body {
   height: 100%;
   overflow-x: hidden;
 }
