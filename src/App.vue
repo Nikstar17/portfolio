@@ -16,18 +16,21 @@ useMeta()
   <!-- Header Navigation -->
   <HeaderNav />
 
-  <!-- Main content -->
-  <main>
-    <RouterView v-slot="{ Component, route }">
-      <transition
-        :name="typeof route.meta.transition === 'string' ? route.meta.transition : 'fade'"
-        mode="out-in"
-      >
-        <component :is="Component" />
-      </transition>
-    </RouterView>
-  </main>
-  <FooterView />
+  <!-- Flexible content container with min-height to prevent layout shift -->
+  <div class="flex min-h-screen flex-col">
+    <!-- Main content with flex-grow to push footer down and min-height to reserve space -->
+    <main class="flex-grow" style="min-height: calc(100vh - 60px);">
+      <RouterView v-slot="{ Component, route }">
+        <transition
+          :name="typeof route.meta.transition === 'string' ? route.meta.transition : 'fade'"
+          mode="out-in"
+        >
+          <component :is="Component" />
+        </transition>
+      </RouterView>
+    </main>
+    <FooterView />
+  </div>
   <CookieBanner />
 </template>
 
@@ -77,5 +80,11 @@ button {
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
+}
+
+/* Layout stabilization */
+html, body {
+  height: 100%;
+  overflow-x: hidden;
 }
 </style>
