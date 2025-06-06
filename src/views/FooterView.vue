@@ -1,5 +1,5 @@
 <template>
-  <footer class="min-h-[150px] border-t border-gray-800 py-8 md:py-10">
+  <footer class="h-[280px] border-t border-gray-800 py-8 sm:h-[200px] md:py-10">
     <div class="container mx-auto max-w-6xl px-4 md:px-6">
       <div class="flex flex-col items-center justify-between gap-8 md:flex-row md:gap-6">
         <!-- Logo/Branding Side -->
