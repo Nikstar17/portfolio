@@ -78,7 +78,7 @@
                 <td
                   class="px-3 py-2 text-right text-sm font-medium text-gray-300 md:px-6 md:py-4 md:text-base"
                 >
-                  70 €/Stunde
+                  70 € / Stunde
                 </td>
               </tr>
               <tr class="border-b border-gray-700/30">
@@ -332,7 +332,7 @@
                 <td
                   class="px-3 py-2 text-right text-sm font-medium text-gray-300 md:px-6 md:py-4 md:text-base"
                 >
-                  49 €/Stunde
+                  49 € / Stunde
                 </td>
               </tr>
               <tr>
@@ -342,7 +342,7 @@
                 <td
                   class="px-3 py-2 text-right text-sm font-medium text-gray-300 md:px-6 md:py-4 md:text-base"
                 >
-                  ab 29 €/Monat
+                  ab 29 € / Monat
                 </td>
               </tr>
             </tbody>

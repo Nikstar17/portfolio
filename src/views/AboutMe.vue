@@ -21,9 +21,9 @@
       </div>
 
       <div class="relative z-10 container mx-auto max-w-6xl px-4 sm:px-6">
-        <div class="flex flex-col-reverse items-center gap-10 md:flex-row md:justify-around">
+        <div class="flex flex-col-reverse items-center gap-10 lg:flex-row lg:justify-between">
           <!-- Text Content -->
-          <div class="w-full text-center md:max-w-xl md:text-left">
+          <div class="w-full text-center lg:max-w-3xl lg:text-left">
             <h1
               class="bg-gradient-to-r from-white to-blue-400 bg-clip-text text-2xl font-bold tracking-tight text-transparent sm:text-3xl md:text-5xl lg:text-6xl"
             >
@@ -39,7 +39,7 @@
               komplizierte Fachsprache und unübersichtliche Technik haben.
             </p>
             <div
-              class="mt-6 flex flex-col flex-wrap items-center justify-center gap-4 sm:mt-8 sm:flex-row md:justify-start"
+              class="mt-6 flex flex-col flex-wrap items-center justify-center gap-4 sm:mt-8 sm:flex-row lg:justify-start"
             >
               <RouterLink to="/kontakt" class="w-full sm:w-auto">
                 <button
@@ -48,25 +48,11 @@
                   Kontakt aufnehmen
                 </button>
               </RouterLink>
-              <RouterLink to="/webseiten-erstellung" class="w-full sm:w-auto">
-                <button
-                  class="w-full rounded-full border border-blue-500 px-6 py-2.5 text-sm font-medium text-white transition-all hover:bg-blue-500 hover:shadow-lg hover:shadow-blue-500/20 sm:w-[220px]"
-                >
-                  Webseiten-Erstellung
-                </button>
-              </RouterLink>
-              <RouterLink to="/preise" class="w-full sm:w-auto">
-                <button
-                  class="w-full rounded-full border border-blue-500 px-6 py-2.5 text-sm font-medium text-white transition-all hover:bg-blue-500 hover:shadow-lg hover:shadow-blue-500/20 sm:w-[220px]"
-                >
-                  Preise ansehen
-                </button>
-              </RouterLink>
             </div>
           </div>
 
           <!-- Profile Image mit Overlay-Effekt -->
-          <div class="relative w-40 sm:w-48 md:w-56 lg:w-64">
+          <div class="relative w-40 sm:w-48 md:w-64 lg:w-80">
             <div
               class="absolute inset-0 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 opacity-75 blur-sm"
             ></div>
@@ -83,7 +69,7 @@
     </section>
 
     <!-- Über mich Section mit Card Design -->
-    <section class="py-4">
+    <section class="py-4 lg:py-8">
       <div class="container mx-auto max-w-6xl px-5">
         <div class="mb-4 flex items-center">
           <UserIcon class="mr-3 size-7 text-blue-500" />
@@ -135,20 +121,20 @@
     </section>
 
     <!-- Mein Einsatzgebiet Section -->
-    <section class="py-4">
+    <section class="py-4 lg:py-8">
       <div class="container mx-auto max-w-6xl px-6">
         <div class="mb-4 flex items-center">
           <LightBulbIcon class="mr-3 size-7 text-blue-500" />
           <h2 class="text-3xl font-bold text-white md:text-4xl">Mein Einsatzgebiet</h2>
         </div>
 
-        <div class="mb-6">
+        <div class="mb-4">
           <p class="mb-4 text-gray-300">
             Ich bin in Goslar zuhause und betreue Kundinnen und Kunden in der gesamten Region –
             darunter:
           </p>
 
-          <div class="mt-6 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-6">
+          <div class="mt-4 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-6">
             <div
               class="rounded-lg bg-gray-800/40 p-4 text-center transition-all hover:bg-gray-800/60"
             >
@@ -182,7 +168,7 @@
           </div>
         </div>
 
-        <div class="mt-8 rounded-xl border border-gray-700 bg-gray-800/30 p-6">
+        <div class="mt-0 rounded-xl border border-gray-700 bg-gray-800/30 p-6">
           <h3 class="mb-3 text-xl font-semibold text-white">
             Ein Ansprechpartner für alles Digitale
           </h3>
@@ -196,7 +182,7 @@
     </section>
 
     <!-- Fähigkeiten Section -->
-    <section class="py-4">
+    <section class="py-4 lg:py-8">
       <div class="container mx-auto max-w-6xl px-6">
         <div class="mb-4 flex items-center">
           <LightBulbIcon class="mr-3 size-7 text-blue-500" />
@@ -256,140 +242,200 @@
     </section>
 
     <!-- Projekte Section -->
-    <section class="px-3 py-4">
-      <div class="container mx-auto max-w-6xl">
+    <section class="px-3 py-4 lg:py-8">
+      <div class="container mx-auto max-w-6xl px-6">
         <div class="mb-4 flex items-center">
           <FolderIcon class="mr-3 size-7 text-blue-500" />
           <h2 class="text-3xl font-bold text-white md:text-4xl">Meine Projekte</h2>
         </div>
 
-        <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <div class="grid gap-8 md:grid-cols-2">
           <!-- Dinkelspelz24 Projekt -->
-          <a
-            href="https://dinkelspelz24.de/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="group flex flex-col overflow-hidden rounded-xl bg-slate-800/70 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-blue-600/20"
+          <div
+            class="group overflow-hidden rounded-xl bg-slate-800/70 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-blue-600/20"
           >
             <div class="relative overflow-hidden">
               <img
                 src="@/assets/webp/dinkelspelz24.webp"
                 alt="Dinkelspelz24 - Regionale Bio-Produkte"
-                class="h-48 w-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
+                class="h-64 w-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
               />
               <div
                 class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-60"
               ></div>
             </div>
-            <div class="flex flex-1 flex-col p-6">
+            <div class="p-6">
               <h3 class="mb-3 text-xl font-semibold text-white">Dinkelspelz24</h3>
-              <p class="mb-4 flex-1 text-gray-300">
+              <p class="mb-4 text-gray-300">
                 Ein moderner Onlineshop mit WordPress und WooCommerce – benutzerfreundlich und
                 leicht erweiterbar.
               </p>
-              <div class="mt-auto flex flex-wrap items-center justify-between">
-                <div class="flex flex-wrap gap-2">
-                  <span class="rounded-full bg-blue-900/50 px-3 py-1 text-xs text-blue-300"
-                    >WordPress</span
-                  >
-                  <span class="rounded-full bg-blue-900/50 px-3 py-1 text-xs text-blue-300"
-                    >WooCommerce</span
-                  >
-                  <span class="rounded-full bg-blue-900/50 px-3 py-1 text-xs text-blue-300"
-                    >Elementor</span
-                  >
-                </div>
-              </div>
+              <a
+                href="https://dinkelspelz24.de"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center text-blue-400 transition-colors hover:text-blue-300"
+              >
+                Website besuchen
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="ml-2 h-4 w-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
+                </svg>
+              </a>
             </div>
-          </a>
+          </div>
 
           <!-- Chronixly Projekt -->
-          <a
-            href="https://chronixly.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="group flex flex-col overflow-hidden rounded-xl bg-slate-800/70 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-blue-600/20"
+          <div
+            class="group overflow-hidden rounded-xl bg-slate-800/70 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-blue-600/20"
           >
             <div class="relative overflow-hidden">
               <img
                 src="@/assets/webp/chronixly.webp"
                 alt="Chronixly - Zeiterfassungssoftware"
-                class="h-48 w-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
+                class="h-64 w-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
               />
               <div
                 class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-60"
               ></div>
             </div>
-            <div class="flex flex-1 flex-col p-6">
+            <div class="p-6">
               <h3 class="mb-3 text-xl font-semibold text-white">Chronixly</h3>
-              <p class="mb-4 flex-1 text-gray-300">
+              <p class="mb-4 text-gray-300">
                 Eine moderne Web-App zur Zeiterfassung mit intuitiver Benutzeroberfläche,
                 responsivem Design und umfangreichen Analyse-Funktionen.
               </p>
-              <div class="mt-auto flex flex-wrap items-center justify-between">
-                <div class="flex flex-wrap gap-2">
-                  <span class="rounded-full bg-blue-900/50 px-3 py-1 text-xs text-blue-300"
-                    >Vue 3</span
-                  >
-                  <span class="rounded-full bg-blue-900/50 px-3 py-1 text-xs text-blue-300"
-                    >Flask</span
-                  >
-                  <span class="rounded-full bg-blue-900/50 px-3 py-1 text-xs text-blue-300"
-                    >PostgreSQL</span
-                  >
-                  <span class="rounded-full bg-blue-900/50 px-3 py-1 text-xs text-blue-300"
-                    >Tailwind CSS</span
-                  >
-                </div>
-              </div>
+              <a
+                href="https://www.chronixly.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center text-blue-400 transition-colors hover:text-blue-300"
+              >
+                Website besuchen
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="ml-2 h-4 w-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
+                </svg>
+              </a>
             </div>
-          </a>
+          </div>
+
+          <!-- KatrinCompanera Projekt -->
+          <div
+            class="group overflow-hidden rounded-xl bg-slate-800/70 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-blue-600/20"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="@/assets/webp/katrincompanera.webp"
+                alt="KatrinCompanera - Gesellschaftsleisterin in Wolfsburg"
+                class="h-64 w-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-60"
+              ></div>
+            </div>
+            <div class="p-6">
+              <h3 class="mb-3 text-xl font-semibold text-white">KatrinCompanera</h3>
+              <p class="mb-4 text-gray-300">
+                Eine Website für eine Gesellschaftsleisterin mit Kontaktformular und responsivem
+                Design.
+              </p>
+              <a
+                href="https://www.katrincompanera.de/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center text-blue-400 transition-colors hover:text-blue-300"
+              >
+                Website besuchen
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="ml-2 h-4 w-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
 
           <!-- Editorfolio Projekt -->
-          <RouterLink
-            to="/editorfolio"
-            class="group flex flex-col overflow-hidden rounded-xl bg-slate-800/70 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-blue-600/20"
+          <div
+            class="group overflow-hidden rounded-xl bg-slate-800/70 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-blue-600/20"
           >
             <div class="relative overflow-hidden">
               <img
                 src="@/assets/webp/Editorfolio.webp"
-                alt="Editorfolio - Portfolio für Videocreator"
-                class="h-48 w-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
+                alt="EditorFolio - Portfolio für Video-Editoren"
+                class="h-64 w-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
               />
               <div
                 class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-60"
               ></div>
             </div>
-            <div class="flex flex-1 flex-col p-6">
-              <h3 class="mb-3 text-xl font-semibold text-white">Editorfolio</h3>
-              <p class="mb-4 flex-1 text-gray-300">
-                Ein modernes Onepage-Portfolio für Cutter und Videocreator – ideal zur Präsentation
-                von Projekten und Showreels.
+            <div class="p-6">
+              <h3 class="mb-3 text-xl font-semibold text-white">EditorFolio</h3>
+              <p class="mb-4 text-gray-300">
+                Ein modernes Portfolio-Template für Video-Editoren und Content-Creator mit
+                interaktiven Elementen und optimaler Darstellung von Showreels.
               </p>
-              <div class="mt-auto flex flex-wrap items-center justify-between">
-                <div class="flex flex-wrap gap-2">
-                  <span class="rounded-full bg-blue-900/50 px-3 py-1 text-xs text-blue-300"
-                    >Vue.js</span
-                  >
-                  <span class="rounded-full bg-blue-900/50 px-3 py-1 text-xs text-blue-300"
-                    >Tailwind</span
-                  >
-                  <span class="rounded-full bg-blue-900/50 px-3 py-1 text-xs text-blue-300"
-                    >Node.js</span
-                  >
-                </div>
-              </div>
+              <RouterLink
+                to="/editorfolio"
+                class="inline-flex items-center text-blue-400 transition-colors hover:text-blue-300"
+              >
+                Projekt ansehen
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="ml-2 h-4 w-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                  />
+                </svg>
+              </RouterLink>
             </div>
-          </RouterLink>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Kontakt Section -->
     <section class="px-3 pb-10">
-      <div class="container mx-auto max-w-4xl">
+      <div class="container mx-auto max-w-6xl px-6">
         <div
-          class="overflow-hidden rounded-2xl bg-gradient-to-br from-[#334488]/50 to-[#3a3f8f]/30 p-8 shadow-xl"
+          class="overflow-hidden rounded-2xl bg-gradient-to-br from-[#334488]/50 to-[#3a3f8f]/30 px-4 py-8 shadow-xl"
         >
           <div class="text-center">
             <h2 class="text-3xl font-bold text-white md:text-4xl">

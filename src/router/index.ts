@@ -10,6 +10,7 @@ const Kontakt = () => import('@/views/KontaktView.vue')
 const Danke = () => import('@/views/DankeView.vue')
 const WebseitenErstellung = () => import('@/views/WebseitenErstellung.vue')
 const PreiseView = () => import('@/views/PreiseView.vue')
+const LandingpageDigitalisierung = () => import('@/views/LandingpageDigitalisierung.vue')
 import type { MetaInfo } from '@/utils/metaService'
 
 const router = createRouter({
@@ -193,6 +194,54 @@ const router = createRouter({
           keywords:
             'it-preise goslar, webseiten kosten, it-service preise, webdesign kosten harz, it-dienstleistung preisliste',
           canonical: 'https://dominik-kasten.de/preise',
+        } as MetaInfo,
+      },
+    },
+    {
+      path: '/digitalisierung',
+      name: 'digitalisierung',
+      component: LandingpageDigitalisierung,
+      meta: {
+        transition: 'fade',
+        metaInfo: {
+          title: 'Digitalisierung für Unternehmen | Einfache & effiziente Lösungen',
+          description:
+            'Professionelle Digitalisierungslösungen für Unternehmen im Harz. Prozessoptimierung, Cloud-Einführung und IT-Support aus einer Hand – persönlich, verständlich und vor Ort.',
+          keywords:
+            'digitalisierung unternehmen, prozessoptimierung, cloud-lösungen, it-support, webentwicklung, automatisierung, digitale transformation',
+          ogTitle: 'Digitalisierung für Ihr Unternehmen – einfach, effizient, zukunftssicher',
+          ogDescription:
+            'Maßgeschneiderte Digitalisierungslösungen für Ihr Unternehmen. Optimieren Sie Ihre Prozesse und steigern Sie Ihre Effizienz mit professioneller Unterstützung.',
+          ogImage: 'https://dominik-kasten.de/social-preview.png',
+          canonical: 'https://dominik-kasten.de/digitalisierung',
+          structuredData: {
+            '@context': 'https://schema.org',
+            '@type': 'Service',
+            name: 'Digitalisierungslösungen',
+            serviceType: 'Digitale Transformation',
+            provider: {
+              '@type': 'LocalBusiness',
+              name: 'Dominik Kasten IT-Dienstleistungen',
+              address: {
+                '@type': 'PostalAddress',
+                streetAddress: 'Grauhöfer Str. 9',
+                addressLocality: 'Goslar',
+                postalCode: '38640',
+                addressCountry: 'DE',
+              },
+            },
+            description:
+              'Professionelle Digitalisierungslösungen für Unternehmen im Harz. Prozessoptimierung, Cloud-Einführung und IT-Support aus einer Hand.',
+            areaServed: {
+              '@type': 'GeoCircle',
+              geoMidpoint: {
+                '@type': 'GeoCoordinates',
+                latitude: 51.9081,
+                longitude: 10.4304,
+              },
+              geoRadius: '30000',
+            },
+          },
         } as MetaInfo,
       },
     },

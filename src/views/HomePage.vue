@@ -53,63 +53,58 @@
     />
 
     <!-- Hero Section -->
-    <section class="relative py-8 sm:py-12 md:py-16">
+    <section class="relative py-6 sm:py-10 md:py-16 lg:py-20">
       <div class="absolute inset-0 z-0 opacity-10">
         <div class="h-full w-full"></div>
       </div>
 
       <div class="relative z-10 container mx-auto max-w-6xl px-4 sm:px-6">
-        <div class="grid grid-cols-1 gap-8 md:grid-cols-5 md:items-center">
+        <div
+          class="flex flex-col-reverse items-center gap-6 sm:gap-8 md:flex-row md:justify-between md:gap-12"
+        >
           <!-- Text Content -->
-          <div class="order-2 text-center md:order-1 md:col-span-3 md:text-left">
+          <div class="mt-4 text-center sm:mt-6 md:mt-0 md:w-3/5 md:text-left">
             <h1
-              class="bg-gradient-to-r from-white to-blue-400 bg-clip-text text-2xl font-bold tracking-tight text-transparent sm:text-3xl md:text-4xl lg:text-5xl"
+              class="bg-gradient-to-r from-white to-blue-400 bg-clip-text pb-2 text-2xl font-bold tracking-tight text-transparent sm:text-3xl md:text-4xl lg:text-5xl"
             >
-              IT-Service & Webseiten aus Goslar
+              Ihr persönlicher IT-Partner
             </h1>
-            <h2 class="mt-2 text-xl font-semibold text-white sm:text-2xl md:text-3xl">
-              Persönlich. Verständlich. Vor Ort.
+            <h2 class="mt-2 text-xl font-semibold text-blue-400 sm:text-2xl">
+              Webseiten erstellen. Prozesse digitalisieren. Technik verstehen – persönlich & lokal
+              in Goslar.
             </h2>
-            <p class="mt-4 text-base font-medium text-blue-400 sm:text-lg">
-              Ihr IT-Dienstleister für Goslar & Umgebung
-            </p>
             <p class="mt-4 text-sm leading-relaxed text-gray-300 sm:text-base md:text-lg">
-              Technik einfach machen – schnell, persönlich und unkompliziert.
+              Ich helfe Ihnen bei der Erstellung moderner Webseiten, der Optimierung digitaler
+              Prozesse und biete transparente Unterstützung bei technischen Fragen – lokal,
+              zuverlässig und individuell.
             </p>
             <div
-              class="mt-6 flex flex-col flex-wrap items-center justify-center gap-4 sm:flex-row md:justify-start"
+              class="mt-6 flex flex-row flex-wrap items-center justify-center gap-4 md:justify-start"
             >
               <RouterLink to="/kontakt">
                 <button
-                  class="w-full rounded-full bg-blue-600 px-6 py-2.5 text-sm font-medium text-white transition-all hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-600/20 sm:w-auto"
+                  class="rounded-full bg-blue-600 px-6 py-2.5 text-sm font-medium text-white transition-all hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-600/20"
                 >
                   Kontakt aufnehmen
                 </button>
               </RouterLink>
-              <RouterLink to="/webseiten-erstellung">
+              <a href="#leistungen">
                 <button
-                  class="w-full rounded-full border border-blue-500 px-6 py-2.5 text-sm font-medium text-white transition-all hover:bg-blue-500 hover:shadow-lg hover:shadow-blue-500/20 sm:w-auto"
+                  class="rounded-full border border-blue-500 px-6 py-2.5 text-sm font-medium text-white transition-all hover:bg-blue-500 hover:shadow-lg hover:shadow-blue-500/20"
                 >
-                  Webseiten-Erstellung
-                </button>
-              </RouterLink>
+                  Was ich anbiete
+                </button></a
+              >
             </div>
           </div>
 
-          <!-- Profile Image -->
-          <div class="order-1 mx-auto md:order-2 md:col-span-2">
-            <div class="relative">
-              <div
-                class="absolute -inset-1 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 opacity-75 blur-sm"
-              ></div>
-              <div class="relative rounded-full border-2 border-blue-500/20 p-1 backdrop-blur-sm">
-                <img
-                  src="@/assets/webp/me2.webp"
-                  alt="Dominik Kasten - IT-Dienstleister aus Goslar und IT-Freelancer im Harz"
-                  class="h-40 w-40 rounded-full object-cover shadow-xl sm:h-48 sm:w-48 md:h-56 md:w-56 lg:h-64 lg:w-64"
-                />
-              </div>
-            </div>
+          <!-- Image -->
+          <div class="flex w-2/3 items-center justify-center sm:w-1/2 md:w-2/5">
+            <img
+              src="@/assets/webp/home.webp"
+              alt="IT-Service und Webseiten aus Goslar"
+              class="h-auto w-full max-w-[150px] sm:max-w-[220px] md:max-w-xs lg:max-w-sm"
+            />
           </div>
         </div>
       </div>
@@ -156,46 +151,42 @@
     </section>
 
     <!-- Leistungen Section -->
-    <section class="py-4">
+    <section class="py-4" id="leistungen">
       <div class="container mx-auto max-w-6xl px-6">
         <div class="mb-4 flex items-center">
           <WrenchIcon class="mr-3 size-7 text-blue-500" />
           <h2 class="text-3xl font-bold text-white md:text-4xl">Was ich anbiete:</h2>
         </div>
 
-        <div class="grid gap-8 md:grid-cols-3">
-          <!-- IT-Service Card -->
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
+          <!-- Digitalisierung Card -->
           <div
             class="flex flex-col overflow-hidden rounded-xl bg-gradient-to-br from-gray-800/80 to-gray-900/80 p-6 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-blue-900/20"
           >
             <h3 class="mb-4 flex items-center text-xl font-bold text-white">
-              <ComputerDesktopIcon class="mr-2 size-6 text-blue-400" />
-              IT-Service vor Ort & per Fernwartung
+              <RocketLaunchIcon class="mr-2 size-6 text-blue-400" />
+              Digitalisierung für Unternehmen
             </h3>
             <ul class="flex-grow space-y-3 text-gray-300">
               <li class="flex items-start">
                 <div class="mt-1 mr-2 flex-shrink-0 text-blue-400">•</div>
-                PC-Reparatur, Fehleranalyse, Systemoptimierung
+                Prozessoptimierung & Workflow-Automatisierung
               </li>
               <li class="flex items-start">
                 <div class="mt-1 mr-2 flex-shrink-0 text-blue-400">•</div>
-                WLAN- & Netzwerkprobleme lösen
+                Cloud-Einführung & sichere Datenmigration
               </li>
               <li class="flex items-start">
                 <div class="mt-1 mr-2 flex-shrink-0 text-blue-400">•</div>
-                Drucker, Scanner, NAS & Co. einrichten
-              </li>
-              <li class="flex items-start">
-                <div class="mt-1 mr-2 flex-shrink-0 text-blue-400">•</div>
-                Softwarehilfe, Virenschutz, Backups
+                Maßgeschneiderte digitale Lösungen
               </li>
             </ul>
             <div class="mt-auto pt-6">
-              <RouterLink to="/kontakt" class="block">
+              <RouterLink to="/digitalisierung" class="block">
                 <button
                   class="w-full rounded-lg bg-blue-600/60 py-2 text-sm font-medium text-white transition-all hover:bg-blue-600"
                 >
-                  IT-Service anfragen
+                  Digitalisierung starten
                 </button>
               </RouterLink>
             </div>
@@ -262,6 +253,43 @@
                   class="w-full rounded-lg bg-blue-600/60 py-2 text-sm font-medium text-white transition-all hover:bg-blue-600"
                 >
                   Beratung anfordern
+                </button>
+              </RouterLink>
+            </div>
+          </div>
+
+          <!-- IT-Service Card -->
+          <div
+            class="flex flex-col overflow-hidden rounded-xl bg-gradient-to-br from-gray-800/80 to-gray-900/80 p-6 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-blue-900/20"
+          >
+            <h3 class="mb-4 flex items-center text-xl font-bold text-white">
+              <ComputerDesktopIcon class="mr-2 size-6 text-blue-400" />
+              IT-Service vor Ort & per Fernwartung
+            </h3>
+            <ul class="flex-grow space-y-3 text-gray-300">
+              <li class="flex items-start">
+                <div class="mt-1 mr-2 flex-shrink-0 text-blue-400">•</div>
+                PC-Reparatur, Fehleranalyse, Systemoptimierung
+              </li>
+              <li class="flex items-start">
+                <div class="mt-1 mr-2 flex-shrink-0 text-blue-400">•</div>
+                WLAN- & Netzwerkprobleme lösen
+              </li>
+              <li class="flex items-start">
+                <div class="mt-1 mr-2 flex-shrink-0 text-blue-400">•</div>
+                Drucker, Scanner, NAS & Co. einrichten
+              </li>
+              <li class="flex items-start">
+                <div class="mt-1 mr-2 flex-shrink-0 text-blue-400">•</div>
+                Softwarehilfe, Virenschutz, Backups
+              </li>
+            </ul>
+            <div class="mt-auto pt-6">
+              <RouterLink to="/kontakt" class="block">
+                <button
+                  class="w-full rounded-lg bg-blue-600/60 py-2 text-sm font-medium text-white transition-all hover:bg-blue-600"
+                >
+                  IT-Service anfragen
                 </button>
               </RouterLink>
             </div>
@@ -459,6 +487,7 @@ import {
   UserGroupIcon,
   BuildingOfficeIcon,
   WrenchIcon,
+  RocketLaunchIcon,
 } from '@heroicons/vue/24/outline'
 import MetaTags from '@/components/MetaTags.vue'
 

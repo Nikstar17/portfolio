@@ -24,12 +24,12 @@
 
       <div class="relative z-10 container mx-auto max-w-6xl px-4 sm:px-6">
         <div
-          class="flex flex-col-reverse items-center gap-6 md:flex-row md:justify-around md:gap-10"
+          class="flex flex-col-reverse items-center gap-6 sm:gap-8 md:flex-row md:justify-between md:gap-12"
         >
           <!-- Text Content -->
-          <div class="w-full text-center md:max-w-xl md:text-left">
+          <div class="mt-4 text-center sm:mt-6 md:mt-0 md:w-3/5 md:text-left">
             <h1
-              class="bg-gradient-to-r from-white to-blue-400 bg-clip-text text-2xl font-bold tracking-tight text-transparent sm:text-3xl md:text-5xl lg:text-6xl"
+              class="bg-gradient-to-r from-white to-blue-400 bg-clip-text pb-3 text-2xl font-bold tracking-tight text-transparent sm:text-3xl md:text-4xl lg:text-5xl"
             >
               Professionelle Webseiten für Ihr Business
             </h1>
@@ -45,18 +45,18 @@
               persönlichen Betreuung vor Ort.
             </p>
             <div
-              class="mt-6 flex flex-col flex-wrap items-center justify-center gap-4 sm:mt-8 sm:flex-row md:justify-start"
+              class="mt-6 flex flex-col flex-wrap items-center justify-center gap-3 sm:mt-8 sm:flex-row md:justify-start"
             >
               <RouterLink to="/kontakt" class="w-full sm:w-auto">
                 <button
-                  class="w-full min-w-[220px] rounded-full bg-blue-600 px-6 py-2.5 text-sm font-medium text-white transition-all hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-600/20"
+                  class="w-full min-w-[200px] rounded-full bg-blue-500 px-6 py-3 text-sm font-medium text-white transition-all hover:scale-105 hover:bg-blue-600 hover:shadow-lg hover:shadow-blue-600/30"
                 >
                   Kostenfreies Beratungsgespräch
                 </button>
               </RouterLink>
               <a href="#leistungen" class="w-full sm:w-auto">
                 <button
-                  class="w-full min-w-[220px] rounded-full border border-gray-600 px-6 py-2.5 text-sm font-medium text-white transition-all hover:border-blue-400 hover:text-blue-400"
+                  class="w-full min-w-[200px] rounded-full border-2 border-blue-400/40 px-6 py-2.5 text-sm font-medium text-white transition-all hover:border-blue-400 hover:bg-slate-800/50 hover:text-blue-300"
                 >
                   Leistungen entdecken
                 </button>
@@ -65,11 +65,11 @@
           </div>
 
           <!-- Image -->
-          <div class="w-full max-w-[160px] sm:max-w-[200px] md:max-w-md">
+          <div class="flex w-2/3 items-center justify-center sm:w-1/2 md:w-2/5">
             <img
-              src="/dominik-kasten-transparent.png"
-              alt="Dominik Kasten Webentwickler"
-              class="h-auto w-full rounded-2xl"
+              src="@/assets/webp/website.webp"
+              alt="Webseiten-Erstellung für Unternehmen"
+              class="h-auto w-full max-w-[150px] sm:max-w-[220px] md:max-w-xs lg:max-w-sm"
             />
           </div>
         </div>
@@ -86,8 +86,10 @@
           <div
             class="rounded-lg bg-slate-800/70 p-6 shadow-lg transition-all hover:-translate-y-1 hover:shadow-blue-600/10"
           >
-            <div class="mb-4 text-3xl text-blue-500">
-              <i class="fas fa-laptop-code"></i>
+            <div
+              class="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-blue-500/10 text-blue-500"
+            >
+              <CodeBracketIcon class="h-6 w-6" />
             </div>
             <h3 class="mb-3 text-xl font-semibold text-white">Webdesign & Entwicklung</h3>
             <p class="text-gray-300">
@@ -101,8 +103,10 @@
           <div
             class="rounded-lg bg-slate-800/70 p-6 shadow-lg transition-all hover:-translate-y-1 hover:shadow-blue-600/10"
           >
-            <div class="mb-4 text-3xl text-blue-500">
-              <i class="fas fa-search"></i>
+            <div
+              class="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-blue-500/10 text-blue-500"
+            >
+              <MagnifyingGlassIcon class="h-6 w-6" />
             </div>
             <h3 class="mb-3 text-xl font-semibold text-white">SEO-Optimierung</h3>
             <p class="text-gray-300">
@@ -115,8 +119,10 @@
           <div
             class="rounded-lg bg-slate-800/70 p-6 shadow-lg transition-all hover:-translate-y-1 hover:shadow-blue-600/10"
           >
-            <div class="mb-4 text-3xl text-blue-500">
-              <i class="fas fa-mobile-alt"></i>
+            <div
+              class="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-blue-500/10 text-blue-500"
+            >
+              <DevicePhoneMobileIcon class="h-6 w-6" />
             </div>
             <h3 class="mb-3 text-xl font-semibold text-white">Responsive Design</h3>
             <p class="text-gray-300">
@@ -129,8 +135,10 @@
           <div
             class="rounded-lg bg-slate-800/70 p-6 shadow-lg transition-all hover:-translate-y-1 hover:shadow-blue-600/10"
           >
-            <div class="mb-4 text-3xl text-blue-500">
-              <i class="fas fa-server"></i>
+            <div
+              class="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-blue-500/10 text-blue-500"
+            >
+              <ServerIcon class="h-6 w-6" />
             </div>
             <h3 class="mb-3 text-xl font-semibold text-white">Hosting & Wartung</h3>
             <p class="text-gray-300">
@@ -143,8 +151,10 @@
           <div
             class="rounded-lg bg-slate-800/70 p-6 shadow-lg transition-all hover:-translate-y-1 hover:shadow-blue-600/10"
           >
-            <div class="mb-4 text-3xl text-blue-500">
-              <i class="fas fa-pen-fancy"></i>
+            <div
+              class="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-blue-500/10 text-blue-500"
+            >
+              <PencilSquareIcon class="h-6 w-6" />
             </div>
             <h3 class="mb-3 text-xl font-semibold text-white">Content-Erstellung</h3>
             <p class="text-gray-300">
@@ -157,8 +167,10 @@
           <div
             class="rounded-lg bg-slate-800/70 p-6 shadow-lg transition-all hover:-translate-y-1 hover:shadow-blue-600/10"
           >
-            <div class="mb-4 text-3xl text-blue-500">
-              <i class="fas fa-chart-line"></i>
+            <div
+              class="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-blue-500/10 text-blue-500"
+            >
+              <ChartBarIcon class="h-6 w-6" />
             </div>
             <h3 class="mb-3 text-xl font-semibold text-white">Analytics & Tracking</h3>
             <p class="text-gray-300">
@@ -594,7 +606,7 @@
             class="rounded-lg bg-slate-800/70 p-6 text-center shadow-lg transition-all hover:-translate-y-1"
           >
             <div class="mb-4 inline-block rounded-full bg-blue-600/20 p-3">
-              <i class="fas fa-map-marker-alt text-2xl text-blue-500"></i>
+              <MapPinIcon class="h-6 w-6 text-blue-500" />
             </div>
             <h3 class="mb-2 text-xl font-semibold text-white">Goslar</h3>
             <p class="text-gray-300">
@@ -608,7 +620,7 @@
             class="rounded-lg bg-slate-800/70 p-6 text-center shadow-lg transition-all hover:-translate-y-1"
           >
             <div class="mb-4 inline-block rounded-full bg-blue-600/20 p-3">
-              <i class="fas fa-mountain text-2xl text-blue-500"></i>
+              <HomeModernIcon class="h-6 w-6 text-blue-500" />
             </div>
             <h3 class="mb-2 text-xl font-semibold text-white">Harz</h3>
             <p class="text-gray-300">
@@ -622,7 +634,7 @@
             class="rounded-lg bg-slate-800/70 p-6 text-center shadow-lg transition-all hover:-translate-y-1"
           >
             <div class="mb-4 inline-block rounded-full bg-blue-600/20 p-3">
-              <i class="fas fa-industry text-2xl text-blue-500"></i>
+              <BuildingOfficeIcon class="h-6 w-6 text-blue-500" />
             </div>
             <h3 class="mb-2 text-xl font-semibold text-white">Salzgitter</h3>
             <p class="text-gray-300">
@@ -636,7 +648,7 @@
             class="rounded-lg bg-slate-800/70 p-6 text-center shadow-lg transition-all hover:-translate-y-1"
           >
             <div class="mb-4 inline-block rounded-full bg-blue-600/20 p-3">
-              <i class="fas fa-spa text-2xl text-blue-500"></i>
+              <SparklesIcon class="h-6 w-6 text-blue-500" />
             </div>
             <h3 class="mb-2 text-xl font-semibold text-white">Bad Harzburg</h3>
             <p class="text-gray-300">
@@ -873,6 +885,18 @@
 import { onMounted, reactive } from 'vue'
 import { RouterLink } from 'vue-router'
 import MetaTags from '@/components/MetaTags.vue'
+import {
+  CodeBracketIcon,
+  MagnifyingGlassIcon,
+  DevicePhoneMobileIcon,
+  ServerIcon,
+  PencilSquareIcon,
+  ChartBarIcon,
+  MapPinIcon,
+  HomeModernIcon,
+  BuildingOfficeIcon,
+  SparklesIcon,
+} from '@heroicons/vue/24/outline'
 
 // Define a type for the FAQ state
 interface FaqState {

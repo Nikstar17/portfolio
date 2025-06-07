@@ -4,7 +4,7 @@
       <div class="flex items-center justify-between">
         <!-- Logo -->
         <RouterLink to="/" class="flex items-center">
-          <h1 class="text-xl font-bold text-white md:text-2xl">Dominik Kasten</h1>
+          <img src="@/assets/webp/logo.webp" alt="Dominik Kasten" class="h-8 md:h-10" />
         </RouterLink>
 
         <!-- Mobile Menu Button -->
@@ -64,6 +64,15 @@
             </li>
             <li>
               <RouterLink
+                to="/digitalisierung"
+                class="text-sm font-medium text-gray-300 transition-colors hover:text-blue-400"
+                :class="{ 'text-blue-400': $route.path === '/digitalisierung' }"
+              >
+                Digitalisierung
+              </RouterLink>
+            </li>
+            <li>
+              <RouterLink
                 to="/preise"
                 class="text-sm font-medium text-gray-300 transition-colors hover:text-blue-400"
                 :class="{ 'text-blue-400': $route.path === '/preise' }"
@@ -115,6 +124,16 @@
                     :class="{ 'text-blue-400': $route.path === '/webseiten-erstellung' }"
                   >
                     Webseiten
+                  </RouterLink>
+                </li>
+                <li>
+                  <RouterLink
+                    @click="closeMenu"
+                    to="/digitalisierung"
+                    class="text-2xl font-medium text-white transition-colors hover:text-blue-400"
+                    :class="{ 'text-blue-400': $route.path === '/digitalisierung' }"
+                  >
+                    Digitalisierung
                   </RouterLink>
                 </li>
                 <li>
