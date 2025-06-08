@@ -9,6 +9,7 @@ import { RouterLink } from 'vue-router'
       <div class="mb-8 text-center">
         <h1 class="text-3xl font-bold text-white md:text-4xl">Datenschutzerklärung</h1>
         <div class="mx-auto mt-2 h-1 w-20 bg-gradient-to-r from-blue-500 to-blue-400"></div>
+        <p class="mt-4 text-sm text-gray-400">Letzte Aktualisierung: 08.06.2025</p>
       </div>
 
       <div
@@ -78,19 +79,15 @@ import { RouterLink } from 'vue-router'
 
         <div class="space-y-6 text-gray-300">
           <div>
-            <h3 class="mt-4 mb-2 text-lg font-medium text-white">
-              Externes Hosting durch Amazon Web Services (AWS)
-            </h3>
+            <h3 class="mt-4 mb-2 text-lg font-medium text-white">Externes Hosting durch Vercel</h3>
             <p>
               Diese Website wird extern gehostet. Der Anbieter ist:
               <br />
-              <strong
-                >Amazon Web Services EMEA SARL, 38 Avenue John F. Kennedy, L-1855 Luxemburg</strong
-              >.
+              <strong>Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, USA</strong>.
             </p>
             <p class="mt-2">
               Die personenbezogenen Daten, die auf dieser Website erfasst werden, werden auf den
-              Servern von AWS gespeichert. Hierbei kann es sich insbesondere um IP-Adressen,
+              Servern von Vercel gespeichert. Hierbei kann es sich insbesondere um IP-Adressen,
               Kontaktanfragen, Meta- und Kommunikationsdaten, Vertragsdaten, Kontaktdaten, Namen,
               Websitezugriffe sowie sonstige über eine Website generierte Daten handeln.
             </p>
@@ -147,7 +144,51 @@ import { RouterLink } from 'vue-router'
       <div
         class="mt-8 rounded-xl border border-gray-800/50 bg-gray-800/30 p-6 shadow-lg backdrop-blur-sm"
       >
-        <h2 class="mb-4 text-xl font-semibold text-blue-400">4. Cookie-Einstellungen</h2>
+        <h2 class="mb-4 text-xl font-semibold text-blue-400">4. Einwilligungsmanagement</h2>
+
+        <div class="space-y-6 text-gray-300">
+          <div>
+            <p>
+              Auf unserer Website verwenden wir ein selbst entwickeltes Cookie-Einwilligungs-Tool,
+              um Ihre Zustimmung zur Speicherung bestimmter Cookies auf Ihrem Endgerät oder zum
+              Einsatz bestimmter Technologien einzuholen und datenschutzkonform zu dokumentieren.
+              Grundlage hierfür ist Art. 6 Abs. 1 lit. c DSGVO.
+            </p>
+            <p class="mt-2">
+              Sie können Ihre Einwilligung jederzeit über die Schaltfläche „Cookie-Einstellungen" am
+              unteren Rand der Website widerrufen oder anpassen.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="mt-8 rounded-xl border border-gray-800/50 bg-gray-800/30 p-6 shadow-lg backdrop-blur-sm"
+      >
+        <h2 class="mb-4 text-xl font-semibold text-blue-400">5. Kontaktaufnahme</h2>
+
+        <div class="space-y-6 text-gray-300">
+          <div>
+            <p>
+              Wenn Sie uns per E-Mail oder über ein Kontaktformular Anfragen zukommen lassen, werden
+              Ihre Angaben inklusive der von Ihnen dort angegebenen Kontaktdaten zur Bearbeitung der
+              Anfrage und für den Fall von Anschlussfragen bei uns gespeichert.
+            </p>
+            <p class="mt-2">
+              Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO,
+              sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur
+              Durchführung vorvertraglicher Maßnahmen erforderlich ist. In allen übrigen Fällen
+              beruht die Verarbeitung auf unserem berechtigten Interesse (Art. 6 Abs. 1 lit. f
+              DSGVO).
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="mt-8 rounded-xl border border-gray-800/50 bg-gray-800/30 p-6 shadow-lg backdrop-blur-sm"
+      >
+        <h2 class="mb-4 text-xl font-semibold text-blue-400">6. Cookie-Einstellungen</h2>
 
         <CookieSettings />
       </div>
