@@ -24,7 +24,7 @@
 
       <div class="relative z-10 container mx-auto max-w-6xl px-4 sm:px-6">
         <div
-          class="flex flex-col-reverse items-center gap-0 sm:gap-8 md:flex-row md:justify-between md:gap-12"
+          class="flex flex-col-reverse items-center gap-0 md:flex-row md:justify-between md:gap-12"
         >
           <!-- Text Content -->
           <div class="mt-4 text-center sm:mt-6 md:mt-0 md:w-3/5 md:text-left">
@@ -803,7 +803,7 @@
     </section>
 
     <!-- Portfolio Section -->
-    <section class="py-16">
+    <section class="py-16" id="projekte">
       <div class="container mx-auto max-w-6xl px-6">
         <h2 class="mb-8 text-center text-3xl font-bold text-white">Meine bisherigen Projekte</h2>
         <p class="mx-auto mb-12 max-w-3xl text-center text-lg text-gray-300">

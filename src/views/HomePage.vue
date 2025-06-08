@@ -60,7 +60,7 @@
 
       <div class="relative z-10 container mx-auto max-w-6xl px-4 sm:px-6">
         <div
-          class="flex flex-col-reverse items-center gap-6 sm:gap-8 md:flex-row md:justify-between md:gap-12"
+          class="flex flex-col-reverse items-center gap-0 md:flex-row md:justify-between md:gap-12"
         >
           <!-- Text Content -->
           <div class="mt-4 text-center sm:mt-6 md:mt-0 md:w-3/5 md:text-left">
