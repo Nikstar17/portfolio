@@ -3,9 +3,9 @@
     <!-- Meta-Tags Component -->
     <MetaTags
       :meta="{
-        title: 'Webseiten-Erstellung Goslar | Professionelle Websites für lokale Unternehmen',
+        title: 'Webseiten-Erstellung in Goslar – Modern, lokal & SEO-optimiert',
         description:
-          'Professionelle Webseiten-Erstellung in Goslar und im Harz. Moderne, responsive Websites mit SEO-Optimierung speziell für lokale Unternehmen und Dienstleister.',
+          'Webseite vom Profi aus Goslar – maßgeschneidert, schnell & SEO-stark. Perfekt für Selbstständige und Unternehmen im Harz. Jetzt Beratung sichern!',
         keywords:
           'webseiten-erstellung goslar, website entwicklung harz, responsive webdesign, lokale webentwicklung, seo-optimierte webseiten',
         ogTitle: 'Webseiten-Erstellung für lokale Unternehmen im Harz',
@@ -24,15 +24,20 @@
 
       <div class="relative z-10 container mx-auto max-w-6xl px-4 sm:px-6">
         <div
-          class="flex flex-col-reverse items-center gap-6 sm:gap-8 md:flex-row md:justify-between md:gap-12"
+          class="flex flex-col-reverse items-center gap-0 sm:gap-8 md:flex-row md:justify-between md:gap-12"
         >
           <!-- Text Content -->
           <div class="mt-4 text-center sm:mt-6 md:mt-0 md:w-3/5 md:text-left">
             <h1
               class="bg-gradient-to-r from-white to-blue-400 bg-clip-text pb-3 text-2xl font-bold tracking-tight text-transparent sm:text-3xl md:text-4xl lg:text-5xl"
             >
-              Professionelle Webseiten für Ihr Business
+              Ich baue Ihre Website, damit Sie Kunden gewinnen – nicht nur Besucher.
             </h1>
+            <!-- <h1
+              class="bg-gradient-to-r from-white to-blue-400 bg-clip-text pb-3 text-2xl font-bold tracking-tight text-transparent sm:text-3xl md:text-4xl lg:text-5xl"
+            >
+              Professionelle Webseiten für Ihr Business
+            </h1> -->
             <p class="mt-4 text-base font-medium text-blue-400 sm:text-lg md:text-xl">
               Maßgeschneiderte Webseiten für Unternehmen im Harz und deutschlandweit
             </p>
@@ -675,6 +680,128 @@
       </div>
     </section>
 
+    <!-- Technology Stack Section -->
+    <section class="bg-slate-900/50 py-16">
+      <div class="container mx-auto max-w-6xl px-6">
+        <h2 class="mb-8 text-center text-3xl font-bold text-white">
+          Moderne Technologien für Ihren Erfolg
+        </h2>
+        <p class="mx-auto mb-12 max-w-3xl text-center text-lg text-gray-300">
+          Ich setze auf modernste Webtechnologien, um Ihnen eine schnelle, sichere und
+          zukunftsfähige Website zu bieten.
+        </p>
+
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Vue.js -->
+          <div
+            class="rounded-lg bg-slate-800/70 p-6 transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-600/10"
+          >
+            <div
+              class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-green-500/10"
+            >
+              <img src="/src/assets/webp/vue_icon.webp" alt="Vue Icon" class="p-2" />
+            </div>
+            <h3 class="mb-3 text-xl font-semibold text-white">Vue.js</h3>
+            <p class="text-gray-300">
+              Ein progressives JavaScript-Framework für besonders reaktionsschnelle und dynamische
+              Benutzeroberflächen. Ermöglicht eine optimale Performance und flüssige
+              Benutzererfahrung.
+            </p>
+          </div>
+
+          <!-- Tailwind CSS -->
+          <div
+            class="rounded-lg bg-slate-800/70 p-6 transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-600/10"
+          >
+            <div
+              class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-cyan-500/10"
+            >
+              <img src="/src/assets/webp/tailwind_icon.webp" alt="Vue Icon" class="p-2" />
+            </div>
+            <h3 class="mb-3 text-xl font-semibold text-white">Tailwind CSS</h3>
+            <p class="text-gray-300">
+              Ein modernes Utility-First CSS Framework für hochgradig anpassbare Designs. Ermöglicht
+              schnelle Entwicklung bei gleichzeitig optimaler Performance durch minimale
+              Dateigrößen.
+            </p>
+          </div>
+
+          <!-- Vercel -->
+          <div
+            class="rounded-lg bg-slate-800/70 p-6 transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-600/10"
+          >
+            <div
+              class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-slate-500/10"
+            >
+              <img src="/src/assets/webp/vercel_icon.webp" alt="Vue Icon" class="p-2" />
+            </div>
+            <h3 class="mb-3 text-xl font-semibold text-white">Vercel Hosting</h3>
+            <p class="text-gray-300">
+              Eine globale Cloud-Plattform für ultraschnelles Hosting. Bietet automatische
+              SSL-Verschlüsselung, globales CDN und kontinuierliche Deployment-Prozesse für maximale
+              Sicherheit und Geschwindigkeit.
+            </p>
+          </div>
+
+          <!-- TypeScript -->
+          <div
+            class="rounded-lg bg-slate-800/70 p-6 transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-600/10"
+          >
+            <div
+              class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-blue-500/10"
+            >
+              <img src="/src/assets/webp/typescript_icon.webp" alt="Vue Icon" class="p-2" />
+            </div>
+            <h3 class="mb-3 text-xl font-semibold text-white">TypeScript</h3>
+            <p class="text-gray-300">
+              Eine typisierte Erweiterung von JavaScript für mehr Zuverlässigkeit und bessere
+              Wartbarkeit. Ermöglicht frühzeitiges Erkennen von Fehlern und verbessert die
+              Code-Qualität.
+            </p>
+          </div>
+
+          <!-- Vite -->
+          <div
+            class="rounded-lg bg-slate-800/70 p-6 transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-600/10"
+          >
+            <div
+              class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-purple-500/10"
+            >
+              <img src="/src/assets/webp/vite_icon.webp" alt="Vue Icon" class="p-2" />
+            </div>
+            <h3 class="mb-3 text-xl font-semibold text-white">Vite</h3>
+            <p class="text-gray-300">
+              Ein moderner Build-Tool für blitzschnelle Entwicklung. Bietet unmittelbares HMR (Hot
+              Module Replacement) und optimierte Produktions-Builds für beste Performance.
+            </p>
+          </div>
+
+          <!-- Git & CI/CD -->
+          <div
+            class="rounded-lg bg-slate-800/70 p-6 transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-600/10"
+          >
+            <div
+              class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-orange-500/10"
+            >
+              <img src="/src/assets/webp/git_icon.webp" alt="Vue Icon" class="p-2" />
+            </div>
+            <h3 class="mb-3 text-xl font-semibold text-white">Git & CI/CD</h3>
+            <p class="text-gray-300">
+              Professionelle Versionskontrolle und automatisierte Deployments. Garantiert
+              reibungslose Updates und schnelle Fehlerbehebung bei maximaler Projektsicherheit.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-12 text-center">
+          <p class="mx-auto max-w-3xl text-lg text-gray-300">
+            Diese moderne Technologie-Kombination ermöglicht es mir, Ihnen eine schnelle, wartbare
+            und zukunftssichere Website zu erstellen, die sich optimal an Ihre Bedürfnisse anpasst.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <!-- Portfolio Section -->
     <section class="py-16">
       <div class="container mx-auto max-w-6xl px-6">
@@ -872,7 +999,7 @@
             <button
               class="rounded-full bg-blue-600 px-6 py-2.5 text-sm font-medium text-white transition-all hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-600/20"
             >
-              Projekt anfragen
+              Jetzt kostenlose Beratung sichern
             </button>
           </RouterLink>
         </div>

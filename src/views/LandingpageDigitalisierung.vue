@@ -366,6 +366,138 @@
       </div>
     </section>
 
+    <!-- Technology Stack Section -->
+    <section class="bg-slate-900/50 py-16">
+      <div class="container mx-auto max-w-6xl px-6">
+        <h2 class="mb-8 text-center text-3xl font-bold text-white">
+          Moderne Technologien für Ihre Digitalisierung
+        </h2>
+        <p class="mx-auto mb-12 max-w-3xl text-center text-lg text-gray-300">
+          Ich setze auf einen modernen Full-Stack-Technologie-Stack, um Ihnen skalierbare, sichere
+          und effiziente Lösungen zu bieten.
+        </p>
+
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Vue.js -->
+          <div
+            class="rounded-lg bg-slate-800/70 p-6 transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-600/10"
+          >
+            <div
+              class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-green-500/10"
+            >
+              <img src="/src/assets/webp/vue_icon.webp" alt="Vue Icon" class="p-2" />
+            </div>
+            <h3 class="mb-3 text-xl font-semibold text-white">Vue.js Frontend</h3>
+            <p class="text-gray-300">
+              Ein modernes JavaScript-Framework für reaktionsschnelle Benutzeroberflächen. Ideal für
+              komplexe Geschäftsanwendungen mit hoher Benutzerfreundlichkeit.
+            </p>
+          </div>
+
+          <!-- Flask -->
+          <div
+            class="rounded-lg bg-slate-800/70 p-6 transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-600/10"
+          >
+            <div
+              class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-slate-100/30"
+            >
+              <img src="/src/assets/webp/flask_icon.webp" alt="Vue Icon" class="p-2" />
+            </div>
+            <h3 class="mb-3 text-xl font-semibold text-white">Flask Backend</h3>
+            <p class="text-gray-300">
+              Ein leichtgewichtiges und flexibles Python-Framework für die Backend-Entwicklung.
+              Perfekt für REST-APIs, Datenverarbeitung und Geschäftslogik.
+            </p>
+          </div>
+
+          <!-- PostgreSQL -->
+          <div
+            class="rounded-lg bg-slate-800/70 p-6 transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-600/10"
+          >
+            <div
+              class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-blue-500/10"
+            >
+              <img src="/src/assets/webp/postgres_icon.webp" alt="Vue Icon" class="p-2" />
+            </div>
+            <h3 class="mb-3 text-xl font-semibold text-white">PostgreSQL Datenbank</h3>
+            <p class="text-gray-300">
+              Eine robuste, skalierbare SQL-Datenbank für Ihre Geschäftsdaten. Bietet erweiterte
+              Features wie JSON-Unterstützung und hervorragende Performance.
+            </p>
+          </div>
+
+          <!-- Python -->
+          <div
+            class="rounded-lg bg-slate-800/70 p-6 transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-600/10"
+          >
+            <div
+              class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-yellow-500/10"
+            >
+              <img src="/src/assets/webp/pyhton_icon.webp" alt="Vue Icon" class="p-2" />
+            </div>
+            <h3 class="mb-3 text-xl font-semibold text-white">Python</h3>
+            <p class="text-gray-300">
+              Eine vielseitige und leistungsstarke Programmiersprache für Backend-Logik,
+              Datenverarbeitung und Automatisierung. Ideal für KI und maschinelles Lernen.
+            </p>
+          </div>
+
+          <!-- Docker -->
+          <div
+            class="rounded-lg bg-slate-800/70 p-6 transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-600/10"
+          >
+            <div
+              class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-blue-500/10"
+            >
+              <img src="/src/assets/webp/docker_icon.webp" alt="Vue Icon" class="p-2" />
+            </div>
+            <h3 class="mb-3 text-xl font-semibold text-white">Docker</h3>
+            <p class="text-gray-300">
+              Container-Virtualisierung für einfaches Deployment und Skalierung. Garantiert
+              konsistente Entwicklungs- und Produktionsumgebungen.
+            </p>
+          </div>
+
+          <!-- REST APIs -->
+          <div
+            class="rounded-lg bg-slate-800/70 p-6 transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-600/10"
+          >
+            <div
+              class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-indigo-500/10"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-8 w-8 text-indigo-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                />
+              </svg>
+            </div>
+            <h3 class="mb-3 text-xl font-semibold text-white">REST APIs</h3>
+            <p class="text-gray-300">
+              Moderne API-Architekturen für nahtlose Systemintegration. Ermöglicht sichere und
+              effiziente Kommunikation zwischen verschiedenen Anwendungen.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-12 text-center">
+          <p class="mx-auto max-w-3xl text-lg text-gray-300">
+            Diese leistungsstarke Technologie-Kombination ermöglicht es mir, Ihnen skalierbare,
+            sichere und wartbare Digitalisierungslösungen zu erstellen, die sich optimal an Ihre
+            Geschäftsprozesse anpassen.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <!-- Call-to-Action Section -->
     <section class="bg-gradient-to-b from-slate-900 to-blue-900/20 py-20">
       <div class="relative container mx-auto max-w-4xl px-6 text-center">
