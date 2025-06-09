@@ -73,6 +73,15 @@
             </li>
             <li>
               <RouterLink
+                to="/fullstack-entwicklung"
+                class="text-sm font-medium text-gray-300 transition-colors hover:text-blue-400"
+                :class="{ 'text-blue-400': $route.path === '/fullstack-entwicklung' }"
+              >
+                Fullstack
+              </RouterLink>
+            </li>
+            <li>
+              <RouterLink
                 to="/preise"
                 class="text-sm font-medium text-gray-300 transition-colors hover:text-blue-400"
                 :class="{ 'text-blue-400': $route.path === '/preise' }"
@@ -134,6 +143,16 @@
                     :class="{ 'text-blue-400': $route.path === '/digitalisierung' }"
                   >
                     Digitalisierung
+                  </RouterLink>
+                </li>
+                <li>
+                  <RouterLink
+                    @click="closeMenu"
+                    to="/fullstack-entwicklung"
+                    class="text-2xl font-medium text-white transition-colors hover:text-blue-400"
+                    :class="{ 'text-blue-400': $route.path === '/fullstack-entwicklung' }"
+                  >
+                    Fullstack
                   </RouterLink>
                 </li>
                 <li>

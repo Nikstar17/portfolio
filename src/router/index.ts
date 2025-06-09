@@ -11,6 +11,7 @@ const Danke = () => import('@/views/DankeView.vue')
 const WebseitenErstellung = () => import('@/views/WebseitenErstellung.vue')
 const PreiseView = () => import('@/views/PreiseView.vue')
 const LandingpageDigitalisierung = () => import('@/views/LandingpageDigitalisierung.vue')
+const FullstackEntwicklung = () => import('@/views/FullstackEntwicklung.vue')
 import type { MetaInfo } from '@/utils/metaService'
 
 const router = createRouter({
@@ -240,6 +241,54 @@ const router = createRouter({
                 longitude: 10.4304,
               },
               geoRadius: '30000',
+            },
+          },
+        } as MetaInfo,
+      },
+    },
+    {
+      path: '/fullstack-entwicklung',
+      name: 'fullstack-entwicklung',
+      component: FullstackEntwicklung,
+      meta: {
+        transition: 'fade',
+        metaInfo: {
+          title: 'Fullstack-Entwicklung | Modern, performant & maßgeschneidert',
+          description:
+            'Individuelle Fullstack-Webapplikationen mit Vue.js, Flask & PostgreSQL. Maßgeschneiderte Lösungen für Ihr Business – reaktiv, sicher und zukunftsorientiert.',
+          keywords:
+            'fullstack-entwicklung, vue.js, flask, postgresql, webapplikationen, api-entwicklung, datenmodellierung, business-anwendungen',
+          ogTitle: 'Fullstack-Entwicklung für moderne Webanwendungen',
+          ogDescription:
+            'Maßgeschneiderte Fullstack-Lösungen mit Vue.js, Flask & PostgreSQL – reaktiv, performant und skalierbar für Ihren Unternehmenserfolg.',
+          ogImage: 'https://dominik-kasten.de/social-preview.png',
+          canonical: 'https://dominik-kasten.de/fullstack-entwicklung',
+          structuredData: {
+            '@context': 'https://schema.org',
+            '@type': 'Service',
+            name: 'Fullstack-Entwicklung',
+            serviceType: 'Webapplikation-Entwicklung',
+            provider: {
+              '@type': 'LocalBusiness',
+              name: 'Dominik Kasten IT-Dienstleistungen',
+              address: {
+                '@type': 'PostalAddress',
+                streetAddress: 'Grauhöfer Str. 9',
+                addressLocality: 'Goslar',
+                postalCode: '38640',
+                addressCountry: 'DE',
+              },
+            },
+            description:
+              'Individuelle Fullstack-Webapplikationen mit Vue.js, Flask & PostgreSQL. Maßgeschneiderte Lösungen für moderne Unternehmen.',
+            areaServed: {
+              '@type': 'GeoCircle',
+              geoMidpoint: {
+                '@type': 'GeoCoordinates',
+                latitude: 51.9081,
+                longitude: 10.4304,
+              },
+              geoRadius: '50000',
             },
           },
         } as MetaInfo,
