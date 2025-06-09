@@ -1,4 +1,15 @@
 {
-  "redirects": [{ "source": "/(.*)/", "destination": "/$1", "permanent": true }],
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+  "redirects": [
+    {
+      "source": "/((?!$).*)/",
+      "destination": "/$1",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
 }
