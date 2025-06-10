@@ -28,29 +28,35 @@
         >
           <!-- Text Content -->
           <div class="mt-4 text-center sm:mt-6 md:mt-0 md:w-3/5 md:text-left">
-            <h1 class="text-3xl leading-tight font-bold text-white md:text-4xl lg:text-5xl">
+            <h1
+              class="bg-gradient-to-r from-white to-blue-400 bg-clip-text pb-2 text-2xl font-bold tracking-tight text-transparent sm:text-3xl md:text-4xl lg:text-5xl"
+            >
               Fullstack-Entwicklung für moderne Webanwendungen
             </h1>
-            <p class="mt-4 text-xl text-gray-300">
+            <h2 class="mt-2 text-xl font-semibold text-blue-400 sm:text-2xl">
               Individuelle Lösungen mit Vue.js, Flask & PostgreSQL – performant, sicher und
               zukunftssicher.
-            </p>
-            <p class="mt-5 text-lg text-gray-300">
+            </h2>
+            <p class="mt-4 text-sm leading-relaxed text-gray-300 sm:text-base md:text-lg">
               Ob internes Tool, Kundenportal oder Business-Webapp – ich entwickle schlanke,
               performante Fullstack-Anwendungen, die exakt zu Ihrem Bedarf passen.
             </p>
-            <div class="mt-8 flex flex-wrap justify-center gap-4 md:justify-start">
-              <RouterLink
-                to="/kontakt"
-                class="rounded-lg bg-blue-600 px-6 py-3 text-base font-medium text-white shadow-lg shadow-blue-600/30 transition-all hover:bg-blue-700 hover:shadow-xl hover:shadow-blue-600/40"
-              >
-                🔹 Jetzt unverbindlich anfragen
+            <div
+              class="mt-6 flex flex-col flex-wrap items-center justify-center gap-3 sm:mt-8 sm:flex-row md:justify-start"
+            >
+              <RouterLink to="/kontakt" class="w-full sm:w-auto">
+                <button
+                  class="w-full min-w-[200px] rounded-full bg-blue-500 px-6 py-3 text-sm font-medium text-white transition-all hover:scale-105 hover:bg-blue-600 hover:shadow-lg hover:shadow-blue-600/30"
+                >
+                  Kostenfreies Beratungsgespräch
+                </button>
               </RouterLink>
-              <a
-                href="#technologie"
-                class="rounded-lg bg-slate-700 px-6 py-3 text-base font-medium text-white shadow-lg transition-all hover:bg-slate-600 hover:shadow-xl"
-              >
-                🔹 Technologien entdecken
+              <a href="#technologie" class="w-full sm:w-auto">
+                <button
+                  class="w-full min-w-[200px] rounded-full border-2 border-blue-400/40 px-6 py-2.5 text-sm font-medium text-white transition-all hover:border-blue-400 hover:bg-slate-800/50 hover:text-blue-300"
+                >
+                  Technologien entdecken
+                </button>
               </a>
             </div>
           </div>
