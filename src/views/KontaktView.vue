@@ -200,7 +200,7 @@
             </svg>
             <div>
               <h3 class="text-lg font-medium text-white">Telefon</h3>
-              <a href="tel:+4917656723879" class="hover:text-blue-400"> +49 176 56723879 </a>
+              <a href="tel:+4915563846168" class="hover:text-blue-400"> +49 155 63846168 </a>
             </div>
           </div>
         </div>

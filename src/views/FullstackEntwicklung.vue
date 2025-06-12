@@ -664,7 +664,7 @@
               class="flex w-full items-center justify-center gap-2 rounded-lg border border-gray-600 bg-transparent px-6 py-3 text-base font-medium text-white transition-all hover:bg-slate-800 sm:w-auto"
             >
               <PhoneIcon class="h-5 w-5" />
-              <span>+49 176 56723879</span>
+              <span>+49 155 63846168</span>
             </a>
           </div>
         </div>

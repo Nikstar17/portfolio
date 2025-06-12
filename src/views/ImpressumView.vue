@@ -21,7 +21,7 @@
 
           <div>
             <h3 class="mb-2 text-lg font-medium text-white">Kontakt</h3>
-            <p>Telefon: +49 176 56723879</p>
+            <p>Telefon: +49 155 63846168</p>
             <p>E-Mail: info@dominik-kasten.de</p>
           </div>
 
