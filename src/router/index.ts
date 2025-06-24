@@ -12,6 +12,7 @@ const WebseitenErstellung = () => import('@/views/WebseitenErstellung.vue')
 const PreiseView = () => import('@/views/PreiseView.vue')
 const LandingpageDigitalisierung = () => import('@/views/LandingpageDigitalisierung.vue')
 const FullstackEntwicklung = () => import('@/views/FullstackEntwicklung.vue')
+const SonderangebotView = () => import('@/views/SonderangebotView.vue')
 import type { MetaInfo } from '@/utils/metaService'
 
 const router = createRouter({
@@ -291,6 +292,41 @@ const router = createRouter({
               geoRadius: '50000',
             },
           },
+        } as MetaInfo,
+      },
+    },
+    {
+      path: '/sonderangebot',
+      name: 'sonderangebot',
+      component: SonderangebotView,
+      meta: {
+        transition: 'fade',
+        metaInfo: {
+          title: 'Sonderangebote | Dominik Kasten - IT-Dienstleistungen Goslar',
+          description:
+            'Entdecken Sie unsere aktuellen Sonderangebote für IT-Dienstleistungen und Webseiten-Erstellung in Goslar. Jetzt sparen und profitieren!',
+          keywords:
+            'sonderangebote, rabatte, it-dienstleistungen, webseiten-erstellung, goslar, harz, it-service angebote',
+          canonical: 'https://dominik-kasten.de/sonderangebot',
+        } as MetaInfo,
+      },
+    },
+    {
+      path: '/sonderangebot-webseite',
+      name: 'sonderangebot-webseite',
+      component: SonderangebotView,
+      meta: {
+        transition: 'fade',
+        metaInfo: {
+          title: 'Express-Webseite für nur 299€ – Blitzschnell in 2 Tagen online',
+          description:
+            'Limitiertes Sonderangebot: Professionelle Express-Webseite für nur 299€! Inkl. Landingpage, Datenschutz & Impressum. In nur 2 Tagen erstellt. Responsiv & SEO-optimiert.',
+          keywords:
+            'express-webseite, günstige webseite, schnelle webseitenerstellung, webseite in 2 tagen, webseite 299€, webdesign sonderangebot',
+          canonical: 'https://dominik-kasten.de/sonderangebot-webseite',
+          ogTitle: 'Express-Webseite für nur 299€ – In nur 2 Tagen online',
+          ogDescription:
+            'Limitiertes Sonderangebot: Professionelle Express-Webseite für nur 299€! Komplett responsiv, superschnell, mit Datenschutz & Impressum in nur 2 Tagen erstellt.',
         } as MetaInfo,
       },
     },
