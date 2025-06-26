@@ -58,30 +58,6 @@
         <div class="h-full w-full"></div>
       </div>
 
-      <!-- Sonderangebot Banner -->
-      <div class="relative z-20 container mx-auto mb-6 max-w-6xl px-4 sm:px-6">
-        <RouterLink to="/sonderangebot-webseite">
-          <div
-            class="flex flex-col items-center justify-between rounded-xl bg-gradient-to-r from-blue-900/60 to-blue-600/60 p-4 sm:flex-row"
-          >
-            <div class="flex items-center">
-              <div class="mr-4 rounded-full bg-yellow-400 p-1.5 text-blue-900">
-                <BoltIcon class="h-5 w-5" />
-              </div>
-              <div>
-                <p class="font-bold text-white">Express-Webseite Sonderangebot</p>
-                <p class="text-sm text-blue-100">Ihre komplette Webseite in 2 Tagen für nur 299€</p>
-              </div>
-            </div>
-            <div
-              class="mt-3 rounded-full bg-white px-4 py-1.5 text-sm font-medium text-blue-900 transition-colors hover:bg-blue-50 sm:mt-0"
-            >
-              Mehr erfahren
-            </div>
-          </div>
-        </RouterLink>
-      </div>
-
       <div class="relative z-10 container mx-auto max-w-6xl px-4 sm:px-6">
         <div
           class="flex flex-col-reverse items-center gap-0 md:flex-row md:justify-between md:gap-12"
@@ -512,7 +488,6 @@ import {
   BuildingOfficeIcon,
   WrenchIcon,
   RocketLaunchIcon,
-  BoltIcon,
 } from '@heroicons/vue/24/outline'
 import MetaTags from '@/components/MetaTags.vue'
 
