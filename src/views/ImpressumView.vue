@@ -9,7 +9,7 @@
       <div
         class="rounded-xl border border-gray-800/50 bg-gray-800/30 p-6 shadow-lg backdrop-blur-sm"
       >
-        <h2 class="mb-4 text-xl font-semibold text-blue-400">Angaben gemäß § 5 TMG</h2>
+        <h2 class="mb-4 text-xl font-semibold text-blue-400">Angaben gemäß § 5 DDG</h2>
 
         <div class="space-y-6 text-gray-300">
           <div>
@@ -33,7 +33,7 @@
 
           <div>
             <h3 class="mb-2 text-lg font-medium text-white">
-              Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV
+              Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV
             </h3>
             <p>Dominik Kasten</p>
             <p>Grauhöfer Str. 9</p>
@@ -52,8 +52,8 @@
           <div>
             <h3 class="mb-2 text-lg font-medium text-white">Haftung für Inhalte</h3>
             <p>
-              Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten
-              nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als
+              Als Diensteanbieter sind wir gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten
+              nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG sind wir als
               Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde
               Informationen zu überwachen oder nach Umständen zu forschen, die auf eine
               rechtswidrige Tätigkeit hinweisen.
