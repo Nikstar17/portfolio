@@ -454,7 +454,8 @@ a:hover {
   display: none;
 }
 
-@media (min-width: 820px) {
+/* Maßkette gilt für alle Breiten; schmale Bildschirme siehe unten */
+@media all {
   .chain {
     gap: 22px;
     position: relative;
@@ -907,18 +908,6 @@ a:hover {
   color: var(--tusche);
 }
 
-@media (max-width: 560px) {
-  .rev li {
-    grid-template-columns: 2.25rem minmax(0, 1fr);
-  }
-
-  .rev .state {
-    grid-column: 2;
-    justify-self: start;
-    margin-top: 6px;
-  }
-}
-
 /* ---------- Schriftfeld ---------- */
 
 .titleblock {
@@ -1075,4 +1064,255 @@ a:hover {
   clip-path: inset(50%);
   white-space: nowrap;
   border: 0;
+}
+
+/* ---------- Schmale Bildschirme: kompakt, nah am Desktop-Format ---------- */
+
+@media (max-width: 640px) {
+  .inner {
+    gap: 56px;
+  }
+
+  .section-head {
+    margin-bottom: 22px;
+    padding-bottom: 10px;
+  }
+
+  /* Kopf: Navigation über die ganze Breite in einer Zeile;
+     der Name steht direkt darunter groß, das Kürzel entfällt */
+  .mark {
+    display: none;
+  }
+
+  .top nav {
+    width: 100%;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .top nav a {
+    font-size: 0.6875rem;
+    white-space: nowrap;
+  }
+
+  /* Einstieg: Name links, Porträt rechts, Text darunter */
+  .intro {
+    grid-template-columns: minmax(0, 1fr) 7.25rem;
+    grid-template-areas:
+      'label photo'
+      'name photo'
+      'lead lead';
+    gap: 0 14px;
+    align-items: start;
+  }
+
+  .intro > div {
+    display: contents;
+  }
+
+  .intro > div > .label {
+    grid-area: label;
+  }
+
+  .intro h1 {
+    grid-area: name;
+    margin-top: 10px;
+    font-size: 2.75rem;
+  }
+
+  .lead {
+    grid-area: lead;
+    margin-top: 22px;
+    font-size: 1.0625rem;
+  }
+
+  .detail {
+    grid-area: photo;
+    width: 100%;
+  }
+
+  .detail .ring {
+    padding: 5px;
+  }
+
+  .detail figcaption {
+    margin-top: 8px;
+    gap: 6px;
+  }
+
+  .detail figcaption .pos {
+    width: 1.25rem;
+    height: 1.25rem;
+    font-size: 0.5625rem;
+  }
+
+  .detail figcaption .label {
+    font-size: 0.5625rem;
+    letter-spacing: 0;
+    white-space: nowrap;
+  }
+
+  /* Maßkette kompakt: Zeilenname über der Linie, kurze Namen, wenige Jahre */
+  .chain {
+    gap: 8px;
+  }
+
+  .track {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .track > .label {
+    padding-bottom: 0;
+    font-size: 0.625rem;
+  }
+
+  .lane {
+    height: 2.3rem;
+  }
+
+  .dim {
+    padding-bottom: 10px;
+  }
+
+  .dim b {
+    font-size: 0.75rem;
+  }
+
+  .dim b[data-short] {
+    font-size: 0;
+  }
+
+  .dim b[data-short]::after {
+    content: attr(data-short);
+    font-size: 0.75rem;
+  }
+
+  .dim .years {
+    display: none;
+  }
+
+  .axis {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .axis > span:first-child,
+  .ticks span:nth-of-type(2),
+  .ticks span:nth-of-type(3),
+  .ticks span:nth-of-type(5),
+  .ticks span:nth-of-type(7),
+  .ticks span:nth-of-type(9) {
+    display: none;
+  }
+
+  .ticks span,
+  .today span {
+    font-size: 0.625rem;
+  }
+
+  /* erste und letzte Jahreszahl nach innen setzen, damit sie nicht überstehen */
+  .ticks span:first-of-type {
+    transform: none;
+  }
+
+  .ticks span:first-of-type::before {
+    left: 0;
+  }
+
+  .ticks span:last-of-type {
+    transform: translateX(-100%);
+  }
+
+  .ticks span:last-of-type::before {
+    left: auto;
+    right: 0;
+  }
+
+  .today {
+    left: calc(100% * 0.9805);
+  }
+
+  .notes {
+    margin-top: 28px;
+    gap: 18px;
+  }
+
+  .notes h3 {
+    font-size: 1rem;
+    margin-bottom: 2px;
+  }
+
+  .notes p {
+    font-size: 0.9375rem;
+  }
+
+  /* Arbeiten */
+  .pieces {
+    margin-top: 40px;
+    gap: 48px;
+  }
+
+  .piece {
+    gap: 18px;
+  }
+
+  .piece-text p {
+    font-size: 0.9375rem;
+  }
+
+  /* Werkzeug zweispaltig wie auf dem Desktop */
+  .tools div {
+    grid-template-columns: 5.25rem minmax(0, 1fr);
+    gap: 12px;
+    padding-block: 10px;
+  }
+
+  .tools dt {
+    font-size: 0.625rem;
+    padding-top: 3px;
+  }
+
+  .tools dd {
+    font-size: 0.8125rem;
+  }
+
+  /* Ausblick: Status rechts neben dem Titel, Text darunter */
+  .rev li {
+    grid-template-columns: 1.75rem minmax(0, 1fr) auto;
+    grid-template-areas:
+      'idx title state'
+      '. text text';
+    gap: 2px 12px;
+    padding-block: 12px;
+  }
+
+  .rev li > div {
+    display: contents;
+  }
+
+  .rev .idx {
+    grid-area: idx;
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 0.6875rem;
+  }
+
+  .rev b {
+    grid-area: title;
+    font-size: 1rem;
+  }
+
+  .rev p {
+    grid-area: text;
+    font-size: 0.9375rem;
+  }
+
+  .rev .state {
+    grid-area: state;
+    align-self: start;
+    font-size: 0.5625rem;
+    padding: 2px 6px;
+  }
 }

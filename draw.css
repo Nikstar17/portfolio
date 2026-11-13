@@ -249,7 +249,7 @@
 }
 
 /* --- Maßkette (nur breite Ansicht) --- */
-@media (prefers-reduced-motion: no-preference) and (min-width: 820px) {
+@media (prefers-reduced-motion: no-preference) {
   /* Maßlinie wächst von der Mitte nach außen */
   .typing .dim::after {
     transform-origin: center center;
