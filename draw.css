@@ -255,6 +255,14 @@
   .typing body {
     padding-bottom: 30vh;
   }
+
+  /* hochkant auf dem Handy steht der Kontaktsatz über dem Schriftfeld
+     und erreicht die Auslösezone auch ohne Zusatzplatz */
+  @media (max-width: 640px) {
+    .typing body {
+      padding-bottom: 16px;
+    }
+  }
 }
 
 /* --- Maßkette (nur breite Ansicht) --- */
