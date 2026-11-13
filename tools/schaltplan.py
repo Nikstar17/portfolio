@@ -2,11 +2,11 @@
 
 Enthält Schaltpläne (Schaltzeichen nach DIN EN 60617), Platine, UML
 (Aktivität, Klassen, Sequenz), ER-Modell, CPU-Blockschaltbild, Serverrack,
-Netzwerk und Cluster. Die Zeichnung liegt fest im Hintergrund (Zeichentisch),
-das Blatt scrollt darüber und zeigt dieselbe Zeichnung blasser.
+Netzwerk und Cluster. Die Zeichnung liegt im Hintergrund (Zeichentisch),
+das Blatt scrollt darüber.
 
 Aufruf (im Projektordner):  python tools/schaltplan.py img
-Schreibt img/schaltplan-papier.svg und img/schaltplan-blatt.svg.
+Schreibt img/schaltplan-papier.svg.
 """
 import math
 import sys
@@ -366,14 +366,7 @@ PAPIER = [
     (classes, 60, 640), (cpu, 760, 680), (opamp_circuit, 1460, 470), (sequence, 1420, 800),
     (network, 2030, 780), (cluster, 60, 1200), (pcb, 700, 1190), (logic, 2120, 1380),
 ]
-BLATT = [
-    (erm, 80, 60), (pcb, 900, 40), (sequence, 1700, 80), (cpu, 120, 560),
-    (activity, 820, 640), (rack, 1340, 600), (classes, 1700, 660), (logic, 140, 1160),
-    (cluster, 560, 1220), (network, 1240, 1260), (opamp_circuit, 1820, 1220),
-]
 
 target = sys.argv[1]
 open(f'{target}/schaltplan-papier.svg', 'w', encoding='utf-8').write(compose(PAPIER, 2600, 1800, 0.16))
-# Das Blatt zeigt dieselbe Zeichnung, nur blasser (wie durch Transparentpapier)
-open(f'{target}/schaltplan-blatt.svg', 'w', encoding='utf-8').write(compose(PAPIER, 2600, 1800, 0.06))
 print('ok')

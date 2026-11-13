@@ -156,10 +156,13 @@ a:hover {
   position: relative;
   max-width: 74rem;
   margin-inline: auto;
-  /* dieselbe Zeichnung schimmert blass durch das Blatt, wie durch Transparentpapier */
-  background: url('/img/schaltplan-blatt.svg') center top / 3900px 2700px fixed, var(--sheet);
+  background: var(--sheet);
   border: 1.5px solid var(--ink);
-  box-shadow: 0 1px 0 var(--hair), 0 24px 48px -32px rgb(26 31 36 / 0.25);
+  /* liegt mit etwas Abstand über dem Zeichentisch */
+  box-shadow:
+    0 1px 0 var(--hair),
+    0 10px 24px -14px rgb(26 31 36 / 0.22),
+    0 40px 90px -30px rgb(26 31 36 / 0.32);
 }
 
 .sheet::before {

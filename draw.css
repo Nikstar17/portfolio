@@ -291,8 +291,9 @@
   }
 }
 
-/* --- Zeichentisch: wandert beim Scrollen langsamer mit als das Blatt,
-   so ziehen alle Zeichnungen einmal vorbei, ohne sich zu wiederholen --- */
+/* --- Zeichentisch: Raster und Zeichnungen wandern unterschiedlich langsam
+   mit, das Blatt scrollt normal darüber. So entsteht Tiefe, und alle
+   Zeichnungen ziehen einmal vorbei, ohne sich zu wiederholen. --- */
 @supports (animation-timeline: scroll()) {
   @media (prefers-reduced-motion: no-preference) {
     body {
@@ -300,28 +301,20 @@
       animation-timeline: scroll(root);
     }
 
-    .sheet {
-      animation: sheet-pan linear both;
-      animation-timeline: scroll(root);
-    }
   }
 }
 
+/* drei Ebenen: Raster ganz hinten (langsam), Zeichnungen darüber, Blatt vorn */
 @keyframes table-pan {
   from { background-position: center 0, 0 0, 0 0, 0 0, 0 0; }
   to {
     background-position:
       center calc(100vh - 2700px),
-      0 calc(100vh - 2700px),
-      0 calc(100vh - 2700px),
-      0 calc(100vh - 2700px),
-      0 calc(100vh - 2700px);
+      0 -500px,
+      0 -500px,
+      0 -500px,
+      0 -500px;
   }
-}
-
-@keyframes sheet-pan {
-  from { background-position: center 0; }
-  to { background-position: center calc(100vh - 2700px); }
 }
 
 /* =================== Keyframes =================== */
