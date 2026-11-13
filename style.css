@@ -331,6 +331,36 @@ a:hover {
   .detail {
     width: 100%;
   }
+
+  /* Bildtafeln neben dem Text statt über die volle Breite */
+  .piece {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 18px 28px;
+  }
+
+  .piece:nth-child(even) .plate {
+    order: 2;
+  }
+
+  .piece .piece-text h3 {
+    font-size: 1.375rem;
+  }
+
+  .piece .piece-text p {
+    font-size: 0.9375rem;
+  }
+
+  .piece .titlepage {
+    padding: 16px;
+  }
+
+  .piece .titlepage .t-main {
+    font-size: 1.125rem;
+  }
+
+  .piece .titlepage .t-sub {
+    font-size: 0.8125rem;
+  }
 }
 
 .intro h1 {
