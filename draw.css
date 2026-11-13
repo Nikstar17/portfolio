@@ -160,6 +160,15 @@
     animation: trace 2.2s var(--calm) both paused;
   }
 
+  /* zweite Tafel: gespiegelt, beginnt oben rechts und läuft gegen den Uhrzeigersinn */
+  .typing .piece:nth-child(even) .plate::after {
+    background:
+      linear-gradient(var(--ink), var(--ink)) right top / var(--fr-t) 1px no-repeat,
+      linear-gradient(var(--ink), var(--ink)) left top / 1px var(--fr-r) no-repeat,
+      linear-gradient(var(--ink), var(--ink)) left bottom / var(--fr-b) 1px no-repeat,
+      linear-gradient(var(--ink), var(--ink)) right bottom / 1px var(--fr-l) no-repeat;
+  }
+
   .typing .plate img {
     animation: develop 1.8s ease 0.6s both paused;
   }
