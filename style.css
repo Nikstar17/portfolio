@@ -68,11 +68,13 @@ body {
   margin: 0;
   background-color: var(--paper);
   background-image:
+    url('/img/schaltplan-papier.svg'),
     linear-gradient(var(--grid-major) 1px, transparent 1px),
     linear-gradient(90deg, var(--grid-major) 1px, transparent 1px),
     linear-gradient(var(--grid) 1px, transparent 1px),
     linear-gradient(90deg, var(--grid) 1px, transparent 1px);
   background-size:
+    1400px 1000px,
     50px 50px,
     50px 50px,
     10px 10px,
@@ -151,7 +153,8 @@ a:hover {
   position: relative;
   max-width: 74rem;
   margin-inline: auto;
-  background: var(--sheet);
+  /* ganz blasse Schaltplan-Zeichnung auf dem Blatt, versetzt zum Hintergrund */
+  background: url('/img/schaltplan-blatt.svg') 380px 220px / 1400px 1000px repeat, var(--sheet);
   border: 1.5px solid var(--ink);
   box-shadow: 0 1px 0 var(--hair), 0 24px 48px -32px rgb(26 31 36 / 0.25);
 }

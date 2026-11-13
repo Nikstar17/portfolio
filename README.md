@@ -20,7 +20,8 @@ style.css           alles Gestalterische, Farben als Tokens oben
 draw.css            Zeichen-Effekte beim Laden und Scrollen (abschaltbar: <link> entfernen)
 draw.js             Tipp-Effekt für Elemente mit data-type (abschaltbar: <script> entfernen)
 fonts/              Archivo, Source Serif 4, JetBrains Mono (selbst gehostet, OFL)
-img/                Porträt und Projektbilder
+img/                Porträt, Projektbild, Schaltplan-Hintergrund (SVG)
+tools/schaltplan.py erzeugt die Schaltplan-SVGs: python tools/schaltplan.py img
 vercel.json         saubere URLs, Weiterleitungen alter Pfade, Security-Header
 ```
 
