@@ -158,11 +158,7 @@ a:hover {
   margin-inline: auto;
   background: var(--sheet);
   border: 1.5px solid var(--ink);
-  /* liegt mit etwas Abstand über dem Zeichentisch */
-  box-shadow:
-    0 1px 0 var(--hair),
-    0 10px 24px -14px rgb(26 31 36 / 0.22),
-    0 40px 90px -30px rgb(26 31 36 / 0.32);
+  box-shadow: 0 1px 0 var(--hair), 0 24px 48px -32px rgb(26 31 36 / 0.25);
 }
 
 .sheet::before {
