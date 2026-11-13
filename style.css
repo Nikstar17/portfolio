@@ -1153,7 +1153,7 @@ a:hover {
     white-space: nowrap;
   }
 
-  /* Maßkette kompakt: Zeilenname über der Linie, kurze Namen, wenige Jahre */
+  /* Maßkette kompakt: kurze Namen, wenige Jahre */
   .chain {
     gap: 8px;
   }
@@ -1163,9 +1163,9 @@ a:hover {
     gap: 0;
   }
 
+  /* Zeilennamen (Handwerk, Studium …) entfallen mobil */
   .track > .label {
-    padding-bottom: 0;
-    font-size: 0.625rem;
+    display: none;
   }
 
   .lane {
