@@ -2,8 +2,8 @@
 
 Enthält Schaltpläne (Schaltzeichen nach DIN EN 60617), Platine, UML
 (Aktivität, Klassen, Sequenz), ER-Modell, CPU-Blockschaltbild, Serverrack,
-Netzwerk und Cluster. Papier und Blatt bekommen unterschiedliche
-Anordnungen, damit sich nichts sichtbar wiederholt.
+Netzwerk und Cluster. Die Zeichnung liegt fest im Hintergrund (Zeichentisch),
+das Blatt scrollt darüber und zeigt dieselbe Zeichnung blasser.
 
 Aufruf (im Projektordner):  python tools/schaltplan.py img
 Schreibt img/schaltplan-papier.svg und img/schaltplan-blatt.svg.
@@ -374,5 +374,6 @@ BLATT = [
 
 target = sys.argv[1]
 open(f'{target}/schaltplan-papier.svg', 'w', encoding='utf-8').write(compose(PAPIER, 2600, 1800, 0.16))
-open(f'{target}/schaltplan-blatt.svg', 'w', encoding='utf-8').write(compose(BLATT, 2300, 1700, 0.05))
+# Das Blatt zeigt dieselbe Zeichnung, nur blasser (wie durch Transparentpapier)
+open(f'{target}/schaltplan-blatt.svg', 'w', encoding='utf-8').write(compose(PAPIER, 2600, 1800, 0.06))
 print('ok')

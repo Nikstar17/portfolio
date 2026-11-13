@@ -291,6 +291,39 @@
   }
 }
 
+/* --- Zeichentisch: wandert beim Scrollen langsamer mit als das Blatt,
+   so ziehen alle Zeichnungen einmal vorbei, ohne sich zu wiederholen --- */
+@supports (animation-timeline: scroll()) {
+  @media (prefers-reduced-motion: no-preference) {
+    body {
+      animation: table-pan linear both;
+      animation-timeline: scroll(root);
+    }
+
+    .sheet {
+      animation: sheet-pan linear both;
+      animation-timeline: scroll(root);
+    }
+  }
+}
+
+@keyframes table-pan {
+  from { background-position: center 0, 0 0, 0 0, 0 0, 0 0; }
+  to {
+    background-position:
+      center calc(100vh - 2700px),
+      0 calc(100vh - 2700px),
+      0 calc(100vh - 2700px),
+      0 calc(100vh - 2700px),
+      0 calc(100vh - 2700px);
+  }
+}
+
+@keyframes sheet-pan {
+  from { background-position: center 0; }
+  to { background-position: center calc(100vh - 2700px); }
+}
+
 /* =================== Keyframes =================== */
 
 @keyframes ink-fill {

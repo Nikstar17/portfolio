@@ -74,11 +74,14 @@ body {
     linear-gradient(var(--grid) 1px, transparent 1px),
     linear-gradient(90deg, var(--grid) 1px, transparent 1px);
   background-size:
-    1400px 1000px,
+    3900px 2700px,
     50px 50px,
     50px 50px,
     10px 10px,
     10px 10px;
+  /* Zeichentisch: Raster und Zeichnungen bleiben stehen, das Blatt scrollt darüber */
+  background-position: center top, 0 0, 0 0, 0 0, 0 0;
+  background-attachment: fixed;
   color: var(--ink);
   font-family: var(--text);
   font-size: 1.0625rem;
@@ -153,8 +156,8 @@ a:hover {
   position: relative;
   max-width: 74rem;
   margin-inline: auto;
-  /* ganz blasse Schaltplan-Zeichnung auf dem Blatt, versetzt zum Hintergrund */
-  background: url('/img/schaltplan-blatt.svg') 380px 220px / 1400px 1000px repeat, var(--sheet);
+  /* dieselbe Zeichnung schimmert blass durch das Blatt, wie durch Transparentpapier */
+  background: url('/img/schaltplan-blatt.svg') center top / 3900px 2700px fixed, var(--sheet);
   border: 1.5px solid var(--ink);
   box-shadow: 0 1px 0 var(--hair), 0 24px 48px -32px rgb(26 31 36 / 0.25);
 }
