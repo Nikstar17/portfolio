@@ -1,143 +1,373 @@
 <!doctype html>
-<html lang="de" class="dark bg-slate-950">
+<html lang="de">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dominik Kasten – Webentwicklung & IT-Service aus Goslar</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <link rel="canonical" href="https://www.dominik-kasten.de/" />
-
-    <meta property="og:title" content="Dominik Kasten – Full-Stack Webentwickler aus Goslar" />
-    <meta
-      property="og:description"
-      content="Moderne Webentwicklung und IT-Dienstleistungen für Unternehmen aus Niedersachsen."
-    />
-    <meta property="og:image" content="https://dominik-kasten.de/social-preview.png" />
-    <meta property="og:url" content="https://dominik-kasten.de" />
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="de_DE" />
-    <meta property="og:site_name" content="Dominik Kasten" />
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Dominik Kasten · Informatiker</title>
     <meta
       name="description"
-      content="Ich bin Dominik Kasten, Full-Stack Entwickler aus Goslar. Ich entwickle moderne Weblösungen für Unternehmen in Niedersachsen und darüber hinaus."
+      content="Dominik Kasten, Informatiker aus Goslar. Früher Tischler im Klavierbau, heute Softwareentwicklung, Serverbetrieb und Ausbildung von Fachinformatikern."
     />
-
-    <meta name="theme-color" content="#13141f" />
-
-    <meta name="apple-mobile-web-app-title" content="Dominik Kasten" />
-    <meta name="application-name" content="Dominik Kasten" />
-    <meta name="msapplication-TileColor" content="#1a1c26" />
+    <meta name="author" content="Dominik Kasten" />
+    <meta name="theme-color" content="#f7f9f9" />
+    <link rel="canonical" href="https://dominik-kasten.de/" />
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="Dominik Kasten · Informatiker" />
+    <meta property="og:description" content="Früher Klavierbau, heute Software und Infrastruktur. Goslar." />
+    <meta property="og:url" content="https://dominik-kasten.de/" />
+    <meta property="og:locale" content="de_DE" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="preload" href="/fonts/archivo.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/source-serif-4.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/draw.css" />
+    <script src="/draw.js" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "LocalBusiness",
+        "@type": "Person",
         "name": "Dominik Kasten",
-        "url": "https://dominik-kasten.de",
-        "image": "https://dominik-kasten.de/me.png",
-        "description": "Full-Stack Webentwickler aus Goslar. Ich helfe Unternehmen in Niedersachsen mit maßgeschneiderter Webentwicklung und IT-Lösungen.",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Grauhöfer Str. 9",
-          "addressLocality": "Goslar",
-          "postalCode": "38640",
-          "addressCountry": "DE"
-        },
-        "telephone": "+49-155-63846168"
+        "jobTitle": "Informatiker",
+        "url": "https://dominik-kasten.de/",
+        "address": { "@type": "PostalAddress", "addressLocality": "Goslar", "addressCountry": "DE" },
+        "sameAs": ["https://github.com/Nikstar17", "https://www.linkedin.com/in/dominik-kasten-6b52b3228/"]
       }
-    </script>
-    <!-- Deferred Google Analytics Setup - Only loads after consent -->
-    <script>
-      // Initialize stub dataLayer and gtag function
-      window.dataLayer = window.dataLayer || []
-      function gtag() {
-        dataLayer.push(arguments)
-      }
-
-      // Check for existing consent cookie
-      function getCookie(name) {
-        const nameEQ = name + '='
-        const ca = document.cookie.split(';')
-        for (let i = 0; i < ca.length; i++) {
-          let c = ca[i]
-          while (c.charAt(0) === ' ') c = c.substring(1, c.length)
-          if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length)
-        }
-        return null
-      }
-
-      // Store GA configuration for later use
-      window.GA_CONFIG = {
-        id: 'G-Y2MBSY2W6B',
-        options: {
-          anonymize_ip: true,
-          cookie_flags: 'SameSite=None;Secure',
-          send_page_view: false,
-        },
-      }
-
-      // Load GA only if consent is already granted
-      const consent = getCookie('cookie-consent')
-      if (consent === 'ga-consent-granted') {
-        loadGA()
-      }
-
-      // Function to load GA script
-      function loadGA() {
-        if (document.getElementById('ga-script')) return
-
-        // Set default consent configuration (Consent Mode v2)
-        gtag('consent', 'default', {
-          ad_storage: 'denied',
-          analytics_storage: 'denied',
-          functionality_storage: 'denied',
-          personalization_storage: 'denied',
-          security_storage: 'granted',
-          ad_user_data: 'denied', // Consent Mode v2
-          ad_personalization: 'denied', // Consent Mode v2
-          wait_for_update: 500,
-        })
-
-        // Set recommended Consent Mode v2 settings
-        gtag('set', 'url_passthrough', true)
-        gtag('set', 'ads_data_redaction', true)
-
-        // Create and append GA script
-        const script = document.createElement('script')
-        script.id = 'ga-script'
-        script.async = true
-        script.src = 'https://www.googletagmanager.com/gtag/js?id=' + window.GA_CONFIG.id
-
-        script.onload = function () {
-          gtag('js', new Date())
-          gtag('config', window.GA_CONFIG.id, window.GA_CONFIG.options)
-
-          // If consent is already granted, update consent status
-          if (consent === 'ga-consent-granted') {
-            gtag('consent', 'update', {
-              ad_storage: 'granted',
-              analytics_storage: 'granted',
-              functionality_storage: 'granted',
-              personalization_storage: 'granted',
-              ad_user_data: 'granted', // Consent Mode v2
-              ad_personalization: 'granted', // Consent Mode v2
-            })
-            gtag('event', 'page_view')
-          }
-        }
-
-        document.head.appendChild(script)
-      }
-
-      // Expose loadGA to window for use in our consent script
-      window.loadGA = loadGA
     </script>
   </head>
-  <body class="min-h-screen bg-gradient-to-b from-[#1a1c26] to-[#13141f]">
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
+  <body>
+    <div class="sheet">
+      <div class="zones zones-top" aria-hidden="true">
+        <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span>
+      </div>
+      <div class="zones zones-bottom" aria-hidden="true">
+        <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span>
+      </div>
+      <div class="zones zones-left" aria-hidden="true"><span>A</span><span>B</span><span>C</span><span>D</span></div>
+      <div class="zones zones-right" aria-hidden="true"><span>A</span><span>B</span><span>C</span><span>D</span></div>
+
+      <div class="inner">
+        <header class="top">
+          <a class="mark" href="/"><span class="pos">DK</span>Dominik Kasten</a>
+          <nav aria-label="Abschnitte">
+            <a href="#werdegang">Werdegang</a>
+            <a href="#arbeiten">Arbeiten</a>
+            <a href="#werkzeug">Werkzeug</a>
+            <a href="#ausblick">Ausblick</a>
+            <a href="#kontakt">Kontakt</a>
+          </nav>
+        </header>
+
+        <main style="display: contents">
+          <section class="intro">
+            <span class="guide guide-h" aria-hidden="true"></span>
+            <span class="guide guide-v" aria-hidden="true"></span>
+            <div>
+              <p class="label">Informatiker · Goslar</p>
+              <h1><span>Dominik</span><span>Kasten</span></h1>
+              <p class="lead">
+                Bis 2024 war ich Tischler, die längste Zeit davon im Klavierbau. Heute entwickle ich
+                Software, betreibe die Infrastruktur, auf der sie läuft, und bilde
+                <em>Fachinformatiker</em> aus.
+              </p>
+            </div>
+            <figure class="detail">
+              <div class="ring">
+                <img
+                  class="photo"
+                  src="/img/dominik-kasten.webp"
+                  alt="Porträt von Dominik Kasten"
+                  width="600"
+                  height="600"
+                />
+              </div>
+              <figcaption><span class="pos">A</span><span class="label">Detail A · M 1:1</span></figcaption>
+            </figure>
+          </section>
+
+          <section id="werdegang">
+            <div class="section-head">
+              <h2>Werdegang</h2>
+            </div>
+
+            <!--
+              Zweistufiger Maßstab: 2013–2023 auf 40 % der Breite, 2023–2027 auf 60 %.
+              --a / --b sind Positionen in Prozent:
+                bis 2023:  (Jahr − 2013) × 4
+                ab 2023:   40 + (Jahr − 2023) × 15
+            -->
+            <div class="chain">
+              <div class="track">
+                <span class="label">Handwerk</span>
+                <div class="lane">
+                  <div class="dim" style="--a: 2.3; --b: 15.3">
+                    <b>Tischlerei</b
+                    ><span class="where">Ausbildung zum Tischler, dann Tischlerei Warnecke, Vechelde</span
+                    ><span class="years">2013–2016</span>
+                  </div>
+                  <div class="dim" style="--a: 15.7; --b: 57.5">
+                    <b>Wilhelm Schimmel Pianoforte</b
+                    ><span class="where">Tischler im Klavierbau, Braunschweig</span
+                    ><span class="years">2016–2024</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="track">
+                <span class="label">Studium</span>
+                <div class="lane">
+                  <div class="dim accent" style="--a: 50; --b: 95">
+                    <b>B.Sc. Informatik</b
+                    ><span class="where">IU Internationale Hochschule</span
+                    ><span class="years">2023–2026</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="track">
+                <span class="label">Selbständigkeit</span>
+                <div class="lane">
+                  <div class="dim open" style="--a: 58.75; --b: 100">
+                    <b>Projekte</b
+                    ><span class="where">Selbständig: Softwareentwicklung und Betrieb der Infrastruktur</span
+                    ><span class="years">seit 2024</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="track">
+                <span class="label">Lehre</span>
+                <div class="lane">
+                  <div class="dim open accent" style="--a: 80; --b: 100">
+                    <b>Ausbilder</b
+                    ><span class="where">Ausbilder für Fachinformatiker, INN-tegrativ gGmbH</span
+                    ><span class="years">seit 2025</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="axis" aria-hidden="true">
+                <span></span>
+                <div class="ticks">
+                  <span style="--y: 0">2013</span><span style="--y: 8">2015</span
+                  ><span style="--y: 16">2017</span><span style="--y: 24">2019</span
+                  ><span style="--y: 32">2021</span><span style="--y: 40">2023</span
+                  ><span style="--y: 55">2024</span><span style="--y: 70">2025</span
+                  ><span style="--y: 85">2026</span><span style="--y: 100">2027</span>
+                  <i class="brk" style="--y: 40"></i>
+                </div>
+              </div>
+              <div class="today" aria-hidden="true"><span>Stand 11/2026</span></div>
+            </div>
+
+            <div class="notes">
+              <div>
+                <h3>Handwerk</h3>
+                <p>
+                  Ausbildung zum Tischler, danach Möbelbau und Restaurierung. Ab 2016 Endmontage und
+                  Präzisionsarbeit an Flügeln und Klavieren bei Schimmel in Braunschweig.
+                </p>
+              </div>
+              <div>
+                <h3>Informatik</h3>
+                <p>
+                  Bachelorstudium an der IU Internationale Hochschule, abgeschlossen mit der
+                  Gesamtnote 1,6. Daneben selbständig in der Softwareentwicklung, vom Datenmodell bis
+                  zum Betrieb der Infrastruktur.
+                </p>
+              </div>
+              <div>
+                <h3>Lehre</h3>
+                <p>
+                  Seit 2025 bei INN-tegrativ. Im Team von fünf Ausbildern betreue ich rund 80 Teilnehmende
+                  in Programmierung, Datenbanken und Software Engineering.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section id="arbeiten">
+            <div class="section-head">
+              <h2>Arbeiten</h2>
+              <span class="label">Stückliste</span>
+            </div>
+
+            <div class="table-wrap">
+              <table class="parts">
+                <thead>
+                  <tr>
+                    <th scope="col">Pos.</th>
+                    <th scope="col">Benennung</th>
+                    <th scope="col">Art</th>
+                    <th scope="col">Werkstoff</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="pos">1</span></td>
+                    <td><a href="#pos-1">Chronixly</a></td>
+                    <td>Webanwendung, eigenes Produkt</td>
+                    <td class="mono">Vue.js, Flask, PostgreSQL</td>
+                  </tr>
+                  <tr>
+                    <td><span class="pos">2</span></td>
+                    <td><a href="#pos-2">Bachelorarbeit</a></td>
+                    <td>Wissenschaftliche Arbeit</td>
+                    <td class="mono">Machine Learning, IT-Sicherheit</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="pieces">
+              <article class="piece" id="pos-1">
+                <div class="plate">
+                  <span class="pos">1</span>
+                  <img
+                    src="/img/chronixly.webp"
+                    alt="Startseite von Chronixly"
+                    width="1200"
+                    height="750"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="piece-text">
+                  <h3>Chronixly</h3>
+                  <p>
+                    Zeiterfassung mit Projekten, Aufgabenboard und Auswertungen. Ich habe sie allein
+                    entwickelt und betreibe sie selbst: Datenmodell, API, Oberfläche, Container und
+                    Deployment.
+                  </p>
+                  <dl class="spec">
+                    <dt>Werkstoff</dt>
+                    <dd>Vue.js, Flask, PostgreSQL, Docker</dd>
+                    <dt>Betrieb</dt>
+                    <dd>Linux-Server, CI/CD</dd>
+                    <dt>Verweis</dt>
+                    <dd><a href="https://www.chronixly.com" rel="noopener">chronixly.com</a></dd>
+                  </dl>
+                </div>
+              </article>
+
+              <article class="piece" id="pos-2">
+                <div class="plate">
+                  <span class="pos">2</span>
+                  <div class="titlepage">
+                    <span class="label">Bachelorarbeit · IU Internationale Hochschule · 2026</span>
+                    <div class="t">
+                      <p class="t-main">Zwischen Seltenheit und Risiko</p>
+                      <p class="t-sub">
+                        Grenzen ML-basierter Anomalieerkennung für die risikobasierte
+                        Alarm-Priorisierung
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="piece-text">
+                  <h3>Bachelorarbeit</h3>
+                  <p>
+                    Sicherheitssysteme erzeugen mehr Alarme, als sich von Hand prüfen lassen.
+                    Die Arbeit untersucht, wo ML-basierte Anomalieerkennung an Grenzen stößt, wenn sie
+                    Alarme nach Risiko ordnen soll. Selten heißt eben nicht automatisch gefährlich.
+                  </p>
+                  <dl class="spec">
+                    <dt>Abschluss</dt>
+                    <dd>B.Sc. Informatik, Gesamtnote 1,6</dd>
+                    <dt>Thema</dt>
+                    <dd>Anomalieerkennung, Alarm-Priorisierung</dd>
+                  </dl>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section id="werkzeug">
+            <div class="section-head">
+              <h2>Werkzeug</h2>
+              <span class="label">Womit ich arbeite</span>
+            </div>
+            <dl class="tools">
+              <div><dt class="label">Sprachen</dt><dd>Python · JavaScript · TypeScript · C# · SQL</dd></div>
+              <div><dt class="label">Web</dt><dd>Vue.js · Flask · REST-APIs · Tailwind CSS</dd></div>
+              <div><dt class="label">Daten</dt><dd>PostgreSQL · Datenmodellierung</dd></div>
+              <div><dt class="label">Betrieb</dt><dd>Linux · Docker · CI/CD · Virtualisierung · Kubernetes</dd></div>
+              <div><dt class="label">Zertifikat</dt><dd>Google Cybersecurity Professional Certificate (2024)</dd></div>
+            </dl>
+          </section>
+
+          <section id="ausblick">
+            <div class="section-head">
+              <h2>Ausblick</h2>
+              <span class="label">Änderungsindex</span>
+            </div>
+            <ol class="rev">
+              <li>
+                <span class="idx">a</span>
+                <div><b>KI-Agenten</b><p>Agenten wie Hermes: wie sie Werkzeuge nutzen, wo sie verlässlich arbeiten und wie man sie selbst betreibt.</p></div>
+                <span class="state now">in Arbeit</span>
+              </li>
+              <li>
+                <span class="idx">b</span>
+                <div><b>Skalierung mit Clustern</b><p>Dienste so aufbauen, dass sie mit der Last wachsen: horizontal über mehrere Knoten verteilen, Last ausgleichen, Ressourcen automatisch nachziehen und den Ausfall einzelner Server abfangen. Orchestriert mit Kubernetes.</p></div>
+                <span class="state now">in Arbeit</span>
+              </li>
+              <li>
+                <span class="idx">c</span>
+                <div><b>IT-Sicherheit</b><p>Tiefer einsteigen, als Zertifikat und Bachelorarbeit es verlangt haben: Angriffe verstehen, Systeme härten, Vorfälle erkennen.</p></div>
+                <span class="state next">vertiefen</span>
+              </li>
+              <li>
+                <span class="idx">d</span>
+                <div><b>Rechenzentren und große Infrastruktur</b><p>Wie Infrastruktur aufgebaut ist, wenn ein einzelner Server keine Rolle mehr spielt.</p></div>
+                <span class="state next">vertiefen</span>
+              </li>
+              <li>
+                <span class="idx">e</span>
+                <div><b>Maschinenbau, Elektrotechnik und Robotik</b><p>Robotik fasziniert mich, weil dort Mechanik, Elektronik und Software zusammenkommen. Darüber will ich mehr lernen.</p></div>
+                <span class="state">Interesse</span>
+              </li>
+            </ol>
+          </section>
+        </main>
+
+        <footer id="kontakt" class="titleblock">
+          <div style="display: grid; gap: 18px">
+            <div class="section-head" style="margin-bottom: 0">
+              <h2>Kontakt</h2>
+            </div>
+            <p class="say">Am einfachsten erreichen Sie mich per E-Mail.</p>
+            <nav class="foot" aria-label="Rechtliches">
+              <a href="/impressum">Impressum</a>
+              <a href="/datenschutz">Datenschutz</a>
+            </nav>
+          </div>
+
+          <div class="field" aria-label="Schriftfeld">
+            <div class="big"><span class="label">Name</span><span class="v">Dominik Kasten</span></div>
+            <div><span class="label">Blatt</span><span class="v">1 / 1</span></div>
+            <div class="w2"><span class="label">Benennung</span><span class="v">Informatiker</span></div>
+            <div><span class="label">Ort</span><span class="v">Goslar</span></div>
+            <div><span class="label">Stand</span><span class="v">11.2026</span></div>
+            <div class="w2">
+              <span class="label">E-Mail</span
+              ><span class="v"><a href="mailto:info@dominik-kasten.de">info@dominik-kasten.de</a></span>
+            </div>
+            <div>
+              <span class="label">Code</span
+              ><span class="v"><a href="https://github.com/Nikstar17" rel="me noopener">GitHub</a></span>
+            </div>
+            <div>
+              <span class="label">Profil</span
+              ><span class="v"
+                ><a href="https://www.linkedin.com/in/dominik-kasten-6b52b3228/" rel="me noopener"
+                  >LinkedIn</a
+                ></span
+              >
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
   </body>
 </html>
